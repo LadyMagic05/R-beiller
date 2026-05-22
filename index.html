@@ -1,0 +1,2008 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rébeiller Wiki</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+body{
+    margin:0;
+    background:#090611;
+    background-image:
+        radial-gradient(circle at top, rgba(122,91,255,0.12), transparent 35%),
+        radial-gradient(circle at bottom, rgba(0,180,255,0.08), transparent 30%);
+    color:white;
+    font-family:'Inter', sans-serif;
+    padding:20px;
+}
+
+.wiki-wrap{
+    max-width:1400px;
+    margin:auto;
+    box-shadow:
+        0 0 40px rgba(111,92,255,0.15),
+        0 20px 60px rgba(0,0,0,0.45);
+    border:1px solid rgba(120,100,255,0.15);
+}
+
+.wiki-title{
+    font-family:'Cinzel', serif !important;
+    font-size:32px !important;
+    letter-spacing:0.08em !important;
+}
+
+.card:hover,
+.tomo-card:hover,
+.lugar-card:hover{
+    transform:translateY(-4px);
+    transition:0.25s ease;
+    border-color:rgba(130,115,225,0.55) !important;
+    box-shadow:0 10px 30px rgba(100,85,220,0.2);
+}
+
+.nav-btn,
+.add-btn,
+.subcat-btn{
+    backdrop-filter:blur(10px);
+}
+
+.search-bar:focus,
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row select:focus{
+    outline:none;
+    border-color:#8f7fff !important;
+    box-shadow:0 0 0 3px rgba(143,127,255,0.12);
+}
+
+.section{
+    animation:fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3c3270;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#120d24;
+}
+
+/* ===== Mejoras visuales extra ===== */
+body{
+  background-attachment:fixed;
+}
+
+.wiki-wrap{
+  border:1px solid rgba(160,140,255,0.18);
+  box-shadow:
+    0 0 80px rgba(90,70,190,0.18),
+    0 25px 80px rgba(0,0,0,0.55);
+}
+
+.wiki-wrap::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(140,120,255,0.08), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(90,180,255,0.06), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(180,120,255,0.05), transparent 30%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.card,
+.tomo-card,
+.lugar-card,
+.poder-card,
+.magia-intro,
+.detail-panel{
+  backdrop-filter:blur(10px);
+}
+
+.card,
+.tomo-card,
+.lugar-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before,
+.tomo-card::before,
+.lugar-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+}
+
+.section-title{
+  font-size:17px;
+  letter-spacing:0.03em;
+}
+
+.card-name,
+.tomo-title,
+.lugar-name,
+.poder-nombre{
+  letter-spacing:0.02em;
+}
+
+.nav-btn{
+  background:rgba(255,255,255,0.08);
+
+  transition:all .25s ease, transform .18s ease;
+}
+
+.nav-btn:hover{
+  transform:translateY(-2px) scale(1.02);
+}
+
+.magia-intro{
+  position:relative;
+  overflow:hidden;
+}
+
+.magia-intro::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, transparent, rgba(255,255,255,0.03), transparent);
+  pointer-events:none;
+}
+
+.poder-card{
+  border:1px solid rgba(120,100,220,0.28);
+}
+
+.poder-card.open{
+  border-color:rgba(150,130,255,0.45);
+  box-shadow:0 10px 30px rgba(80,60,180,0.18);
+}
+
+.avatar{
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.search-bar{
+  background:rgba(10,8,25,0.85);
+}
+
+.modal{
+  background:linear-gradient(180deg,#161032 0%, #100b24 100%);
+}
+
+.detail-panel{
+  animation:fadePanel .25s ease;
+}
+
+@keyframes fadePanel{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+
+/* ===== Paleta pastel ===== */
+.nav-btn{
+  color:#d9d0ff !important;
+  border-color:rgba(220,200,255,0.18) !important;
+}
+
+.nav-btn:hover{
+  background:rgba(240,220,255,0.14) !important;
+  border-color:rgba(255,230,255,0.35) !important;
+}
+
+.add-btn{
+  color:#f5e8ff !important;
+}
+
+.add-btn:hover{
+  background:linear-gradient(135deg, rgba(255,220,240,0.35), rgba(220,210,255,0.35)) !important;
+}
+
+.subcat-btn{
+  color:#d7cdf5 !important;
+}
+
+.subcat-btn:hover{
+  background:rgba(240,220,255,0.12) !important;
+}
+
+</style>
+</head>
+<body>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:var(--font-sans, 'Georgia', serif);-webkit-text-size-adjust:100%;}
+
+/* Fondo nocturno */
+.wiki-wrap{
+  padding:0.75rem 0;
+  position:relative;
+  background: linear-gradient(160deg, #0f0c1a 0%, #151030 40%, #0d1525 100%);
+  border-radius:var(--border-radius-lg, 12px);
+  min-height:100%;
+  overflow:hidden;
+}
+#star-canvas{
+  position:absolute;inset:0;
+  pointer-events:none;z-index:0;
+  border-radius:var(--border-radius-lg, 12px);
+}
+.wiki-wrap > *:not(#star-canvas){position:relative;z-index:1;}
+
+/* Encabezado */
+.wiki-header{padding:1rem 1rem 0.5rem;display:flex;align-items:center;gap:12px;}
+.wiki-moon{font-size:26px;line-height:1;filter:drop-shadow(0 0 8px #a89be8aa);}
+.wiki-title{font-size:20px;font-weight:600;color:#e8e0ff;letter-spacing:0.02em;text-shadow:0 0 18px #7f6fc055;}
+.wiki-subtitle{font-size:11px;color:#8a80b8;margin-top:2px;letter-spacing:0.04em;}
+
+/* Separador */
+.deco-divider{display:flex;align-items:center;gap:8px;padding:0 1rem;margin-bottom:0;}
+.deco-divider span{color:#4a4070;font-size:11px;letter-spacing:0.15em;flex-shrink:0;}
+.deco-line{flex:1;height:0.5px;background:linear-gradient(90deg,transparent,#3a3360,transparent);}
+
+/* Nav — scroll horizontal en móvil */
+.nav{
+  display:flex;gap:6px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  margin-bottom:1rem;
+  border-bottom:0.5px solid #2a2450;
+  padding:0.75rem 1rem 0.75rem;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav-btn{
+  background:rgba(255,255,255,0.08);
+
+  padding:7px 13px;
+  font-size:13px;
+  border:1px solid rgba(130,115,220,0.25);
+  border-radius:var(--border-radius-md, 8px);
+  background:rgba(255,255,255,0.05);
+  cursor:pointer;
+  color:#b0a8d8;
+  transition:all 0.2s ease;
+  white-space:nowrap;
+  flex-shrink:0;
+  min-height:36px;
+  -webkit-tap-highlight-color:transparent;
+  letter-spacing:0.02em;
+}
+.nav-btn:hover,.nav-btn:active{
+  background:rgba(140,125,240,0.18);
+  color:#e2daff;
+  border-color:rgba(160,140,255,0.5);
+  box-shadow:0 2px 12px rgba(120,100,255,0.15);
+  transform:translateY(-1px);
+}
+.nav-btn.active{
+  background:linear-gradient(135deg, rgba(214,190,255,0.35), rgba(186,220,255,0.28));
+  border-color:rgba(230,210,255,0.45);
+  color:#f7f2ff;
+
+  background:linear-gradient(135deg, rgba(110,95,210,0.35), rgba(90,75,190,0.25));
+  color:#ede8ff;
+  border-color:rgba(160,140,255,0.6);
+  font-weight:500;
+  box-shadow:0 0 16px rgba(110,95,210,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Secciones */
+.section{display:none;padding:0 0.75rem 1rem;}.section.active{display:block}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.875rem;}
+.section-title{font-size:15px;font-weight:500;color:#d4ccff;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:"\2726";font-size:10px;color:#a090ee;}
+
+/* Añadir */
+.add-btn{
+  background:linear-gradient(135deg, rgba(255,205,230,0.22), rgba(210,190,255,0.22));
+  border:1px solid rgba(255,220,240,0.25);
+
+  padding:7px 14px;font-size:13px;
+  border:1px solid rgba(130,115,220,0.35);
+  border-radius:var(--border-radius-md, 8px);
+  background:linear-gradient(135deg, rgba(100,88,200,0.22), rgba(80,68,175,0.15));
+  cursor:pointer;color:#c8c0f0;
+  display:flex;align-items:center;gap:6px;
+  transition:all 0.2s ease;
+  white-space:nowrap;
+  min-height:36px;
+  -webkit-tap-highlight-color:transparent;
+  font-weight:500;
+  letter-spacing:0.02em;
+  box-shadow:0 2px 8px rgba(100,88,200,0.12);
+}
+.add-btn:hover,.add-btn:active{
+  background:linear-gradient(135deg, rgba(120,105,230,0.32), rgba(95,80,200,0.25));
+  color:#e8e0ff;
+  border-color:rgba(170,155,255,0.55);
+  box-shadow:0 4px 16px rgba(100,88,200,0.25);
+  transform:translateY(-1px);
+}
+
+/* Tarjetas — 1 columna en móvil */
+.card-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:480px){.card-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}}
+.card{
+  background:rgba(20,16,45,0.7);border:1px solid rgba(60,50,100,0.45);
+  border-radius:var(--border-radius-lg, 12px);
+  padding:0.875rem 1rem;
+  cursor:pointer;transition:all 0.2s ease;
+  backdrop-filter:blur(4px);
+  -webkit-tap-highlight-color:transparent;
+}
+.card:hover{
+  border-color:rgba(130,115,225,0.55);
+  box-shadow:0 8px 24px rgba(100,88,200,0.18);
+  transform:translateY(-2px);
+  background:rgba(24,19,52,0.8);
+}
+.card:active{border-color:#5a52a0;box-shadow:0 0 16px #5a52a018;}
+.card-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;flex-shrink:0;}
+.av-purple{background:#2e2868;color:#d4ccff;box-shadow:0 0 10px rgba(110,95,220,0.2);}
+.av-teal{background:#0f3830;color:#90dcca;box-shadow:0 0 10px rgba(50,180,150,0.18);}
+.av-coral{background:#3a1c14;color:#f0a08a;box-shadow:0 0 10px rgba(220,100,70,0.18);}
+.av-pink{background:#321228;color:#eeaaca;box-shadow:0 0 10px rgba(200,90,150,0.18);}
+.av-amber{background:#32240a;color:#e8c080;box-shadow:0 0 10px rgba(200,160,60,0.18);}
+.av-blue{background:#0e2440;color:#8ac8f0;box-shadow:0 0 10px rgba(60,140,220,0.18);}
+.card-name{font-size:15px;font-weight:500;color:#ede8ff;}
+.card-sub{font-size:12px;color:#9080bb;margin-top:1px;}
+.card-desc{font-size:13px;color:#bab2d0;line-height:1.55;margin-top:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* Badges */
+.badge{display:inline-block;font-size:11px;padding:3px 8px;border-radius:var(--border-radius-md, 8px);margin-top:8px;margin-right:4px;}
+.badge-purple{background:rgba(46,38,100,0.8);color:#d0c6ff;border:0.5px solid rgba(110,95,210,0.3);}
+.badge-teal{background:rgba(15,50,40,0.8);color:#8de0c8;border:0.5px solid rgba(60,180,145,0.3);}
+.badge-coral{background:rgba(50,22,14,0.8);color:#f0a080;border:0.5px solid rgba(210,100,70,0.3);}
+.badge-pink{background:rgba(46,16,34,0.8);color:#eeaac8;border:0.5px solid rgba(200,90,145,0.3);}
+.badge-amber{background:rgba(46,34,10,0.8);color:#e8c070;border:0.5px solid rgba(200,155,55,0.3);}
+.badge-blue{background:rgba(14,34,60,0.8);color:#8ac8f0;border:0.5px solid rgba(55,135,215,0.3);}
+.badge-gray{background:rgba(28,24,50,0.8);color:#a098c8;border:0.5px solid rgba(100,90,170,0.3);}
+
+/* Cronología */
+.timeline-item{display:flex;gap:14px;margin-bottom:1.25rem;align-items:flex-start}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:#9088e0;flex-shrink:0;margin-top:6px;box-shadow:0 0 8px #9088e0aa;}
+.tl-line{width:0.5px;background:rgba(60,50,100,0.6);flex-shrink:0;align-self:stretch;margin-left:3.5px;margin-top:6px;}
+.tl-year{font-size:12px;font-weight:500;color:#b8b0e0;min-width:38px;}
+.tl-event{font-size:14px;color:#ddd8f8;font-weight:500;line-height:1.4;}
+.tl-desc{font-size:13px;color:#a8a0c8;margin-top:4px;line-height:1.6}
+
+/* Modal — bottom sheet en móvil */
+.modal-bg{
+  display:none;
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(5,3,18,0.8);
+  z-index:100;
+  align-items:flex-end;
+  justify-content:center;
+  backdrop-filter:blur(3px);
+}
+.modal-bg.open{display:flex}
+.modal{
+  background:#130f2a;
+  border:1px solid rgba(90,80,150,0.45);
+  border-radius:16px 16px 0 0;
+  padding:1.25rem 1.25rem 2rem;
+  width:100%;max-width:600px;
+  box-shadow:0 -8px 40px rgba(0,0,0,0.7), 0 -2px 0 rgba(130,115,225,0.15);
+  max-height:90vh;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+@media(min-width:600px){
+  .modal-bg{align-items:center;}
+  .modal{border-radius:16px;max-height:80vh;}
+}
+.modal-title{font-size:16px;font-weight:500;margin-bottom:1rem;color:#d4ccff;}
+.form-row{margin-bottom:14px}
+.form-label{font-size:13px;color:#a89de0;margin-bottom:5px;display:block;letter-spacing:0.03em;}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;font-size:15px;
+  background:#0f0c22;color:#ddd8ff;
+  border:0.5px solid #3a3470;
+  border-radius:var(--border-radius-md, 8px);
+  padding:9px 10px;
+  -webkit-appearance:none;
+}
+.form-row textarea{min-height:90px;resize:vertical}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:1.25rem}
+.btn-save{
+  padding:10px 22px;font-size:14px;
+  border:1px solid rgba(140,125,225,0.55);
+  border-radius:var(--border-radius-md, 8px);
+  background:linear-gradient(135deg, #2e2870, #3a2e82);
+  cursor:pointer;color:#e2daff;font-weight:500;min-height:44px;
+  transition:all 0.2s ease;
+  box-shadow:0 2px 12px rgba(100,88,200,0.25);
+}
+.btn-save:hover{background:linear-gradient(135deg, #3a3488, #4a3a9a);box-shadow:0 4px 20px rgba(100,88,200,0.4);transform:translateY(-1px);}
+.btn-save:active{background:#322b72;}
+.btn-cancel{
+  padding:10px 22px;font-size:14px;
+  border:1px solid rgba(110,100,190,0.28);
+  border-radius:var(--border-radius-md, 8px);
+  background:rgba(255,255,255,0.04);cursor:pointer;color:#b0a8d0;min-height:44px;
+  transition:all 0.18s ease;
+}
+.btn-cancel:hover{background:rgba(127,119,221,0.1);color:#d4ccff;border-color:rgba(130,120,210,0.45);}
+
+/* Panel detalle — texto claro y legible */
+.detail-panel{
+  display:none;
+  background:rgba(12,9,30,0.97);
+  border:1px solid rgba(80,70,150,0.45);
+  border-radius:var(--border-radius-lg, 12px);
+  padding:1.25rem;
+  margin-top:0.75rem;
+  backdrop-filter:blur(8px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+.detail-panel.open{display:block}
+.detail-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
+.close-btn{font-size:22px;color:#b8b0e0;cursor:pointer;line-height:1;background:none;border:none;padding:4px 4px 4px 12px;-webkit-tap-highlight-color:transparent;min-width:44px;text-align:right;transition:color 0.15s ease;}
+.close-btn:hover{color:#ede8ff;}
+.close-btn:active{color:#e8e0ff;}
+.detail-body{font-size:14px;color:#d0caec;line-height:1.75}
+.detail-row{display:flex;gap:8px;margin-bottom:8px;font-size:13px;flex-wrap:wrap;}
+.detail-label{color:#7a72b0;min-width:80px;flex-shrink:0;padding-top:1px;}
+.detail-value{color:#ddd8ff;flex:1;min-width:120px;line-height:1.5;}
+/* Descripción larga dentro del detalle */
+.detail-desc{font-size:14px;color:#cec8ea;line-height:1.75;margin-top:10px;}
+
+/* Buscador */
+.search-bar{
+  width:100%;font-size:15px;
+  margin-bottom:0.875rem;
+  background:#0f0c22;color:#ddd8ff;
+  border:1px solid rgba(80,70,150,0.4);
+  border-radius:var(--border-radius-md, 8px);
+  padding:9px 12px;
+  -webkit-appearance:none;
+  transition:border-color 0.15s, box-shadow 0.15s;
+}
+.search-bar::placeholder{color:#6860a0;}
+.search-bar:focus{outline:none;border-color:rgba(140,125,240,0.65);box-shadow:0 0 0 3px rgba(120,105,220,0.12);}
+.empty{font-size:14px;color:#4a4470;padding:1.5rem 0}
+
+/* Tomos */
+.tomo-card{background:rgba(18,14,38,0.85);border:1px solid rgba(55,45,95,0.5);border-radius:var(--border-radius-lg, 12px);padding:1rem 1.125rem;margin-bottom:10px;backdrop-filter:blur(4px);transition:all 0.2s ease;}
+.tomo-card:hover{border-color:rgba(130,115,225,0.5);box-shadow:0 6px 20px rgba(100,88,200,0.15);transform:translateY(-2px);}
+.tomo-card:active{border-color:#4a4480;}
+.tomo-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:8px;}
+.tomo-title{font-size:15px;font-weight:500;color:#e4dcff;}
+.tomo-status{font-size:11px;padding:3px 9px;border-radius:var(--border-radius-md, 8px);white-space:nowrap;flex-shrink:0;}
+.status-pub{background:rgba(15,52,40,0.9);color:#90dcc0;border:0.5px solid rgba(60,180,130,0.35);}
+.status-proc{background:rgba(46,34,10,0.9);color:#e8c070;border:0.5px solid rgba(200,155,50,0.35);}
+.status-plan{background:rgba(28,24,50,0.9);color:#a098cc;border:0.5px solid rgba(100,90,170,0.35);}
+
+/* Subcategorías de especies */
+.subcat-nav{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-bottom:1rem;padding-bottom:2px;}
+.subcat-nav::-webkit-scrollbar{display:none;}
+.subcat-btn{padding:6px 12px;font-size:12px;border:1px solid rgba(120,105,210,0.22);border-radius:var(--border-radius-md, 8px);background:rgba(255,255,255,0.03);cursor:pointer;color:#a098c8;transition:all 0.2s ease;display:flex;align-items:center;gap:5px;white-space:nowrap;flex-shrink:0;min-height:34px;-webkit-tap-highlight-color:transparent;}
+.subcat-btn:hover{background:rgba(127,119,221,0.14);color:#d4ccff;border-color:rgba(140,125,230,0.45);transform:translateY(-1px);}
+.subcat-btn:active{background:rgba(127,119,221,0.1);color:#c4baf0;border-color:#4a4480;}
+.subcat-btn.active{
+  background:linear-gradient(135deg, rgba(255,210,240,0.25), rgba(210,220,255,0.22));
+  border-color:rgba(240,220,255,0.45);
+background:linear-gradient(135deg, rgba(100,90,195,0.28), rgba(80,72,170,0.2));color:#e0d8ff;border-color:rgba(150,135,240,0.55);font-weight:500;box-shadow:0 2px 10px rgba(100,90,195,0.2);}
+.subcat-section{margin-bottom:1.25rem;}
+.subcat-title{font-size:12px;font-weight:500;color:#8f87e0;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px;padding-bottom:6px;border-bottom:0.5px solid #1e1a3a;}
+.subcat-title::before{content:"✦";font-size:9px;}
+/* ── Sistema de Magia ── */
+.magia-intro{
+  background:rgba(16,12,36,0.75);
+  border:1px solid rgba(100,85,200,0.3);
+  border-radius:12px;
+  padding:1.125rem 1.25rem;
+  margin-bottom:0.25rem;
+  backdrop-filter:blur(6px);
+}
+.magia-intro-icon{font-size:18px;color:#8f80e0;margin-bottom:8px;line-height:1;}
+.magia-intro-text{font-size:13.5px;color:#c0b8e0;line-height:1.75;}
+.magia-intro-text strong{color:#ddd8ff;}
+.magia-potencia-bar{margin-top:1rem;display:flex;flex-direction:column;gap:7px;}
+.magia-potencia-row{display:flex;align-items:center;gap:10px;}
+.magia-potencia-label{font-size:11px;color:#d0c8ff;min-width:120px;flex-shrink:0;letter-spacing:0.03em;}
+.magia-potencia-track{flex:1;height:5px;background:rgba(255,255,255,0.06);border-radius:99px;overflow:hidden;}
+.magia-potencia-fill{height:100%;border-radius:99px;transition:width 0.6s ease;}
+
+/* Tarjetas de tipo de poder */
+.poder-card{
+  background:rgba(16,12,36,0.7);
+  border:1px solid rgba(55,45,100,0.5);
+  border-radius:12px;
+  margin-bottom:10px;
+  overflow:hidden;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor:pointer;
+}
+.poder-card:hover{border-color:rgba(130,110,240,0.5);box-shadow:0 6px 20px rgba(90,75,190,0.15);}
+.poder-card-header{
+  display:flex;align-items:center;gap:12px;
+  padding:1rem 1.125rem;
+}
+.poder-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;flex-shrink:0;
+}
+.poder-icon-coral{background:rgba(50,20,14,0.9);color:#f0a080;box-shadow:0 0 10px rgba(220,90,60,0.15);}
+.poder-icon-pink{background:rgba(44,14,32,0.9);color:#eeaacb;box-shadow:0 0 10px rgba(200,85,145,0.15);}
+.poder-icon-purple{background:rgba(36,28,82,0.9);color:#c8baff;box-shadow:0 0 10px rgba(110,90,220,0.18);}
+.poder-icon-blue{background:rgba(10,18,48,0.9);color:#8ac8f4;box-shadow:0 0 10px rgba(55,130,220,0.15);}
+.poder-icon-amber{background:rgba(40,30,8,0.9);color:#e8c070;box-shadow:0 0 10px rgba(200,155,50,0.15);}
+.poder-icon-teal{background:rgba(8,38,30,0.9);color:#86dcc0;box-shadow:0 0 10px rgba(50,180,140,0.15);}
+.poder-nombre{font-size:15px;font-weight:500;color:#e8e0ff;}
+.poder-chevron{margin-left:auto;font-size:14px;color:#6a60a0;transition:transform 0.2s ease;flex-shrink:0;}
+.poder-card.open .poder-chevron{transform:rotate(180deg);}
+.poder-body{display:none;padding:0 1.125rem 1rem;}
+.poder-card.open .poder-body{display:block;}
+.poder-desc{font-size:13px;color:#b0a8d0;line-height:1.7;margin-bottom:12px;}
+.poder-personajes-title{font-size:11px;font-weight:500;color:#8f87c8;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.poder-personajes-title::before{content:"&#10022;";font-size:8px;}
+.poder-personaje{
+  display:flex;gap:10px;align-items:flex-start;
+  padding:8px 10px;margin-bottom:6px;
+  background:rgba(255,255,255,0.03);
+  border:0.5px solid rgba(80,70,150,0.3);
+  border-radius:8px;
+}
+.poder-personaje:last-child{margin-bottom:0;}
+.poder-pj-name{font-size:13px;font-weight:500;color:#d4ccff;min-width:90px;flex-shrink:0;padding-top:1px;}
+.poder-pj-detalle{font-size:12.5px;color:#9890c0;line-height:1.55;flex:1;}
+
+/* Tarjetas de enfermedad mágica */
+.enfermedad-card{
+  background:rgba(30,10,10,0.65);
+  border:1px solid rgba(160,60,40,0.35);
+  border-radius:12px;
+  margin-bottom:10px;
+  overflow:hidden;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor:pointer;
+}
+.enfermedad-card:hover{border-color:rgba(200,80,55,0.5);box-shadow:0 6px 20px rgba(160,50,30,0.18);}
+.enfermedad-card .poder-card-header{background:rgba(80,15,10,0.2);}
+.enfermedad-card .poder-icon{background:rgba(60,15,8,0.95);color:#e08060;box-shadow:0 0 10px rgba(200,70,40,0.18);}
+.enfermedad-card .poder-nombre{color:#f0c0a8;}
+.enfermedad-card .poder-chevron{color:#804030;}
+.enfermedad-card .poder-desc{color:#c8a898;}
+.enfermedad-card .poder-personajes-title{color:#a06050;}
+.enfermedad-card .poder-personaje{background:rgba(80,15,8,0.2);border-color:rgba(120,50,30,0.3);}
+.enfermedad-card .poder-pj-name{color:#f0c0a8;}
+.enfermedad-card .poder-pj-detalle{color:#b09080;}
+
+/* Corazón Congelado — variante azul frío */
+.enfermedad-card.enf-blue{
+  background:rgba(8,14,32,0.7);
+  border-color:rgba(60,110,200,0.35);
+}
+.enfermedad-card.enf-blue:hover{border-color:rgba(80,150,240,0.5);box-shadow:0 6px 20px rgba(40,90,180,0.2);}
+.enfermedad-card.enf-blue .poder-card-header{background:rgba(10,20,55,0.25);}
+.enfermedad-card.enf-blue .poder-icon{background:rgba(8,18,48,0.95);color:#90c8f8;box-shadow:0 0 10px rgba(50,120,220,0.2);}
+.enfermedad-card.enf-blue .poder-nombre{color:#b8d8ff;}
+.enfermedad-card.enf-blue .poder-chevron{color:#3a5898;}
+.enfermedad-card.enf-blue .poder-desc{color:#9ab0d0;}
+.enfermedad-card.enf-blue .poder-personajes-title{color:#5a80b8;}
+.enfermedad-card.enf-blue .poder-personaje{background:rgba(10,20,55,0.25);border-color:rgba(50,90,170,0.3);}
+.enfermedad-card.enf-blue .poder-pj-name{color:#b8d8ff;}
+.enfermedad-card.enf-blue .poder-pj-detalle{color:#8090b0;}
+
+.magic-section{margin-bottom:1.5rem}
+.magic-title{font-size:15px;font-weight:500;color:#d0c8f4;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.magic-desc{font-size:13px;color:#a098c8;line-height:1.65}
+
+/* Poder primigenio — Creación y Destrucción */
+.poder-card.poder-primigenio{
+  background:linear-gradient(145deg, rgba(28,10,60,0.85), rgba(12,6,30,0.95));
+  border:1px solid rgba(160,120,255,0.4);
+  box-shadow:0 0 24px rgba(130,80,255,0.12), inset 0 0 30px rgba(90,40,180,0.06);
+}
+.poder-card.poder-primigenio:hover{
+  border-color:rgba(190,150,255,0.6);
+  box-shadow:0 8px 32px rgba(140,90,255,0.22);
+}
+.poder-card.poder-primigenio .poder-card-header{
+  background:rgba(80,30,160,0.15);
+}
+.poder-card.poder-primigenio .poder-icon{
+  background:linear-gradient(135deg, rgba(100,40,200,0.95), rgba(60,20,120,0.95));
+  color:#d0b0ff;
+  box-shadow:0 0 14px rgba(150,80,255,0.3);
+}
+.poder-card.poder-primigenio .poder-nombre{
+  color:#e0d0ff;
+  letter-spacing:0.02em;
+}
+.poder-card.poder-primigenio .poder-chevron{color:#8060c0;}
+.poder-card.poder-primigenio .poder-desc{color:#c0b0e8;}
+.poder-card.poder-primigenio .poder-personajes-title{color:#a080d8;}
+.poder-card.poder-primigenio .poder-personaje{
+  background:rgba(70,30,140,0.2);
+  border-color:rgba(120,70,220,0.3);
+}
+.poder-card.poder-primigenio .poder-pj-name{color:#d8c8ff;}
+.poder-card.poder-primigenio .poder-pj-detalle{color:#a898c8;}
+
+/* Especies */
+.species-item{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid #1e1a3a;}
+.species-item:last-child{border-bottom:none}
+.sp-icon{width:36px;height:36px;border-radius:var(--border-radius-md, 8px);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+.sp-name{font-size:14px;font-weight:500;color:#cec8f0;}
+.sp-desc{font-size:13px;color:#9890c0;line-height:1.55;margin-top:2px}
+
+/* Lugares */
+.lugar-card{background:rgba(18,14,38,0.85);border:1px solid rgba(55,45,95,0.5);border-radius:var(--border-radius-lg, 12px);padding:1rem 1.125rem;margin-bottom:10px;backdrop-filter:blur(4px);transition:all 0.2s ease;}
+.lugar-card:hover{border-color:rgba(130,115,225,0.5);box-shadow:0 6px 20px rgba(100,88,200,0.15);transform:translateY(-2px);}
+.lugar-header{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.lugar-name{font-size:15px;font-weight:500;color:#e4dcff;}
+.lugar-desc{font-size:13px;color:#9890c0;line-height:1.65}
+
+/* Editar/Eliminar */
+.edit-del{display:flex;gap:8px;margin-top:12px}
+.edit-del button{
+  font-size:13px;padding:8px 12px;
+  border:1px solid rgba(110,100,200,0.25);
+  border-radius:var(--border-radius-md, 8px);
+  background:rgba(255,255,255,0.04);cursor:pointer;
+  color:#a098c8;
+  min-height:36px;
+  -webkit-tap-highlight-color:transparent;
+  transition:all 0.18s ease;
+}
+.edit-del button:hover{background:rgba(127,119,221,0.14);color:#ddd8ff;border-color:rgba(145,130,240,0.45);transform:translateY(-1px);}
+.edit-del button:active{background:rgba(127,119,221,0.1);color:#c4baf0;}
+</style>
+
+
+
+<div class="wiki-wrap" id="root">
+  <canvas id="star-canvas"></canvas>
+
+  <div class="wiki-header">
+    <div class="wiki-moon">☽</div>
+    <div class="wiki-title-block">
+      <div class="wiki-title">Rébeiller</div>
+      <div class="wiki-subtitle">✦ Wiki de la saga ✦</div><div style="margin-top:6px;font-size:11px;color:#9e93d0;letter-spacing:.08em;text-transform:uppercase;">Fantasía oscura · magia · romance · tragedia</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:0 1rem;margin-bottom:0.5rem;gap:8px">
+    <span id="sync-status" style="font-size:11px;color:#8a80b8;letter-spacing:0.03em">⟳ Conectando con GitHub…</span>
+    <div style="display:flex;gap:6px">
+      <button onclick="saveToGitHub('Guardar cambios wiki')" style="font-size:11px;padding:4px 10px;border:0.5px solid #2e2860;border-radius:6px;background:rgba(127,119,221,0.1);cursor:pointer;color:#a09ad8;" title="Guardar ahora">↑ Guardar</button>
+      <button onclick="showAuthPrompt()" style="font-size:11px;padding:4px 10px;border:0.5px solid #2e2860;border-radius:6px;background:rgba(255,255,255,0.03);cursor:pointer;color:#6a6090;" title="Configurar token">🔑 Token</button>
+    </div>
+  </div>
+  <div class="deco-divider" style="margin-bottom:1rem">
+    <div class="deco-line"></div>
+    <span>✧ &nbsp; ☽ &nbsp; ✧</span>
+    <div class="deco-line"></div>
+  </div>
+
+  <div class="nav" id="nav">
+    <button class="nav-btn active" onclick="showSection('tomos')"><i class="ti ti-books" aria-hidden="true"></i> Tomos</button>
+    <button class="nav-btn" onclick="showSection('personajes')"><i class="ti ti-users" aria-hidden="true"></i> Personajes</button>
+    <button class="nav-btn" onclick="showSection('facciones')"><i class="ti ti-building-community" aria-hidden="true"></i> Facciones</button>
+    <button class="nav-btn" onclick="showSection('magia')"><i class="ti ti-sparkles" aria-hidden="true"></i> Magia</button>
+    <button class="nav-btn" onclick="showSection('especies')"><i class="ti ti-dna" aria-hidden="true"></i> Especies</button>
+    <button class="nav-btn" onclick="showSection('lugares')"><i class="ti ti-map-pin" aria-hidden="true"></i> Lugares</button>
+    <button class="nav-btn" onclick="showSection('cronologia')"><i class="ti ti-timeline" aria-hidden="true"></i> Cronología</button>
+  </div>
+
+  <div id="tomos" class="section active">
+    <div class="section-header">
+      <span class="section-title">Novelas y tomos</span>
+      <button class="add-btn" onclick="openModal('tomo')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir</button>
+    </div>
+    <div id="tomos-list"></div>
+  </div>
+
+  <div id="personajes" class="section">
+    <div class="section-header">
+      <span class="section-title">Personajes</span>
+      <button class="add-btn" onclick="openModal('personaje')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir</button>
+    </div>
+    <input class="search-bar" type="text" placeholder="Buscar personaje..." id="personaje-search" oninput="filterPersonajes(this.value)" />
+    <div class="subcat-nav" id="tomo-filter-nav"></div>
+    <div id="personajes-grid"></div>
+    <div class="detail-panel" id="personaje-detail"></div>
+  </div>
+
+  <div id="facciones" class="section">
+    <div class="section-header">
+      <span class="section-title">Facciones y organizaciones</span>
+      <button class="add-btn" onclick="openModal('faccion')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir</button>
+    </div>
+    <div class="card-grid" id="facciones-grid"></div>
+    <div class="detail-panel" id="faccion-detail"></div>
+  </div>
+
+  <div id="magia" class="section">
+    <div class="section-header">
+      <span class="section-title">Sistema de magia</span>
+    </div>
+
+    <div class="magia-intro">
+      <div class="magia-intro-icon">&#10022;</div>
+      <div class="magia-intro-text">
+        <p>Los poderes son <strong>hereditarios</strong>, aunque pueden saltarse generaciones sin manifestarse. Cuando la sangre magica se mezcla con la de un humano comun, los poderes tienden a debilitarse con cada generacion.</p>
+        <p style="margin-top:10px">La intensidad de la magia esta directamente ligada a la pureza de la sangre: los <strong>sangre pura</strong> &mdash; seres no humanos que nunca han cruzado su linaje con humanos &mdash; son los mas poderosos. A mayor proporcion de sangre humana, menor es el poder resultante.</p>
+      </div>
+      <div class="magia-potencia-bar">
+        <div class="magia-potencia-row">
+          <span class="magia-potencia-label">Sangre pura</span>
+          <div class="magia-potencia-track"><div class="magia-potencia-fill" style="width:100%;background:linear-gradient(90deg,#7a5aff,#b090ff);"></div></div>
+        </div>
+        <div class="magia-potencia-row">
+          <span class="magia-potencia-label" style="color:#9a90c8">Hibridos</span>
+          <div class="magia-potencia-track"><div class="magia-potencia-fill" style="width:60%;background:linear-gradient(90deg,#4a4490,#7a70c0);"></div></div>
+        </div>
+        <div class="magia-potencia-row">
+          <span class="magia-potencia-label" style="color:#6a6090">Portadores humanos</span>
+          <div class="magia-potencia-track"><div class="magia-potencia-fill" style="width:30%;background:linear-gradient(90deg,#2a2460,#4a4480);"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deco-divider" style="margin:1.25rem 0 1rem">
+      <div class="deco-line"></div>
+      <span>&#10023; Tipos de poder &#10023;</span>
+      <div class="deco-line"></div>
+    </div>
+
+    <div id="magia-list"></div>
+
+    <div class="deco-divider" style="margin:1.5rem 0 1rem" id="magia-enf-divider">
+      <div class="deco-line"></div>
+      <span>&#9888; Enfermedades magicas &#9888;</span>
+      <div class="deco-line"></div>
+    </div>
+
+    <div id="magia-enfermedades"></div>
+  </div>
+
+  <div id="especies" class="section">
+    <div class="section-header">
+      <span class="section-title">Especies</span>
+      <button class="add-btn" onclick="openModal('especie')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir</button>
+    </div>
+    <div id="especies-list"></div>
+  </div>
+
+  <div id="lugares" class="section">
+    <div class="section-header">
+      <span class="section-title">Lugares y dimensiones</span>
+      <button class="add-btn" onclick="openModal('lugar')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir</button>
+    </div>
+    <div class="subcat-nav">
+      <button class="subcat-btn lugar-tab active" data-f="todos" onclick="setLugarFiltro('todos')">
+        <i class="ti ti-layout-list" aria-hidden="true"></i> Todos
+      </button>
+      <button class="subcat-btn lugar-tab" data-f="humano" onclick="setLugarFiltro('humano')">
+        🌍 Mundo humano
+      </button>
+      <button class="subcat-btn lugar-tab" data-f="velo" onclick="setLugarFiltro('velo')">
+        ✨ El otro lado del velo
+      </button>
+    </div>
+    <div id="lugares-list"></div>
+  </div>
+
+  <div id="cronologia" class="section">
+    <div class="section-header">
+      <span class="section-title">Línea de tiempo</span>
+      <button class="add-btn" onclick="openModal('evento')"><i class="ti ti-plus" aria-hidden="true"></i> Añadir evento</button>
+    </div>
+    <div id="cronologia-list"></div>
+  </div>
+
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal" id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// DATA loaded from GitHub — see initFromGitHub()
+let DATA = {
+  tomos: [
+    {id:1, titulo:"Tomo 1: Rébeiller Prólogue", numero:"Tomo 1", estado:"en proceso", sinopsis:"Elías y Elliot son dos jóvenes que viven en un mundo aparentemente igual al nuestro, con el pequeño detalle de que existen magos y seres capaces de usar magia que deben pasar desapercibidos entre humanos. Es 1919, la Primera Guerra Mundial acaba de terminar. El padre de Elías ha desaparecido y él debe encargarse de todos sus asuntos como la nueva cabeza de la familia. Elliot vive intentando hacer todo por complacer a su madre, incluso tratar de deshacerse de lo que ella llama una \"enfermedad\". Un encuentro en una biblioteca cambiará sus vidas para siempre."},
+    {id:2, titulo:"La cabeza de la familia", numero:"Spin-off", estado:"publicado", sinopsis:"Inglaterra, 1909. Kenji Nakamura tiene once o doce años y ya carga con más de lo que le corresponde. Tras la muerte de sus padres y el intento de linchamiento de su hermana menor Aoi —una portadora de magia a quien el pueblo llama bruja—, ambos acaban en las instalaciones de Clarté, donde Aoi es sometida a experimentos. Narrado como el diario de Kenji, el spin-off sigue a un niño que aprende a leer libros de medicina a escondidas, roba tiempo en la biblioteca para entender palabras que nadie le explica y reparte su escasa comida entre su hermana y Z-056: un niño con ojos violetas que lleva toda su vida encerrado entre esas paredes sin haber visto nunca el cielo. 'La cabeza de la familia' es una historia sobre lo que significa proteger a quienes amas cuando no tienes ningún poder real para hacerlo."},
+    {id:3, titulo:"Entre rosas y espinas: Un ángel", numero:"Spin-off", estado:"publicado", sinopsis:"Inglaterra, 1915. Allen D'Arnaud es un joven híbrido de belleza inquietante que, desde los dieciséis años, se prostituye en secreto para sostener a su madre y sus cinco hermanos menores mientras la Primera Guerra Mundial devora al continente. Cuando Aarick Ainsworth lo secuestra para usarlo como sujeto de experimentos en Clarté, Allen queda atrapado en una celda húmeda, sometido a pruebas que amenazan tanto su cuerpo como la vida que crece dentro de él. En medio del encierro aparece Jules Ainsworth, la hija mayor del hombre que lo tiene prisionero, que a escondidas le lleva comida, libros y, sin quererlo, esperanza. Lo que comienza como actos de compasión se convierte en algo más difícil de nombrar. Cuando la situación se vuelve crítica, Jules deberá enfrentarse a su propio padre para sacar a Allen de allí, y Allen descubrirá un poder que jamás imaginó tener."},
+    {id:4, titulo:"Tomo 2: Dark Rebéiller", numero:"Tomo 2", estado:"planeado", sinopsis:"Protagonizado por Auguste D'Arnaud-Ainsworth, segundo hijo de Jules y Allen, y hermano menor de Joseph. Los acontecimientos comienzan aproximadamente un año antes del estallido de la Segunda Guerra Mundial. Auguste conoce a una muchacha llamada Willow, quien parece ser una híbrida, pero cuya presencia le despierta recuerdos extraños: experiencias que siente haber vivido con ella, aunque sabe que eso es imposible porque nunca han coincidido antes."},
+    {id:5, titulo:"Tomo 3: Rebéiller — The Lake", numero:"Tomo 3", estado:"planeado", sinopsis:"Sucede inmediatamente después de los eventos de Dark Rebéiller. Sigue dos historias entrelazadas: la de Rémi, amigo de Auguste, y su historia de amor; y la del Rey Lyall, quien por ciertas circunstancias pierde el amor del Rey Deymus y debe comenzar de nuevo — terminando por enamorarse de Ryuji, un príncipe nereida rechazado de otro reino."},
+    {id:6, titulo:"Tomo 4: Avant Rebéiller", numero:"Tomo 4", estado:"planeado", sinopsis:"Ambientado en lo que para el mundo humano sería 1970. El protagonista es Maius, hijo del Rey Lyall y Ryuji. A pesar de ser amado por sus padres, es descartado como sucesor por su naturaleza considerada peligrosa —tachado de psicópata por la corte— y exiliado, mientras su hermana melliza Aira (Airi) es designada heredera. En el mundo humano, Maius conoce a Chiara, quien afirma ser la princesa heredera de un reino del otro lado del velo."},
+    {id:7, titulo:"Tomo 5: The Rebéiller", numero:"Tomo 5", estado:"planeado", sinopsis:"Los acontecimientos transcurren en la época actual. Dado el número de personajes involucrados, es probable que se divida en al menos tres tomos distintos."},
+    {id:8, titulo:"La magia más pura", numero:"Spin-off", estado:"planeado", sinopsis:""},
+    {id:9, titulo:"Mentiras", numero:"Spin-off", estado:"planeado", sinopsis:""},
+  ],
+  personajes: [
+    {id:1, nombre:"Elías Ainsworth", rol:"Protagonista", faccion:"Clarté", especie:"Portador de magia", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"18 años (cumple 19 el 21 de septiembre de 1919). Líder temporal de Clarté. Estudia medicina en la Universitat de València. Ojos azul profundo, cabello negro. Criado bajo el régimen de Aarick; ha heredado el liderazgo que no pidió. Cuida de Camille con devoción absoluta: cuando ella cae inconsciente (agosto de 1919) apenas duerme, la visita a diario y busca desesperadamente una explicación en los libros. Descubre que Camille podría ser una híbrida de rosa, nacimiento que quizás fue planeado por su padre. Reconoció en sus propios pensamientos que ama a Elliot, aunque no se lo ha dicho. Le dio un beso en la frente a Elliot de forma impulsiva. Su hermana mayor Jules regresó de Francia con su esposo Allen y su bebé Joseph. Confía en el doctor Del Castillo para gestionar Farmacéuticas Ainsworth. Aún actúa como si su padre lo observara, incapaz de aceptar que ya no tiene que demostrarse nada.", poderes:"Manipulación de sombras (viaje entre sombras, masas oscuras); telequinesis (poco entrenada)", avatar:"EA", color:"purple"},
+    {id:2, nombre:"Elliot", rol:"Protagonista", faccion:"—", especie:"Híbrido (descendiente de nereidas)", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"18 años. Vive en el barrio costero con su madre Eleanor. Cabello rubio cenizo, ojos variables entre gris, azul y celeste. Vende pan y figuritas de madera talladas. Le gustan las novelas románticas aunque le da vergüenza admitirlo. Pasó tres días encerrado en el cobertizo de su casa durante su ciclo híbrido (agosto de 1919), luchando contra el calor y los pensamientos sobre Elías. Su madre lo presiona cada vez más para que formalice con Lydia y acepte que Miss Beatrice pague sus estudios para ser profesor. Elliot empezó a distanciarse de Elías para no depender de él, lo que provocó una discusión con llanto. Leyó sobre el concepto de Enlace en la biblioteca y lo relacionó instintivamente con Elías. Sabe que sus sentimientos son reales pero los siente condenados. Su padre fue un marinero que prometió volver del mar y nunca lo hizo. Sus poderes acuáticos son herencia directa de su madre Eleanor, descendiente de nereidas.", poderes:"Respirar bajo el agua; comunicación con seres marinos; anulación de magia ajena", avatar:"EL", color:"teal"},
+    {id:3, nombre:"Aarick Ainsworth", rol:"Antagonista / Padre de Elías", faccion:"Clarté", especie:"Portador de magia", tomo:"Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel", descripcion:"Padre de Elías y antiguo líder de Clarté, desaparecido en 1919. Obligó a Elías desde niño a estudiar bajo castigos severos. Trató a Camille como sujeto de experimentación. Hay indicios de que el nacimiento de Camille como híbrida de rosa no fue accidental, sino planeado por él. Sus experimentos más crueles se llevaban a cabo en el Departamento de Anatomía Comparada. En 1915 secuestró a Allen —entonces de dieciséis años— para experimentar con él por ser híbrido. Al descubrir que su esposa Alana era también híbrida, la encerró, la insultó con brutalidad y cometió algo que Jules describe como 'lo peor que puede hacerse a un ser humano'. Odia a los híbridos aunque los estudia; Julius lo describe como alguien que parece disfrutarlo. Usa su propia magia de sombras para destruir las de otros durante los enfrentamientos, causando dolor físico. Fue derrotado temporalmente por Allen con el poder 'Sanguis Innocentium'. Se desconoce su paradero actual.", poderes:"Magia de sombras poderosa (destrucción y dominación de sombras ajenas); investigación y explotación mágica", avatar:"AA", color:"coral"},
+    {id:4, nombre:"Dominico Riva", rol:"Líder de Mirage", faccion:"Mirage", especie:"Portador de magia", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Líder de Mirage en 1920. Organización dedicada a la fabricación de artefactos y armas para potenciar habilidades mágicas.", poderes:"Criogénesis", avatar:"DR", color:"amber"},
+    {id:5, nombre:"Camille Bigot", rol:"Hermana menor de Elías", faccion:"Clarté", especie:"Híbrida de rosa", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"14 años. Ojos grises, cabello rubio rizado. Media hermana de Elías por parte de madre. Cayó inconsciente en agosto de 1919 rodeada de pétalos de rosas blancas (símbolo de purificación entre los sangre pura). Su habitación olía a fiebre y flores. Elías descubrió en libros antiguos que los 'híbridos de rosa' son los más raros entre todos los sangre pura, y sospecha que su nacimiento fue planeado por Aarick. Lleva más de un mes sin despertar. Tiene sueños premonitorios. Tenía un gato llamado Botitas que maúlló para alertar a Elías. Conserva como recuerdo de su madre la canción Le Temps des Cerises.", poderes:"Sueños premonitorios; poderes de rosa sangre pura (en desarrollo, aún no controlados)", avatar:"CB", color:"pink"},
+    {id:6, nombre:"Jules Ainsworth", rol:"Hermana mayor de Elías", faccion:"—", especie:"Híbrida", tomo:"Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel", descripcion:"Hermana mayor de Elías. Cabello rojizo rizado, piel dorada, ojos azules del linaje Ainsworth. En 1915, mientras Aarick tenía a Allen prisionero en Clarté, Jules lo visitaba a escondidas haciéndose pasar por personal médico usando su poder de cambiaformas. Se enamoró de él y organizó su escape usando su magia de sombras. Durante el rescate enfrentó a su padre, cuyas sombras la lastimaron físicamente. Escaparon juntos saltando entre sombras hasta Inglaterra, donde entregó a Allen a su familia. Huyó hace dos años con Allen, un híbrido francés. Regresó a Valencia en agosto de 1919 con su esposo Allen y su hijo Joseph (aprox. 1 año, cabello castaño cenizo, ojos grises). Se instaló con ellos en la mansión Ainsworth mientras Camille sigue inconsciente. Prometió quedarse hasta que Camille mejore, aunque tendrá que volver a Francia. Elías la perdonó entre lágrimas pero sigue sintiéndose traicionado por el tiempo en que estuvo desaparecida. Quería estudiar literatura y ser escritora, pero su padre no se lo permitió.", poderes:"Cambiaformas (puede adoptar la apariencia de otras personas); magia de sombras limitada (viaje entre sombras a distancias cortas, con agotamiento físico severo)", avatar:"JU", color:"amber"},
+    {id:7, nombre:"Joan Ainsworth", rol:"Primo de Elías / Segundo al mando en Clarté", faccion:"Clarté", especie:"Portador de magia", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Primo de Elías, algunos años mayor. Ojos azul oscuro y cabello negro, rasgos propios del linaje Ainsworth. Habla frecuentemente en francés. Es más experimentado que Elías en la práctica, y gestiona gran parte de las tareas administrativas de Clarté para aliviarle la carga. Rechazó ser el líder para proteger a su familia. Está casado en secreto con Aida; tienen un hijo llamado Andrick al que no dio su apellido, deliberadamente. Apoya a Elías con discreción incluso cuando parece llevarle la contraria en las reuniones. Su magia: movimiento preciso entre sombras.", poderes:"Desplazamiento preciso entre sombras", avatar:"JA", color:"blue"},
+    {id:8, nombre:"Aida", rol:"Esposa secreta de Joan / Médica en Clarté", faccion:"Clarté", especie:"Sangre pura — demonio", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Esposa de Joan, aunque dentro de Clarté fingen no tener relación. Es vista como madre soltera y menospreciada por sus colegas. Cabello oscuro, voz sombría y ojos negros muy oscuros; su expresión suele carecer de 'humanidad', según Elías. Acaba de dar a luz a Andrick. Capacidad de percibir emociones y pensamientos superficiales de otros (sin manipularlos, de forma involuntaria). Sorprendió a Elías al detectar sus sentimientos por Elliot sin que él los mencionara.", poderes:"Percepción empática / lectura superficial de emociones y pensamientos", avatar:"AI", color:"teal"},
+    {id:9, nombre:"Lina", rol:"Personaje misterioso / Hermana adoptiva de Anna Sofía", faccion:"—", especie:"Híbrida (demonio de sangre; antepasado 'rosa roja')", tomo:"Tomo 1: Rébeiller Prólogue / La magia más pura", descripcion:"Mujer joven de identidad incierta; 'Lina' podría ser un apodo. Cabello largo y rizado con un tono rosado. Lleva siempre una joya con un rubí auténtico, lo que sugiere origen acomodado. En el spin-off La magia más pura se revela su vínculo con Anna Sofía Vitale: son una especie de hermanas adoptivas. Ha sido vista en aldeas de los alrededores de Valencia (Albuixech, Massamagrell) ayudando a personas sin acceso a médico. Se cree que tiene la facultad de sanar heridas. Algunos grupos conservadores la persiguen. En el Tomo 1, Elías la busca para incorporarla voluntariamente a los equipos de investigación de Clarté.", poderes:"Sanación (no confirmada)", avatar:"LI", color:"pink"},
+    {id:10, nombre:"Eleanor", rol:"Madre de Elliot", faccion:"—", especie:"Híbrida (descendiente de nereidas)", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Madre de Elliot. Cabello rubio en ondas suaves, ojos grises intensos como una tormenta. Aparenta ser hermana mayor de Elliot. Trabaja turnos nocturnos en un bar cerca de la costa. Le inculcó a Elliot que sus sentimientos hacia hombres son una enfermedad. Presiona cada vez más a su hijo para que formalice con Lydia y estudie para ser profesor, con el apoyo económico de Miss Beatrice. Conoce el ciclo híbrido de Elliot y lo encierra en el cobertizo durante esos días para protegerlo. Tiene miedo de que use sus poderes cerca del mar. Fue abandonada por el padre de Elliot, un marinero que prometió volver. Su frase: 'Tienes que ser mejor que yo'. Oculta activamente su naturaleza mágica; de ella hereda Elliot sus poderes acuáticos.", poderes:"Desconocidos (oculta su naturaleza mágica activamente); descendiente de nereidas", avatar:"EN", color:"amber"},
+    {id:11, nombre:"Alana Ruiz (Olivia)", rol:"Madre fallecida de Elías y Camille", faccion:"—", especie:"Híbrida", tomo:"Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel", descripcion:"Madre de Elías y Camille, fallecida en 1908. Cantante de cabaret en París bajo el nombre artístico 'Olivia', donde Aarick la conoció. Mezzosoprano de voz aterciopelada y grave. Su familia de origen consideraba que su voz 'no era digna de una señorita', pero fue esa voz la que le dio libertad y fama. Era híbrida; cuando Aarick lo descubrió, la insultó brutalmente, la llamó 'embustera' y 'criatura despreciable', la encerró y le hizo algo que Jules describe como 'lo peor que puede hacerse a un ser humano'. Aarick la obligó a abandonar su repertorio artístico y a cantar solo canciones 'respetables'. Vivió una vida infeliz en la mansión Ainsworth. Solo queda un disco suyo: Le Temps des Cerises, que Camille atesora.", poderes:"Desconocidos", avatar:"AR", color:"coral"},
+    {id:12, nombre:"Lydia", rol:"Vecina / Interés propuesto por las madres", faccion:"—", especie:"Humana", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Hija de Miss Beatrice y don Joaquim. Cabello castaño oscuro y ojos verdes. Le interesa la costura y quiere trabajar en el taller de su tía Amélie, aunque su madre solo se lo permitirá cuando esté casada. Admite con franqueza que a ella nunca le interesaron los chicos, y que valora a Elliot más como amigo que como pretendiente. Comprende sin decirlo que el matrimonio que sus madres planean es por conveniencia mutua. Le compró a Elliot una figurita de gato por una peseta, reconociendo el valor de su trabajo.", poderes:"Ninguno", avatar:"LY", color:"teal"},
+    {id:13, nombre:"Allen", rol:"Esposo de Jules", faccion:"—", especie:"Híbrido", tomo:"Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel", descripcion:"Esposo de Jules y cuñado de Elías. Francés. Híbrido. Piel pálida, cabello castaño revuelto, ojos grises, labios muy marcados; belleza que él mismo considera una condena. Soñaba con ser médico. Su familia perdió todo en Francia —posiblemente por ser descubiertos como híbridos— y emigró a Inglaterra en 1913. Siendo el mayor de seis hermanos (Thomas, Henry, Madelaine, Lucille y Élodie), con apenas dieciséis años comenzó a prostituirse discretamente para mantener a su madre y hermanos durante la Primera Guerra Mundial. En 1915 fue secuestrado por Aarick Ainsworth y encerrado en las instalaciones de Clarté, donde fue sometido a experimentos. Durante el encierro perdió un bebé a causa de las pruebas. Fue rescatado por Jules, con quien escapó usando magia de sombras. Su padre murió en la guerra mientras él estaba prisionero. Se casó con Jules y tiempo después nació Joseph. Se identifica como atraído tanto por hombres como por mujeres, algo que Jules conoce y acepta. Vive en Francia con Jules y Joseph. Llegó a la mansión Ainsworth con Jules para acompañarla mientras Camille está enferma. Tiene una serenidad y perspicacia que desarma a Elías.", poderes:"Control del dolor — percibe, amplifica y da forma física al dolor (tanto físico como emocional); su manifestación más poderosa es 'Sanguis Innocentium', un ángel que materializa todo el sufrimiento que la víctima ha causado a otros y se lo devuelve. Aarick confundió erróneamente su poder con magia de sombras. Ciclo híbrido cada tres meses", avatar:"AL", color:"blue"},
+    {id:14, nombre:"Rubí", rol:"Bruja de sangre / Colaboradora de Clarté", faccion:"Clarté", especie:"Portadora de magia", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Joven de piel oscura y cabello de un rojo encendido. Acepta colaborar con Clarté a cambio de atención médica para su hermano Hugo, un niño en etapas avanzadas de degeneración mágica. Antes vivían actuando en un circo ambulante: Rubí hacía figuras de fuego, Hugo fingía ser ilusionista. Los echaron cuando el niño se desplomó. Su poder principal es el fuego; el control de sangre (su habilidad como bruja de sangre) le cuesta más. Descubrió que puede sanar heridas propias usando ese control. Se lastimó el pulgar a propósito para demostrárselo a Elías, lo que lo incomodó. Le recuerda a Camille.", poderes:"Control del fuego; control y conservación de sangre; sanación de heridas propias (recién descubierta)", avatar:"RU", color:"coral"},
+    {id:15, nombre:"Doctor Del Castillo", rol:"Director de Farmacéuticas Ainsworth", faccion:"—", especie:"Humano (sin magia)", tomo:"Tomo 1: Rébeiller Prólogue", descripcion:"Hombre de confianza que gestiona Farmacéuticas Ainsworth en nombre de Elías. Fue amigo personal de Alana Ruiz, la madre de Elías. Discreto y leal, se mantiene completamente ajeno a los propósitos de Clarté. Elías delega en él la operación de la farmacéutica, aunque esa dependencia le genera cierta incomodidad.", poderes:"Ninguno conocido", avatar:"DC", color:"blue"},
+    {id:16, nombre:"Kenji Nakamura", rol:"Narrador / Hermano mayor de Aoi", faccion:"—", especie:"Portador de magia", tomo:"La cabeza de la familia", descripcion:"Niño japonés de aproximadamente once o doce años en 1909. Alto para su edad. Tras la muerte de sus padres —posiblemente víctimas de xenofobia en el pueblo— y el intento de linchamiento de su hermana Aoi, ambos acaban en las instalaciones de Clarté. Es el narrador del spin-off a través de entradas de diario. Inteligente y autodidacta: se escapa a la biblioteca para estudiar libros de medicina en inglés y espía conversaciones de los médicos para aprender vocabulario que luego busca en los libros. Su sueño es ser médico, aunque sabe que los médicos de Clarté no son un modelo a seguir. Comparte su escasa ración de comida con Z, el niño más olvidado del lugar. Su madre cocinaba udon con tempura y cantaba mientras cocinaba; esos recuerdos lo sostienen. Lleva consigo el peso de ser 'la cabeza de la familia' desde que era demasiado pequeño para serlo.", poderes:"Reparación de objetos rotos (considerado 'inútil' por Clarté)", avatar:"KN", color:"amber"},
+    {id:17, nombre:"Aoi Nakamura", rol:"Hermana menor de Kenji", faccion:"—", especie:"Portadora de magia (poder de creación y destrucción)", tomo:"La cabeza de la familia", descripcion:"Hermana menor de Kenji, de unos ocho o nueve años en 1909. En su pueblo la llamaban bruja y el intento de quemarla viva fue lo que precipitó la huida de ambos hermanos. En Clarté es sometida a experimentos con regularidad; come mejor que Kenji porque sus poderes resultan más interesantes para los investigadores. A pesar del encierro conserva momentos de alegría, como cuando describe con orgullo la comida que recibió. Se enferma con frecuencia, posiblemente por efecto de los experimentos. En una ocasión guardó comida de su ración para dársela a Kenji y a Z cuando ambos estaban enfermos.", poderes:"Ralentización del entorno: puede reducir drásticamente la velocidad de todo cuanto la rodea, creando la ilusión de que ella misma posee supervelocidad. Es un poder que se ramifica de la Creación y Destrucción", avatar:"AO", color:"pink"},
+    {id:18, nombre:"Z-056 (Zahir)", rol:"Niño prisionero de Clarté", faccion:"—", especie:"Sangre pura (desconoce su propio origen)", tomo:"La cabeza de la familia / Tomo 1: Rébeiller Prólogue", descripcion:"Niño con ojos de color violeta intenso, como amatistas. Los médicos de Clarté lo identifican únicamente como Z-056; no tiene nombre propio hasta que Kenji le pone 'Zahir' en los eventos de Rébeiller Prólogue. Nació dentro de las instalaciones y nunca ha visto el cielo, los árboles ni ha corrido por un camino. Es el más ignorado del lugar: siempre último en la fila de comida, a menudo sin que le quede nada. Físicamente frágil —Kenji lo describe como 'una ramita que podría romperse con un viento fuerte'— y sometido a experimentos más severos que los otros niños. A pesar de esto, Kenji lo percibe como un niño dulce. Se duerme escuchando las canciones que Kenji recuerda de su madre. Es mayor que Aoi aunque su fragilidad lo hace parecer menor. Desconoce completamente su propio origen como sangre pura.", poderes:"Poderes mentales: telequinesis y lectura de emociones", avatar:"Z0", color:"purple"},
+    {id:19, nombre:"Auguste D'Arnaud-Ainsworth", rol:"Protagonista", faccion:"Independiente", especie:"Híbrido (hijo de Jules Ainsworth y Allen D'Arnaud)", tomo:"Tomo 2: Dark Rebéiller", descripcion:"Segundo hijo de Jules Ainsworth y Allen D'Arnaud. Hermano menor de Joseph. Los eventos de su historia comienzan aproximadamente un año antes del estallido de la Segunda Guerra Mundial. Al conocer a Willow experimenta una sensación profundamente perturbadora: recuerdos de experiencias vividas junto a ella que sabe que son imposibles, porque nunca han coincidido antes. Su historia gira en torno a descubrir qué significa esa conexión. Hereda la manipulación de sombras del linaje Ainsworth.", poderes:"Manipulación de sombras (herencia del linaje Ainsworth)", avatar:"AG", color:"blue"},
+    {id:20, nombre:"Willow", rol:"Interés romántico de Auguste", faccion:"Independiente", especie:"Híbrida (madre sangre pura)", tomo:"Tomo 2: Dark Rebéiller", descripcion:"Joven que Auguste conoce cerca del inicio de la Segunda Guerra Mundial. Su presencia despierta en Auguste recuerdos inexplicables de experiencias compartidas que objetivamente no ocurrieron. El origen de esa conexión es uno de los misterios centrales del tomo. Por herencia de su madre, que es sangre pura, puede con esfuerzo cambiar a forma masculina: fluye en su género de forma literal.", poderes:"Creación de portales (poder derivado de Creación y Destrucción: liga un punto del espacio con otro durante un instante); cambio de forma de género (herencia sangre pura de su madre, requiere esfuerzo)", avatar:"WL", color:"pink"},
+    {id:21, nombre:"Rémi", rol:"Amigo de Auguste / Protagonista secundario", faccion:"Independiente", especie:"Híbrido (descendiente de nereidas)", tomo:"Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller", descripcion:"Amigo cercano de Auguste. Protagoniza su propia historia de amor en The Lake, desarrollada en paralelo a la del Rey Lyall. Más detalles por definir.", poderes:"Control del agua (herencia de su linaje nereida)", avatar:"RM", color:"teal"},
+    {id:22, nombre:"Rey Lyall", rol:"Protagonista / Monarca de Arcadia", faccion:"Por definir", especie:"Demonio (linaje de lobo negro, casi extinto)", tomo:"Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller", descripcion:"Rey de Arcadia. Desciende de un linaje de demonios con bestialidad de lobo negro, una estirpe prácticamente extinta en toda la región. En The Lake sufre la pérdida del amor del Rey Deymus por circunstancias aún no reveladas y debe comenzar de nuevo. Su camino lo lleva a enamorarse de Ryuji, un príncipe nereida rechazado por su propio reino. Su hijo con Ryuji protagoniza el Tomo 4, Avant Rebéiller.", poderes:"Control del fuego; poderes parciales de Creación y Destrucción", avatar:"RL", color:"purple"},
+    {id:23, nombre:"Rey Deymus", rol:"Monarca de Ardalan / Interés romántico pasado del Rey Lyall", faccion:"Por definir", especie:"Sangre pura (descendiente de nereidas y demonios marinos)", tomo:"Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller", descripcion:"Rey de Ardalan, cuyo reino es en gran parte habitado por nereidas y seres afines al agua. Su relación con el Rey Lyall se rompe, desencadenando los eventos centrales de The Lake. Más detalles por definir.", poderes:"Manipulación del agua y las mareas", avatar:"DM", color:"coral"},
+    {id:24, nombre:"Ryuji", rol:"Príncipe nereida / Interés romántico del Rey Lyall", faccion:"Por definir", especie:"Nereida (sangre pura)", tomo:"Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller", descripcion:"Príncipe nereida de Haroumi, rechazado por su propio reino desde el nacimiento por nacer extremadamente débil. Padece una enfermedad que fragiliza su cuerpo de forma permanente: se lastima con facilidad, casi como un niño de cristal, lo que lo hizo considerado indigno de su linaje imperial a ojos de la corte. A pesar de ello — o quizás a causa de ello — desarrolló los poderes de sanación más poderosos jamás documentados, superando con creces a cualquier otro portador de magia curativa conocido.\n\nSe enamora del Rey Lyall tras la pérdida de Deymus. Juntos tienen dos hijos mellizos: Maius y Aira (también llamada Airi de cariño), futuros protagonistas de Avant Rebéiller.", poderes:"Sanación (el más poderoso documentado); manipulación del agua", avatar:"RJ", color:"teal"},
+    {id:25, nombre:"Maius", rol:"Protagonista / Príncipe exiliado", faccion:"Por definir", especie:"Mezcla de los linajes de Lyall (demonio lobo negro) y Ryuji (nereida)", tomo:"Tomo 4: Avant Rebéiller", descripcion:"Hijo del Rey Lyall y Ryuji. Mellizo; su hermana Aira (Airi de cariño) es designada sucesora del reino mientras él es exiliado por ser considerado un psicópata por la corte, aunque sus padres lo aman profundamente. El exilio no es un rechazo familiar sino una decisión política. En el mundo humano —1970— conoce a Chiara, quien afirma ser la princesa heredera de un reino del otro lado del velo. Su naturaleza combina ambos linajes aunque se inclina más hacia el lado nereida.", poderes:"Combinación de los linajes de ambos padres (predominantemente nereida); por definir en detalle", avatar:"MA", color:"purple"},
+    {id:26, nombre:"Chiara", rol:"Interés romántico de Maius / Princesa heredera", faccion:"Por definir", especie:"Híbrida casi sangre pura (mínima sangre humana)", tomo:"Tomo 4: Avant Rebéiller", descripcion:"Hija de Anna Sofía Vitale. Joven que Maius encuentra en el mundo humano durante su exilio. Afirma ser la princesa heredera de un reino del otro lado del velo. Tiene tan poca sangre humana que funciona en muchos aspectos como un sangre pura.", poderes:"Creación y Destrucción (parcial, herencia de Anna Sofía); criogénesis débil; magia de los sueños", avatar:"CH", color:"pink"},
+    {id:27, nombre:"Nazly Ainsworth", rol:"Protagonista", faccion:"Valhalla", especie:"Híbrida (bisnieta de Elías; mezcla de linajes)", tomo:"Tomo 5: The Rebéiller", descripcion:"Bisnieta de Elías Ainsworth. Protagonista de The Rebéiller, ambientado en la época actual. Su segundo nombre es Alana — coincidencia no planeada, aunque resuena de forma significativa con el nombre de la madre de Elías, Alana Ruiz. Hereda el poder de Creación y Destrucción por línea materna: su madre es Elaine Laurent, portadora de un linaje primigenio. Hermana de Louis Ainsworth.", poderes:"Manipulación leve de la realidad (poder de Creación y Destrucción, herencia materna — Elaine Laurent)", avatar:"NZ", color:"purple"},
+    {id:28, nombre:"Louis Ainsworth", rol:"Hermano de Nazly / Personaje del Tomo 5", faccion:"Valhalla", especie:"Híbrido (bisnieto de Elías; mezcla de linajes)", tomo:"Tomo 5: The Rebéiller", descripcion:"Hermano de Nazly Ainsworth. Bisnieto de Elías Ainsworth. Comparte con su hermana el poder de Creación y Destrucción, heredado por línea materna de Elaine Laurent. Es la pareja de Carlo de Simone, bailarín de ballet. Cuando Carlo desarrolla la enfermedad del Corazón Congelado tras una ruptura entre ambos, Louis logra reconciliarse con él y detener su progresión — aunque no puede revertir las secuelas permanentes que Carlo arrastra.", poderes:"Manifestaciones del poder de Creación y Destrucción (por definir); herencia materna — Elaine Laurent", avatar:"LO", color:"blue"},
+    {id:29, nombre:"Elaine Laurent", rol:"Madre de Nazly y Louis / Portadora del linaje primigenio", faccion:"Mirage (antiguamente)", especie:"Híbrida", tomo:"Tomo 5: The Rebéiller", descripcion:"Madre de Nazly y Louis Ainsworth. Portadora de un linaje primigenio que transmite a sus hijos el poder de Creación y Destrucción — el poder más antiguo y escaso del universo de Rebéiller, heredado de especies anteriores a las actuales. Sus propias manifestaciones de esta habilidad y su historia personal están por definir.", poderes:"Por definir (portadora del linaje primigenio de Creación y Destrucción)", avatar:"EL", color:"amber"},
+    {id:30, nombre:"Anna Sofía Vitale", rol:"Protagonista del spin-off / Madre de Chiara", faccion:"Eidrya (co-fundadora)", especie:"Sangre pura (mezcla de hadas, y demonios con bestialidad de lobo blanco)", tomo:"Tomo 1: Rébeiller Prólogue / La magia más pura / Tomo 2: Dark Rebéiller / Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller / Tomo 5: The Rebéiller", descripcion:"Nombre completo: Anna Sofía Vitale. Su padre la llama cariñosamente 'Annie'. Madre de Chiara. Protagonista del spin-off La magia más pura y figura presente a lo largo de la saga: aparece en Dark Rebéiller, The Lake y Avant Rebéiller, y es mencionada en el último tomo. Tiene una hermana adoptiva llamada Lina, cuyo vínculo con ella se desarrolla en La magia más pura. Es la portadora más poderosa documentada del poder de Creación y Destrucción — un linaje de las especies primigenias. Su presencia y habilidades son tan inusuales que algunos seres del otro lado del velo casi la consideran una diosa. En The Rebéiller, su existencia se convierte en un misterio activo: se pone en duda si Anna Sofía sigue con vida o ha muerto, sin que ninguna respuesta sea definitiva.", poderes:"Creación y Destrucción (manipulación del tiempo y la realidad); la portadora más poderosa documentada de este linaje primigenio", avatar:"AS", color:"pink"},
+  ],
+  facciones: [
+    {id:1, nombre:"Clarté", tipo:"Organización de investigación", descripcion:"Dedicada a la investigación de la magia: enfermedades de portadores, diferencias entre híbridos y humanos, aprovechamiento de la magia. Tiene enfoque médico pero bajo Aarick sus departamentos realizaron experimentos inhumanos, especialmente el Departamento de Anatomía Comparada. Elías está intentando limpiar la organización, despidiendo jefes corruptos y reemplazándolos con investigadores más jóvenes. Cuenta con un nuevo Departamento de Investigación en Campo fundado por Elías. Opera bajo las normas de Blackwood. Busca actualmente a una bruja de sangre independiente para sus investigaciones genéticas.", color:"purple"},
+    {id:2, nombre:"Mirage", tipo:"Fabricación de artefactos", descripcion:"Organización dedicada a la fabricación de artefactos y armas para potenciar habilidades mágicas. Líder en 1920: Dominico Riva.", color:"amber"},
+    {id:3, nombre:"Blackwood", tipo:"Ministerio oculto", descripcion:"Gobierno secreto que regula a los individuos con habilidades mágicas en el mundo. Quien se registra obtiene protección, acceso a recursos y reconocimiento. A cambio debe seguir sus leyes internas. La discreción es su primera norma: jamás revelar su existencia a los humanos comunes. Si se comete un delito usando magia, es Blackwood —no los estados— quien dicta sentencia. No abarca a todos: muchos nacidos en la pobreza nunca oyeron hablar de ellos; otros lo rechazan por desconfianza. Clarté opera bajo sus directrices.", color:"teal"},
+    {id:4, nombre:"Valhalla", tipo:"Organización en el mundo humano", descripcion:"Facción operativa en el mundo humano a la que pertenecen Nazly y Louis Ainsworth en los eventos de The Rebéiller. Su estructura, objetivos y liderazgo están por definir.", color:"purple"},
+    {id:5, nombre:"Eidrya", tipo:"Facción / Organización", descripcion:"Facción fundada por Anna Sofía Vitale junto a Adrián Moreau. Anna Sofía es co-fundadora y figura central durante el primer tomo de su presencia en la saga. Su ideología, alcance y composición están por definir.", color:"pink"},
+  ],
+  magia: [
+    {
+      id:1, categoria:"elementales",
+      nombre:"Poderes elementales",
+      icono:"ti-flame",
+      color:"coral",
+      descripcion:"Control sobre los elementos naturales: fuego, agua, tierra, aire, hielo, electricidad, criogénesis y sus variantes. Son de los poderes más comunes entre los portadores de magia, aunque su intensidad varía enormemente. Algunos solo pueden manipular su elemento en pequeñas cantidades; otros lo generan desde cero sin necesidad de una fuente cercana.",
+      personajes:[
+        {nombre:"Rubí", detalle:"Control del fuego sin precisar llama preexistente; además controla y conserva sangre, y recientemente ha descubierto una forma rudimentaria de sanación propia."},
+        {nombre:"Elliot", detalle:"Respirar bajo el agua y comunicación con seres marinos, herencia de su linaje nereida."},
+        {nombre:"Eleanor", detalle:"Descendiente de nereidas, aunque oculta activamente su naturaleza mágica."},
+      ]
+    },
+    {
+      id:2, categoria:"ilusiones",
+      nombre:"Ilusiones",
+      icono:"ti-eye",
+      color:"pink",
+      descripcion:"Habilidades para distorsionar la percepción y la realidad aparente. Abarcan desde espejismos complejos y alteración de sonidos hasta modificar cómo otros perciben el entorno. También incluyen el cambio de apariencia física. Son poderes especialmente asociados a los linajes feéricos, aunque pueden manifestarse en portadores humanos.",
+      personajes:[
+        {nombre:"Jules Ainsworth", detalle:"Cambiaformas: puede adoptar la apariencia de otras personas con gran precisión."},
+      ]
+    },
+    {
+      id:3, categoria:"mentales",
+      nombre:"Poderes mentales",
+      icono:"ti-brain",
+      color:"purple",
+      descripcion:"Habilidades que actúan sobre la mente de otros: lectura de pensamientos superficiales, telequinesis avanzada, desplazamiento de objetos a distancia, proyección de imágenes, confusión o alteración de la percepción. También incluyen la manipulación de recuerdos —modificarlos, borrarlos o implantarlos— y el control mental directo sobre la voluntad de otra persona. Su uso sin consentimiento está considerado una de las infracciones más graves bajo las normas de Blackwood. Algunos portadores los desarrollan de forma involuntaria e incapaz de desactivarse.",
+      personajes:[
+        {nombre:"Aida", detalle:"Percepción empática involuntaria: lee emociones y pensamientos superficiales sin poder desactivarlo."},
+      ]
+    },
+    {
+      id:4, categoria:"emocionales",
+      nombre:"Poderes emocionales",
+      icono:"ti-heart",
+      color:"pink",
+      descripcion:"Capacidad de percibir, amplificar, atenuar o proyectar emociones en otros. Difieren de los mentales en que no acceden a pensamientos concretos, sino al estado afectivo. La frontera entre ambas categorías no siempre está clara y los investigadores de Clarté los estudian como categorías separadas.",
+      personajes:[
+        {nombre:"Allen D'Arnaud", detalle:"Control del dolor: percibe, amplifica y da forma física al dolor físico y emocional. Su manifestación más extrema es 'Sanguis Innocentium', un ángel que devuelve a la víctima todo el sufrimiento que ha causado a otros."},
+      ]
+    },
+    {
+      id:5, categoria:"sombras",
+      nombre:"Magia de sombras",
+      icono:"ti-moon",
+      color:"blue",
+      descripcion:"Capacidad de manipular, habitar y desplazarse a través de las sombras. Es uno de los poderes más versátiles documentados: permite viajar entre sombras a distancias variables, proyectar masas oscuras con fuerza física y, en sus formas más avanzadas, destruir o dominar las sombras de otro portador causando dolor real. Es el poder hereditario del linaje Ainsworth.",
+      personajes:[
+        {nombre:"Elías Ainsworth", detalle:"Especialista en desplazamiento entre sombras; además posee telequinesis poco entrenada como poder secundario."},
+        {nombre:"Aarick Ainsworth", detalle:"Dominó la magia de sombras en su forma más destructiva: destrucción y dominación de sombras ajenas."},
+        {nombre:"Jules Ainsworth", detalle:"Versión limitada: viaje entre sombras a distancias cortas, con agotamiento físico severo."},
+        {nombre:"Joan Ainsworth", detalle:"Desplazamiento preciso entre sombras, característica del linaje."},
+      ]
+    },
+    {
+      id:6, categoria:"luz",
+      nombre:"Magia de luz",
+      icono:"ti-sun",
+      color:"amber",
+      descripcion:"Control sobre la luz: desde destellos cegadores y proyecciones lumínicas hasta ilusiones ópticas y manipulación de la visibilidad. Es el polo opuesto de la magia de sombras y, aunque ambas pueden coexistir en teoría, se desconoce un portador que domine las dos con igual destreza. Asociada frecuentemente a los linajes de hadas ninfas.\n\nLa magia de luz también atribuye a sus portadores dotes sanadoras y purificadoras, comparables en naturaleza al efecto de las rosas blancas en el lenguaje de las flores: tiene la capacidad de limpiar heridas, neutralizar venenos mágicos y, en sus formas más avanzadas, purgar influencias externas sobre la mente o el cuerpo de otro ser.",
+      personajes:[]
+    },
+    {
+      id:7, categoria:"flores",
+      nombre:"Lenguaje de las flores",
+      icono:"ti-flower",
+      color:"pink",
+      descripcion:"Entre los sangre pura de ciertos linajes existe un sistema de magia canalizado a través de las flores, especialmente las rosas. No es un poder decorativo: las flores actúan como vehículo para emociones, promesas y lazos de una profundidad que otros tipos de magia no pueden alcanzar. Cada variedad y color tiene un significado preciso dentro de este lenguaje antiguo:\n• Rosas blancas — purificación.\n• Rosas rojas — lazo entre almas.\n• Rosas negras — muerte, o el precio de lo prohibido.\nLos portadores de este linaje son considerados antiguos y orgullosos, y rara vez cruzan el velo al mundo humano. Su esencia no se mezcla con facilidad con la carne humana; cuando lo hace, nacen los híbridos de rosa, los más escasos de todos los híbridos. En los linajes del lenguaje de las flores, el momento del Enlace suele acompañarse de una rosa roja entregada como símbolo del reconocimiento mutuo, aunque el mecanismo del Enlace en sí es el mismo que para cualquier otro ser mágico.",
+      personajes:[
+        {nombre:"Camille Bigot", detalle:"Híbrida de rosa cuyo nacimiento fue posiblemente planeado. Su primera manifestación mágica ocurrió con pétalos de rosas blancas (purificación), desencadenando un colapso energético que la dejó inconsciente durante más de un mes."},
+      ]
+    },
+    {
+      id:8, categoria:"enfermedad",
+      nombre:"Degeneración mágica",
+      icono:"ti-alert-triangle",
+      color:"coral",
+      descripcion:"Fenómeno en que el cuerpo de un portador de magia o híbrido no puede sostener la energía que maneja. Afecta exclusivamente a quienes poseen sangre humana en su linaje: los sangre pura, al no tener mezcla humana, no son susceptibles. La magia comienza a consumirlos desde adentro: el cuerpo se transforma, se corrompe, hasta volverse irreconocible. Sin tratamiento, puede llevar a la muerte.\n\nCaso documentado: una mujer cuya magia era crear figuras de hielo terminó con el lado derecho del rostro permanentemente cubierto de escarcha. Clarté investiga una posible cura, financiada por un inversor cuya hija se encuentra en las primeras etapas de la enfermedad.",
+      personajes:[
+        {nombre:"Hugo", detalle:"Hermano menor de Rubí. Se encuentra en etapas avanzadas de degeneración mágica. Rubí aceptó colaborar con Clarté a cambio de atención médica para él; ambos habían vivido en un circo ambulante hasta que los echaron."},
+      ],
+      esEnfermedad: true
+    },
+    {
+      id:9, categoria:"enfermedad",
+      nombre:"Corazón Congelado",
+      icono:"ti-snowflake",
+      color:"blue",
+      descripcion:"Una de las posibles consecuencias de un enlace roto — ya sea por infidelidad o por rechazo de la pareja de vida. Es especialmente común en quienes poseen el poder de la criogénesis, aunque en seres emocionalmente sensibles puede desencadenarse incluso por un rechazo sin que haya existido enlace formal previo.\n\nEl proceso es físico: en el interior del corazón comienzan a formarse esquirlas de hielo que interfieren progresivamente con su funcionamiento. Si el ser no logra establecer un enlace nuevo a tiempo, las consecuencias pueden ser irreversibles. Siempre deja secuelas — en los casos más graves, el daño es permanente y limita las capacidades del afectado de por vida.",
+      personajes:[
+        {nombre:"Carlo de Simone", detalle:"Tomo 5 — The Rébeiller. Bailarín profesional de los más talentosos de su generación. Desarrolla la enfermedad tras una ruptura con Louis Ainsworth. Louis logra reconciliarse con él y consigue que sane parcialmente, pero Carlo arrastra secuelas permanentes: sus habilidades en el ballet quedan limitadas para siempre."},
+        {nombre:"Louis Ainsworth", detalle:"Pareja de Carlo. Su reconciliación con él es lo que detiene la progresión de la enfermedad, aunque no puede revertir el daño ya causado."},
+      ],
+      esEnfermedad: true
+    },
+    {
+      id:10, categoria:"primigenios",
+      nombre:"Creación y Destrucción",
+      icono:"ti-infinity",
+      color:"purple",
+      descripcion:"El poder más antiguo y escaso documentado en el universo de Rebéiller. No es una habilidad heredada de los linajes mágicos ordinarios, sino un don proveniente de las especies primigenias — seres de una era tan anterior que apenas quedan registros de su existencia.\n\nA diferencia de lo que su rareza podría sugerir, sí puede controlarse de forma activa. Sin embargo, su coste es proporcional a la magnitud del cambio: intervenciones menores suponen un esfuerzo tolerable, pero alterar algo de gran escala —retroceder mucho tiempo, pausar la realidad de forma prolongada o reescribir un evento significativo— puede dejar al portador al límite de sus fuerzas físicas y mentales, o incluso incapacitado durante un periodo.\n\nSus manifestaciones conocidas incluyen:\n• Manipulación del tiempo: retrocederlo, acelerarlo, pausarlo o ralentizarlo.\n• Manipulación de la realidad: alterar eventos o circunstancias, con un coste mayor cuanto más profundo sea el cambio.\n\nQuienes lo poseen aprenden a medir hasta dónde pueden llegar sin romperse en el intento.",
+      personajes:[
+        {nombre:"Anna Sofía Vitale", detalle:"La magia más pura / Dark Rebéiller / The Lake / Avant Rebéiller / menciones en The Rebéiller. Madre de Chiara; su padre la llama 'Annie'. Hermana adoptiva de Lina. Es la portadora más poderosa documentada de este linaje primigenio. Algunos seres del velo casi la consideran una diosa. En el Tomo 5 su existencia misma se convierte en un misterio: se pone en duda si sigue viva o ha muerto."},
+        {nombre:"Nazly Ainsworth", detalle:"Tomo 5 — The Rébeiller. Bisnieta de Elías Ainsworth. Hereda esta habilidad por línea materna (Elaine Laurent). Manifiesta la capacidad de manipular la realidad. Su segundo nombre es Alana — coincidencia no buscada que resuena con el nombre de la madre de Elías."},
+        {nombre:"Louis Ainsworth", detalle:"Tomo 5 — The Rébeiller. Hermano de Nazly. También hereda el poder de Creación y Destrucción por la misma línea materna: Elaine Laurent. Sus manifestaciones específicas están por definir."},
+        {nombre:"Elaine Laurent", detalle:"Madre de Nazly y Louis. Portadora del linaje primigenio que transmite este poder a sus hijos. Más detalles por definir."},
+      ]
+    },
+  ],
+  especies: [
+    {id:1, nombre:"Humanos portadores de magia", descripcion:"Son humanos con la capacidad de usar poderes. Algunos se autodenominan magos, brujas, hechiceros, entre otros; estas son autodenominaciones culturales, no categorías distintas. Sus poderes se heredan y a veces saltan generaciones, pero mientras más se mezcle su sangre con sangre humana, más débiles se vuelven los poderes.", color:"blue"},
+    {id:2, nombre:"Híbridos", descripcion:"Descendientes de humanos y seres mágicos de sangre pura. Combinan características de ambas naturalezas. A diferencia de los sangre pura, no pueden cambiar de forma, pero conservan una versatilidad única: tanto varones como mujeres pueden concebir. El ciclo híbrido ocurre cada tres meses y provoca ardor interno y necesidad de compañía.", color:"purple"},
+    {id:4, nombre:"Híbridos de rosa", descripcion:"Los más raros de todos los híbridos. Descienden de los sangre pura que dominan el lenguaje secreto de las flores. Camille Bigot es un ejemplo: su nacimiento fue posiblemente planeado. Su manifestación mágica se produjo con pétalos de rosas blancas (purificación), lo que detonó un colapso energético que la dejó inconsciente durante más de un mes.", color:"pink"},
+    {id:20, nombre:"Ciclo híbrido", descripcion:"Ocurre cada tres meses en todos los híbridos. Provoca un ardor interno intenso y una necesidad irrefrenable de compañía física. Durante el ciclo el híbrido es vulnerable: sus poderes se desestabilizan y el cuerpo consume más energía de lo habitual. Algunos lo viven en aislamiento voluntario para no depender de nadie. Elliot pasó tres días encerrado en el cobertizo de su casa durante uno de sus ciclos.", color:"purple"},
+    {id:21, nombre:"Frenesí híbrido", descripcion:"Ciclo especial que ocurre dos veces al año. A diferencia del ciclo habitual, el frenesí representa el pico máximo de fertilidad del híbrido. Su intensidad es considerablemente mayor: el ardor interno es más difícil de ignorar y la necesidad de compañía más apremiante. No es un estado de pérdida de control, sino un ciclo biológico diferenciado que el cuerpo reconoce como distinto.", color:"purple"},
+    {id:22, nombre:"El Enlace", descripcion:"Conexión que une a un ser mágico con su pareja de vida, común tanto a híbridos como a sangre pura. Se establece en un momento íntimo cuando existe atracción recíproca genuina entre ambas partes; muchos sangre pura eligen activamente enlazarse en la noche de bodas. Su manifestación física es una marca en el hombro derecho, cuya forma, tamaño y color varían según la pareja. Los enlazados comparten una conexión emocional profunda capaz de transmitir pensamientos o sensaciones cuando una emoción es muy intensa. Elliot leyó sobre este concepto en la Biblioteca Escarlata y lo asoció instintivamente a Elías.", color:"purple"},
+    {id:23, nombre:"Vínculo híbrido", descripcion:"Lazo más débil y anterior al Enlace. Puede formarse por convivencia prolongada, dependencia emocional intensa o por haber compartido un ciclo. No deja marca física visible, pero genera una sensación de atracción o inquietud ante la ausencia de la otra persona. Algunos investigadores lo consideran un precursor del Enlace; otros lo tratan como un fenómeno independiente.", color:"purple"},
+    {id:3, nombre:"Sangre pura", descripcion:"Categoría que agrupa a los seres mágicos originarios de una dimensión paralela. A veces cruzan al mundo humano. Se dividen en tres grandes categorías: Ninfas, Demonios y Hadas. Cada una posee múltiples subespecies y linajes.", color:"teal"},
+    {id:34, nombre:"Ninfas — Nereidas", descripcion:"Espíritus acuáticos inspirados en las nereidas de la mitología griega. Habitan mares y costas profundas del otro lado del velo. Poseen afinidad con las mareas, el canto y la manipulación del agua salada. Suelen ser asociadas con belleza sobrenatural y una naturaleza emocional intensa. Muchos híbridos descendientes de nereidas desarrollan habilidades relacionadas con el océano y la comunicación marina.\n\nSon una de las especies más longevas del mundo mágico: pueden llegar a vivir hasta 200 años.", color:"teal"},
+    {id:35, nombre:"Ninfas — Náyades", descripcion:"Ninfas vinculadas a ríos, lagos y fuentes de agua dulce. En el folclore griego eran guardianas de manantiales y corrientes sagradas. Dentro de Rébeiller son consideradas criaturas delicadas pero temperamentales, capaces de influir sobre emociones mediante el sonido del agua. Sus dominios suelen estar protegidos por magia ilusoria.", color:"teal"},
+    {id:36, nombre:"Ninfas — Dríades", descripcion:"Espíritus ligados a árboles y bosques antiguos. Inspiradas en las dríades de la mitología griega, su vida está conectada a la naturaleza que protegen. Son reservadas y difíciles de encontrar. Algunas poseen control parcial sobre raíces, flores y crecimiento vegetal. Se dice que los bosques donde viven reaccionan emocionalmente a su estado de ánimo.", color:"teal"},
+    {id:37, nombre:"Demonios — Bestialidades", descripcion:"La mayoría de demonios poseen una bestialidad asociada: lobos, felinos, osos, zorros, aves o incluso conejos. Cada linaje hereda rasgos físicos, instintos y habilidades particulares relacionados con su bestia. Los demonios conejo son conocidos por ser los más fértiles entre los sangre pura. Los demonios felinos destacan por agilidad y percepción; los lobos por vínculos grupales y ferocidad.", color:"teal"},
+    {id:38, nombre:"Demonios — Linajes sin bestialidad", descripcion:"Existen demonios que no están ligados a ninguna criatura animal. Entre ellos se encuentran los demonios de sombras, de sangre y los pertenecientes al reino del lenguaje de las flores. Los demonios de sombras manipulan oscuridad y desplazamiento; los de sangre poseen afinidad con la vitalidad y los vínculos biológicos; mientras que los del lenguaje de las flores canalizan emociones, promesas y lazos mediante rosas y simbolismos florales antiguos.", color:"teal"},
+    {id:39, nombre:"Demonios — Habilidades mentales", descripcion:"Algunos demonios desarrollan capacidades relacionadas con la mente y las emociones: percepción emocional, sugestión, lectura superficial de pensamientos o manipulación sensorial. Estas habilidades son consideradas peligrosas por Blackwood debido a su potencial para alterar la voluntad ajena.", color:"teal"},
+    {id:47, nombre:"Hadas — Luz", descripcion:"Hadas asociadas a la luz y la energía luminosa. Poseen afinidad con destellos, brillo sobrenatural y manipulación de visibilidad. Sus ciudades del otro lado del velo suelen describirse como espacios eternamente iluminados.", color:"teal"},
+    {id:48, nombre:"Hadas — Sueños", descripcion:"Linajes feéricos relacionados con los sueños y el subconsciente. Pueden influir en el descanso, los recuerdos oníricos y las visiones. Algunas culturas del velo creen que ciertos sueños proféticos provienen directamente de ellas.", color:"teal"},
+    {id:49, nombre:"Hadas — Ilusiones", descripcion:"Especialistas en distorsionar percepción y realidad aparente. Son capaces de crear espejismos complejos, alterar sonidos o modificar cómo otros perciben el entorno. Sus habilidades son usadas tanto para defensa como para entretenimiento dentro del velo.", color:"teal"},
+    {id:50, nombre:"Hadas — Emociones", descripcion:"Hadas capaces de percibir y alterar emociones ajenas. Algunas inspiran calma y bienestar; otras potencian miedo, deseo o melancolía. Su influencia suele ser sutil y difícil de detectar incluso para otros seres mágicos.", color:"teal"},
+    {id:30, nombre:"Ciclo de los sangre pura", descripcion:"A diferencia del ciclo híbrido, el de los sangre pura no sigue una cadencia mensual fija. Se desencadena por factores estacionales, lunares o emocionales según el linaje. En los demonios suele estar ligado a su bestialidad; en las nereidas, a las mareas o la proximidad al agua. Durante el ciclo sus poderes alcanzan el pico máximo, pero también son más difíciles de controlar.", color:"teal"},
+    {id:31, nombre:"Frenesí de los sangre pura", descripcion:"Ciclo especial que ocurre dos veces al año, equivalente al frenesí híbrido. Representa el pico máximo de fertilidad de los sangre pura y se distingue claramente del ciclo ordinario por su intensidad. Dado que sus poderes no están limitados por la sangre humana, la carga física y energética de este ciclo es mayor que la de cualquier híbrido.", color:"teal"},
+    {id:32, nombre:"El Enlace (sangre pura)", descripcion:"El Enlace funciona de la misma manera para los sangre pura que para los híbridos: se establece en un momento íntimo con atracción recíproca genuina, y deja una marca en el hombro derecho. La diferencia está en la cultura, no en el mecanismo — y cada reino o linaje tiene sus propios rituales para enmarcar ese momento.\n\nEn los linajes del lenguaje de las flores, el instante del Enlace suele acompañarse de una rosa roja entregada como símbolo del reconocimiento mutuo. En Teney-Kaia, el ritual es distinto: la pareja comparte una granada en la ceremonia de boda y la come frente a todos los invitados. Este acto va más allá del Enlace en sí — en Teney-Kaia forma parte de un pacto de vida: los años de vida restantes de ambos individuos se suman y se dividen a la mitad, de modo que la pareja pueda envejecer al mismo ritmo aunque una especie sea naturalmente más longeva que la otra.", color:"teal"},
+    {id:33, nombre:"Vínculo de los sangre pura", descripcion:"Los sangre pura pueden formar vínculos menores con humanos, portadores de magia o híbridos sin que estos lo sepan. Surge de la proximidad reiterada y de la atención sostenida. No es recíproco por naturaleza: el sangre pura siente el tirón; la otra parte puede no notarlo nunca, o notarlo como una atracción inexplicable. Algunos linajes lo usan de forma deliberada.", color:"teal"},
+  ],
+  lugares: [
+    {id:1, nombre:"Mundo humano", tipo:"Dimensión", dimension:"humano", descripcion:"Muy similar al mundo real. Ambientado históricamente a partir de 1919. Los seres mágicos deben pasar desapercibidos aquí.", color:"blue"},
+    {id:2, nombre:"El otro lado del velo", tipo:"Dimensión", dimension:"velo", descripcion:"Espacio mágico que se dobla y desdobla. La distancia y el tiempo son variables: avanzar 5 metros en el velo puede equivaler a aparecer 10 metros más lejos en el mundo humano, o al revés, dependiendo de la región. El tiempo también varía: pasar 2 días en el velo puede equivaler a 4 días en el mundo humano.", color:"purple"},
+    {id:3, nombre:"La Biblioteca Escarlata", tipo:"Edificio · Valencia", dimension:"humano", descripcion:"Biblioteca privada ubicada en Valencia, propiedad de Clarté y, por extensión, de la familia Ainsworth. De apariencia elegante y exclusiva, es confundida por el público general con una tienda de libros de lujo o sala de lectura para ricachones. Sus zonas más apartadas son acceso casi exclusivo de Elías para sus estudios. Alberga una sección visible sobre híbridos y una sección secreta oculta tras una estantería, con volúmenes antiguos sobre magia, alquimia y linajes, muchos obtenidos por Clarté de aquelarres. Los empleados no son humanos.", color:"teal"},
+    {id:4, nombre:"Mansión Ainsworth", tipo:"Residencia · El Ensanche, Valencia", dimension:"humano", descripcion:"Residencia de la familia Ainsworth, ubicada en el Ensanche, cerca de la Gran Vía Marqués del Turia, en un entorno de palacetes burgueses con fachadas modernistas y balcones de hierro forjado. Elías vive aquí con Camille y los sirvientes sombra. Cuenta con una sala de estar con gramófono, sala de estudios para Camille y el despacho privado de Elías. Elías suele volver a ella viajando entre sombras desde la biblioteca o Clarté.", color:"purple"},
+    {id:5, nombre:"Universitat de València / La Nau", tipo:"Institución educativa · Valencia", dimension:"humano", descripcion:"Sede histórica de la universidad donde Elías estudia medicina. Los pasillos huelen a cal, tinta y desinfectante. Ingresó antes de la edad habitual gracias a las conexiones de su padre; sus compañeros lo llaman 'el riquillo' o 'el niño' y lo miran con desdén. Elías destaca por encima de todos ellos aunque mantiene distancia.", color:"blue"},
+    {id:6, nombre:"Barrio costero de Elliot", tipo:"Barrio · Valencia", dimension:"humano", descripcion:"Zona modesta de Valencia cercana al mar donde viven Elliot y Eleanor. Las casas son construcciones humildes de tapia y maderas, con tejados de teja vieja y puertas de tablas. El aire huele a sal, leña húmeda y pescado. La mayoría de los vecinos son forasteros llegados por la actividad comercial de la costa. Junto a la casa de Elliot hay un naranjo torcido que Eleanor cuida con esmero.", color:"teal"},
+    {id:7, nombre:"Casa de Miss Beatrice", tipo:"Residencia · Barrio acomodado, Valencia", dimension:"humano", descripcion:"Casa en una esquina bien cuidada de un barrio más adinerado que el de Elliot. Tiene ventanas altas con postigos pintados, cortinas de encaje blanco, macetas de geranios en flor y un llamador de bronce. Aquí viven Miss Beatrice, su esposo don Joaquim (médico local) y su hija Lydia. Eleanor manda a Elliot con regalos frecuentes como pretexto para acercarlo a Lydia.", color:"blue"},
+    {id:8, nombre:"Sede de Clarté — Valencia", tipo:"Organización · Valencia", dimension:"humano", descripcion:"Sede principal de Clarté en España y epicentro de las operaciones de Aarick Ainsworth durante años. De cara al exterior funciona como una institución médica discreta; en su interior alberga laboratorios, celdas de contención y el temido Departamento de Anatomía Comparada, donde se realizaron los experimentos más inhumanos. Sus paredes son altas, los pasillos fríos y la luz escasa. Aquí fueron encerrados y sometidos a experimentos Allen D'Arnaud (1915–1916), Kenji y Aoi Nakamura (1909), y Z-056, entre otros sujetos cuyo paradero se desconoce. Camille Ainsworth fue trasladada aquí tras caer inconsciente en agosto de 1919. Elías acude regularmente desde la mansión viajando entre sombras y está intentando desmantelar las prácticas heredadas de su padre, despidiendo jefes corruptos y reorientando la investigación. El personal no es en su totalidad humano.", color:"coral"},
+    {id:9, nombre:"Teney-Kaia", tipo:"Reino", dimension:"velo", descripcion:"Uno de los reinos más influyentes de su región al otro lado del velo. Su población predominante son los demonios de sombra, y su cultura y política irradian peso sobre los territorios vecinos. Guarda numerosas similitudes con la Rusia del mundo humano: una extensión vasta, una arquitectura imponente, tradiciones arraigadas y un carácter que combina grandeza y severidad. Sus inviernos son extremadamente crudos, con fríos que pocos forasteros soportan sin preparación. La oscuridad forma parte de su identidad, pero no como hermetismo sino como rasgo propio de un pueblo que lleva siglos habitándola y convirtiéndola en poder.", color:"purple"},
+    {id:11, nombre:"Sede Central de Clarté — Londres", tipo:"Organización · Londres, Inglaterra", dimension:"humano", descripcion:"Sede matriz de Clarté, ubicada en Londres. Es considerablemente más grande que la delegación de Valencia, tanto en superficie como en infraestructura. Cuenta con extensas instalaciones subterráneas que, a diferencia de lo que podría suponerse, están destinadas al alojamiento del personal: dormitorios, comedores, zonas de descanso y espacios comunes para los trabajadores que residen en el edificio. Esta sede nunca fue tan permeada por la ideología de Aarick Ainsworth; su cultura interna es más neutral y menos marcada por los abusos que caracterizaron la delegación española bajo su mandato.", color:"blue"},
+    {id:12, nombre:"Velmora", tipo:"Reino", dimension:"velo", descripcion:"Reino hermético al otro lado del velo, habitado por una raza que se considera descendiente de seres tan poderosos que eran tenidos por dioses. Su cultura está profundamente influenciada por la mitología griega: los nombres de sus habitantes —como Pasitea, abuela de Chiara, o Talia, su tía abuela— reflejan ese legado. La magia fluye con abundancia por todo el reino. Su población convive con los demonios de bestialidad del lobo blanco, un linaje casi extinto al igual que el de los lobos negros. Velmora es un reino de carácter marcadamente aislacionista: no suele involucrarse en conflictos regionales, no envía representantes a las decisiones que afectan a los reinos vecinos y evita activamente las alianzas externas. Su fortaleza reside precisamente en ese hermetismo: Velmora se ocupa de los suyos y espera que el resto del mundo haga lo mismo.", color:"purple"},
+    {id:10, nombre:"Ardalan de Arcadia", tipo:"Reino unificado", dimension:"velo", descripcion:"Reino unificado a raíz del matrimonio del rey Lyall de Arcadia y el rey Deymus de Ardalan. Arcadia es un reino de fuego: su geografía, su magia y su cultura giran en torno a ese elemento, y sus habitantes son en su mayoría portadores de poderes ígneos o demonios asociados al fuego. Ardalan, en cambio, es un reino cuya población está compuesta en gran parte por nereidas y seres afines al agua. La unión de ambas coronas —fuego y agua— generó un reino de equilibrios delicados, donde las diferencias entre pueblos conviven bajo una misma bandera. La alianza se selló a través del vínculo entre sus dos reyes. El rey Lyall carga además con un linaje que va más allá del fuego: desciende de demonios con bestialidad de lobo negro, una estirpe prácticamente extinta en toda la región. Lo que eso implica para su magia, su ciclo y su carácter es algo que pocos en la corte comprenden del todo.", color:"teal"},
+    {id:13, nombre:"Haroumi", tipo:"Imperio", dimension:"velo", descripcion:"Imperio nereida al otro lado del velo, de extensión vasta y cultura profundamente elaborada. Su inspiración principal bebe de varias tradiciones orientales del mundo humano — especialmente Japón, China y Corea —, aunque Haroumi es una entidad propia que no replica ninguna de ellas de forma exacta.\n\nHaroumi colonizó durante siglos numerosos reinos aledaños, y su influencia política, lingüística y cultural todavía se percibe en esos territorios incluso donde el dominio directo del imperio ya no existe. Su historia imperial es larga y no exenta de violencia: la expansión de Haroumi dejó marcas profundas en el mapa del velo.\n\nA pesar de su carácter imperial, Haroumi es también reconocido como cuna de algunos de los sanadores más poderosos que han existido. El más notable es Ryuji, príncipe nereida de este reino, considerado el sanador más poderoso documentado — cuyas habilidades superan con creces lo que cualquier otro portador de magia curativa haya logrado.", color:"teal"},
+  ],
+  eventos: [
+    {id:24, anio:"Antes de 1909", evento:"Muerte de los padres de Kenji y Aoi", descripcion:"[La cabeza de la familia] Los padres de Kenji y Aoi mueren en circunstancias confusas: oficialmente un accidente con una carreta, aunque Kenji sospecha que pudo ser intencionado. La familia era japonesa y extranjera en el pueblo; el padre advertía que algunos vecinos no confiaban en ellos. Kenji cree que quizás su madre también era sospechosa de tener poderes."},
+    {id:25, anio:"1909 (marzo)", evento:"Intento de linchamiento de Aoi — huida y llegada a Clarté", descripcion:"[La cabeza de la familia] El pueblo intenta quemar viva a Aoi, acusándola de bruja. Aoi usa sus poderes para escapar. Los hermanos huyen y se pierden hasta que un joven de ojos amables los encuentra y los lleva a las instalaciones de Clarté, prometiéndoles que allí nadie quema a nadie por ser diferente. Kenji desconfía pero no tienen alternativa."},
+    {id:26, anio:"1909 (marzo–dic.)", evento:"Kenji cuida a Aoi y a Z dentro de Clarté", descripcion:"[La cabeza de la familia] Kenji, considerado 'inútil' por su magia de reparación, recibe raciones mínimas de comida. Aoi es tratada mejor por ser más interesante para los experimentos. Kenji descubre a Z-056, un niño con ojos violetas nacido en Clarté que nunca ha visto el exterior. Le cede parte de su comida, lo cuida durante las enfermedades y le canta canciones de su madre para ayudarlo a dormir. Estudia medicina a escondidas en la biblioteca. Planea escapar."},
+    {id:17, anio:"1913", evento:"La familia D'Arnaud emigra a Inglaterra", descripcion:"[Entre rosas y espinas: Un ángel] La familia de Allen huye de Francia —posiblemente por ser descubiertos como híbridos— y se instala en una casa pequeña de un pariente lejano fallecido. El padre comienza a trabajar en cualquier oficio disponible; la madre lava ropa ajena para sobrevivir."},
+    {id:1, anio:"1914–1918", evento:"Primera Guerra Mundial", descripcion:"[Contexto histórico] Ocurre en el mundo humano. Los portadores de magia participan de forma encubierta. Elliot pierde en la guerra al único chico que le había gustado."},
+    {id:18, anio:"1914 (28 julio)", evento:"El padre de Allen es llamado al frente", descripcion:"[Entre rosas y espinas: Un ángel] El padre de Allen parte a la guerra. Las cartas llegan cada vez con menos frecuencia. Allen, mayor de seis hermanos, siente que debe actuar."},
+    {id:19, anio:"1914–1915 aprox.", evento:"Allen comienza a prostituirse para sostener a su familia", descripcion:"[Entre rosas y espinas: Un ángel] Con apenas dieciséis años y ante la miseria del hogar, Allen usa su belleza como recurso. Se convierte en un amante discreto de personas adineradas —hombres y mujeres— a cambio de dinero y favores. Siempre guarda alguna prueba comprometedora como protección. Su madre lo intuye pero teme confrontarlo."},
+    {id:20, anio:"1915 aprox.", evento:"Allen es secuestrado por Aarick y encerrado en Clarté", descripcion:"[Entre rosas y espinas: Un ángel] Aarick captura a Allen para experimentar con él por su condición de híbrido. Allen es sometido a inyecciones, extracción de sangre y pruebas que dañan su salud. Durante el encierro descubre que está embarazado. Una prueba fallida provoca la pérdida del bebé."},
+    {id:21, anio:"1915–1916 aprox.", evento:"Jules y Allen se conocen en el cautiverio", descripcion:"[Entre rosas y espinas: Un ángel] Jules visita a Allen en secreto haciéndose pasar por personal médico. Le lleva comida y libros. Ambos se abren emocionalmente: Jules le confiesa lo que Aarick hizo a su madre Alana; Allen le revela su embarazo. Jules declara sus sentimientos y Allen, en un momento de vulnerabilidad, la besa."},
+    {id:22, anio:"1916 aprox.", evento:"Jules rescata a Allen — confrontación con Aarick", descripcion:"[Entre rosas y espinas: Un ángel] Jules irrumpe en el quirófano y enfrenta a los médicos. Aarick aparece y la ataca con su magia de sombras. Allen, en un acto de furia protectora, invoca 'Sanguis Innocentium': un ángel que inflige a Aarick todo el daño emocional que ha causado. Aarick cae destrozado internamente. Jules y Allen escapan saltando entre sombras."},
+    {id:23, anio:"1916–1917 aprox.", evento:"Boda de Jules y Allen — nacimiento de Joseph", descripcion:"[Entre rosas y espinas: Un ángel] Jules lleva a Allen de regreso a Inglaterra. Allen se entera de que su padre murió en la guerra. Meses después, Jules y Allen se casan en una ceremonia íntima. Nace su hijo Joseph."},
+    {id:2, anio:"1908", evento:"Muerte de Alana Ruiz (Olivia)", descripcion:"[Tomo 1 — antecedente] Muere la madre de Elías y Camille. Elías tenía entonces unos seis años y Camille dos. Solo queda un disco suyo: Le Temps des Cerises, que Aarick le impuso cantar como símbolo de sumisión."},
+    {id:3, anio:"1919 (10 enero)", evento:"Reunión de Clarté — Propuesta de Elías sobre brujas de sangre", descripcion:"[Tomo 1] En una reunión directiva, Elías propone buscar una bruja de sangre independiente para las investigaciones genéticas de Clarté. Uno de los hombres de Aarick insinúa secuestrar a alguien no registrado en Blackwood; Elías lo rechaza con firmeza."},
+    {id:4, anio:"1919 (5 marzo)", evento:"Elliot descubre la naturaleza híbrida de su reproducción", descripcion:"[Tomo 1] En La Biblioteca Escarlata, Elliot lee que los híbridos pueden concebir independientemente del género, lo que contradice el argumento más repetido contra los hombres que aman a hombres. Ese mismo día, Elías lo lleva por primera vez a su habitación viajando entre sombras y le revela el poder de anulación de Elliot."},
+    {id:5, anio:"1919 (16 junio)", evento:"El paseo por Valencia — Elliot confiesa 'me gustas'", descripcion:"[Tomo 1] Tras un momento de tensión casi romántica en la biblioteca, salen a caminar por el Ensanche. Elliot confiesa sin querer 'me gustas'. Elías empieza a reconocer sus sentimientos. Le habla de los híbridos en la antigua Grecia y los mitos como prueba de existencia real."},
+    {id:6, anio:"1919 (1 julio)", evento:"Elías lidera su primer equipo de campo", descripcion:"[Tomo 1] Elías dirige con éxito a un equipo de investigadores jóvenes para localizar a una mujer conocida como 'Lina', posible bruja de sangre con cabello rosa y facultad de sanación. Primera vez que se siente obedecido sin la sombra de su padre."},
+    {id:9, anio:"1919 (5 agosto)", evento:"Rubí se une a Clarté", descripcion:"[Tomo 1] Rubí, bruja de sangre con poder de fuego, acepta colaborar con Clarté a cambio de atención médica para su hermano Hugo, en etapas avanzadas de degeneración mágica. Había vivido con él en un circo ambulante hasta que los echaron."},
+    {id:10, anio:"1919 (5 agosto)", evento:"Camille cae inconsciente — pétalos de rosa blanca", descripcion:"[Tomo 1] Elías llega a la mansión y encuentra a Camille desmayada, con fiebre extrema y convulsiones. El suelo de su habitación está cubierto de pétalos de rosas blancas. Elías logra llevarla a Clarté en el último momento. Pasa las siguientes semanas sin dormir buscando una explicación."},
+    {id:11, anio:"1919 (agosto)", evento:"Elías descubre el concepto de 'híbridos de rosa'", descripcion:"[Tomo 1] En un tomo antiguo de La Biblioteca Escarlata, Elías lee sobre el lenguaje secreto de las rosas entre los sangre pura y sobre los híbridos de rosa, los más raros. Sospecha que el nacimiento de Camille fue planeado por Aarick."},
+    {id:12, anio:"1919 (agosto)", evento:"Elliot lee sobre el Enlace", descripcion:"[Tomo 1] Mientras espera a Elías en La Biblioteca Escarlata, Elliot lee sobre el Enlace: la conexión de por vida entre dos personas, que se manifiesta con una marca en el hombro derecho. Lo asocia instintivamente con Elías, lo que le provoca confusión y miedo."},
+    {id:13, anio:"1919 (agosto)", evento:"Primer beso — Elías a Elliot, en la frente", descripcion:"[Tomo 1] Tras encontrarse en la biblioteca después de una noche de angustia por Camille, Elías acepta el consuelo de Elliot. Al marcharse, de forma impulsiva, le da un beso rápido en la frente y desaparece entre las sombras. Ambos no duermen pensando en ello."},
+    {id:14, anio:"1919 (agosto)", evento:"Jules regresa con Allen y Joseph", descripcion:"[Tomo 1] Jules vuelve a Valencia tras dos años de ausencia con su esposo Allen y su hijo Joseph (aprox. 1 año). Elías la confronta entre lágrimas por haberlo dejado solo. Se reconcilian y Jules promete quedarse hasta que Camille mejore."},
+    {id:15, anio:"1919 (agosto–sept.)", evento:"Ciclo híbrido de Elliot — presión de Eleanor hacia Lydia", descripcion:"[Tomo 1] Elliot pasa tres días encerrado en el cobertizo durante su ciclo. Su madre intensifica la presión para que formalice con Lydia, cuya familia ofrece pagar sus estudios para ser profesor. Elliot, resignado, decide llevarle pastel de naranja como señal de acercamiento."},
+    {id:16, anio:"1919 (20 sept.)", evento:"Discusión y reconciliación entre Elías y Elliot", descripcion:"[Tomo 1] Tras semanas de distancia, Elías estalla en reproches. Elliot llora. Ambos terminan abrazados, incapaces de admitir lo que sienten. Elías le confiesa que al día siguiente es su cumpleaños y le pide que lo pase con él. Elliot promete ir."},
+    {id:7, anio:"1920", evento:"Dominico Riva lidera Mirage", descripcion:"[Tomo 1 — contexto] Inicio del período documentado del liderazgo de Mirage."},
+    {id:8, anio:"1920–1925", evento:"La guerra oculta", descripcion:"[Contexto] Desaparición masiva de portadores de magia. Una guerra encubierta ocurre invisible a los ojos humanos."},
+    {id:27, anio:"~1938", evento:"Auguste conoce a Willow — inicio de Dark Rebéiller", descripcion:"[Tomo 2: Dark Rebéiller] Aproximadamente un año antes del inicio de la Segunda Guerra Mundial, Auguste D'Arnaud-Ainsworth conoce a Willow. Su presencia despierta en él recuerdos imposibles de experiencias que siente haber compartido con ella, aunque sabe que nunca han coincidido."},
+    {id:28, anio:"1939–1945", evento:"Segunda Guerra Mundial", descripcion:"[Contexto histórico — Tomo 2] Ocurre en el mundo humano durante los eventos de Dark Rebéiller."},
+    {id:29, anio:"Post-WWII aprox.", evento:"Eventos de Rebéiller: The Lake", descripcion:"[Tomo 3: Rebéiller — The Lake] Inmediatamente después de Dark Rebéiller. El Rey Lyall pierde el amor del Rey Deymus y conoce a Ryuji, príncipe nereida rechazado por su reino. En paralelo, Rémi, amigo de Auguste, vive su propia historia de amor."},
+    {id:30, anio:"~1970", evento:"Exilio de Maius — encuentro con Chiara", descripcion:"[Tomo 4: Avant Rebéiller] Maius, hijo de Lyall y Ryuji, es descartado como sucesor y exiliado al mundo humano. Su hermana melliza Aira (Airi) es designada heredera. En el exilio conoce a Chiara, quien afirma ser la princesa heredera de un reino del otro lado del velo."},
+    {id:31, anio:"Época actual", evento:"Eventos de The Rebéiller", descripcion:"[Tomo 5: The Rebéiller] Los acontecimientos del tomo final transcurren en el presente. Dada la cantidad de personajes involucrados, probablemente se divida en al menos tres tomos distintos."},
+  ]
+};
+
+let editingId = null;
+let editingType = null;
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  renderAll();
+}
+
+function renderAll() {
+  renderTomos();
+  renderPersonajes();
+  renderFacciones();
+  renderMagia();
+  renderEspecies();
+  renderLugares();
+  renderCronologia();
+}
+
+function renderTomos() {
+  const c = document.getElementById('tomos-list');
+  const statusMap = {publicado:'status-pub', 'en proceso':'status-proc', planeado:'status-plan'};
+  const statusLabel = {publicado:'Publicado', 'en proceso':'En proceso', planeado:'Planeado'};
+  c.innerHTML = DATA.tomos.map(t => `
+    <div class="tomo-card">
+      <div class="tomo-header">
+        <div>
+          <div class="tomo-title">${t.titulo}</div>
+          <div style="font-size:12px;color:#8a80b8;margin-top:2px">${t.numero}</div>
+        </div>
+        <span class="tomo-status ${statusMap[t.estado]||'status-plan'}">${statusLabel[t.estado]||t.estado}</span>
+      </div>
+      ${t.sinopsis ? `<div style="font-size:13px;color:#c8c0e8;line-height:1.65">${t.sinopsis}</div>` : ''}
+      <div class="edit-del">
+        <button onclick="editItem('tomo',${t.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+        <button onclick="deleteItem('tomo',${t.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+      </div>
+    </div>`).join('');
+}
+
+let personajeTomoActivo = 'todos';
+
+function getTomoKey(tomoStr) {
+  if (!tomoStr) return [];
+  // Split by "/" or "," to handle multiple tomos per character
+  return tomoStr.split(/[\/,]/).map(s => s.trim()).filter(Boolean);
+}
+
+function getAllTomos() {
+  const tomoSet = new Set();
+  DATA.personajes.forEach(p => {
+    getTomoKey(p.tomo).forEach(t => tomoSet.add(t));
+  });
+  // Sort: numbered tomos first (Tomo 1, 2…), then spin-offs, then others
+  return [...tomoSet].sort((a, b) => {
+    const numA = a.match(/Tomo\s+(\d+)/i);
+    const numB = b.match(/Tomo\s+(\d+)/i);
+    if (numA && numB) return parseInt(numA[1]) - parseInt(numB[1]);
+    if (numA) return -1;
+    if (numB) return 1;
+    return a.localeCompare(b, 'es');
+  });
+}
+
+function renderPersonajeCard(p) {
+  return `<div class="card" onclick="showDetail('personaje',${p.id})" data-name="${p.nombre.toLowerCase()}">
+    <div class="card-top">
+      <div class="avatar av-${p.color}">${p.avatar}</div>
+      <div><div class="card-name">${p.nombre}</div><div class="card-sub">${p.rol}</div></div>
+    </div>
+    <div class="card-desc">${p.descripcion}</div>
+    <div>
+      <span class="badge badge-${p.color}">${p.especie}</span>
+      <span class="badge badge-gray">${p.faccion}</span>
+      ${p.tomo ? `<span class="badge" style="background:#0c1e38;color:#7ab8e8;border:0.5px solid #1a3a5c"><i class="ti ti-book-2" style="font-size:10px;margin-right:3px" aria-hidden="true"></i>${p.tomo}</span>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderPersonajes() {
+  const allTomos = getAllTomos();
+
+  // Render filter nav
+  const nav = document.getElementById('tomo-filter-nav');
+  if (nav) {
+    nav.innerHTML = `
+      <button class="subcat-btn ${personajeTomoActivo==='todos'?'active':''}" onclick="filtrarPersonajesTomo('todos')">
+        <i class="ti ti-layout-list" style="font-size:12px"></i> Todos
+      </button>
+      ${allTomos.map(t => `
+        <button class="subcat-btn ${personajeTomoActivo===t?'active':''}" onclick="filtrarPersonajesTomo('${t.replace(/'/g,"\\'")}')">
+          <i class="ti ti-book-2" style="font-size:12px"></i> ${t}
+        </button>`).join('')}`;
+  }
+
+  const c = document.getElementById('personajes-grid');
+  const searchVal = (document.getElementById('personaje-search') || {value:''}).value.toLowerCase();
+
+  if (personajeTomoActivo === 'todos') {
+    // Show all characters grouped by tomo, alphabetically within each group
+    const grouped = {};
+    allTomos.forEach(t => grouped[t] = []);
+    grouped['_sin_tomo'] = [];
+
+    DATA.personajes.forEach(p => {
+      const tomos = getTomoKey(p.tomo);
+      if (tomos.length === 0) {
+        grouped['_sin_tomo'].push(p);
+      } else {
+        tomos.forEach(t => {
+          if (grouped[t]) grouped[t].push(p);
+        });
+      }
+    });
+
+    // Sort each group alphabetically
+    Object.keys(grouped).forEach(k => {
+      grouped[k].sort((a,b) => a.nombre.localeCompare(b.nombre, 'es'));
+    });
+
+    // Filter by search
+    const filterFn = p => !searchVal || p.nombre.toLowerCase().includes(searchVal);
+
+    let html = '';
+    allTomos.forEach(t => {
+      const filtered = grouped[t].filter(filterFn);
+      if (!filtered.length) return;
+      html += `<div class="subcat-section" style="margin-bottom:1.5rem">
+        <div class="subcat-title" style="color:#a09ad8;margin-bottom:10px">
+          <i class="ti ti-book-2" style="font-size:11px" aria-hidden="true"></i>${t}
+        </div>
+        <div class="card-grid">${filtered.map(renderPersonajeCard).join('')}</div>
+      </div>`;
+    });
+
+    const sinTomo = grouped['_sin_tomo'].filter(filterFn);
+    if (sinTomo.length) {
+      html += `<div class="subcat-section" style="margin-bottom:1.5rem">
+        <div class="subcat-title" style="color:#6a6090;margin-bottom:10px">
+          <i class="ti ti-circle-dashed" style="font-size:11px" aria-hidden="true"></i>Sin tomo asignado
+        </div>
+        <div class="card-grid">${sinTomo.map(renderPersonajeCard).join('')}</div>
+      </div>`;
+    }
+
+    c.innerHTML = html || '<div class="empty">No se encontraron personajes.</div>';
+  } else {
+    // Filter to selected tomo, sort alphabetically
+    let filtered = DATA.personajes
+      .filter(p => getTomoKey(p.tomo).includes(personajeTomoActivo))
+      .sort((a,b) => a.nombre.localeCompare(b.nombre, 'es'));
+
+    if (searchVal) filtered = filtered.filter(p => p.nombre.toLowerCase().includes(searchVal));
+
+    c.innerHTML = filtered.length
+      ? `<div class="card-grid">${filtered.map(renderPersonajeCard).join('')}</div>`
+      : '<div class="empty">No se encontraron personajes.</div>';
+  }
+}
+
+function filtrarPersonajesTomo(tomo) {
+  personajeTomoActivo = tomo;
+  renderPersonajes();
+}
+
+function filterPersonajes(query) {
+  renderPersonajes();
+}
+
+function renderFacciones() {
+  const c = document.getElementById('facciones-grid');
+  c.innerHTML = DATA.facciones.map(f => `
+    <div class="card" onclick="showDetail('faccion',${f.id})">
+      <div class="card-top">
+        <div class="avatar av-${f.color}"><i class="ti ti-building-community" style="font-size:16px" aria-hidden="true"></i></div>
+        <div><div class="card-name">${f.nombre}</div><div class="card-sub">${f.tipo}</div></div>
+      </div>
+      <div class="card-desc">${f.descripcion}</div>
+    </div>`).join('');
+}
+
+function renderMagia() {
+  const colorMap = {coral:'coral', pink:'pink', purple:'purple', blue:'blue', amber:'amber', teal:'teal'};
+
+  function buildCard(m, esEnf) {
+    const pjs = m.personajes && m.personajes.length
+      ? `<div class="poder-personajes-title"><span>Personajes afectados</span></div>
+         ${m.personajes.map(p => `
+           <div class="poder-personaje">
+             <span class="poder-pj-name">${p.nombre}</span>
+             <span class="poder-pj-detalle">${p.detalle}</span>
+           </div>`).join('')}`
+      : `<p style="font-size:12px;color:#5a5490;font-style:italic">Sin ejemplos documentados aun.</p>`;
+
+    // Preserve line breaks in description
+    const descHtml = m.descripcion.replace(/\n/g, '<br>');
+    const col = colorMap[m.color] || 'purple';
+    const enfColorClass = (esEnf && m.color === 'blue') ? ' enf-blue' : '';
+    const esPrimigenio = m.categoria === 'primigenios';
+    const cardClass = esEnf ? `poder-card enfermedad-card${enfColorClass}` : esPrimigenio ? 'poder-card poder-primigenio' : 'poder-card';
+    const pjTitle = esEnf
+      ? `<div class="poder-personajes-title"><span>Casos documentados</span></div>`
+      : `<div class="poder-personajes-title"><span>Ejemplos en la saga</span></div>`;
+    const pjsBlock = m.personajes && m.personajes.length
+      ? pjTitle + m.personajes.map(p => `
+           <div class="poder-personaje">
+             <span class="poder-pj-name">${p.nombre}</span>
+             <span class="poder-pj-detalle">${p.detalle}</span>
+           </div>`).join('')
+      : `<p style="font-size:12px;color:#5a5490;font-style:italic">Sin ejemplos documentados aun.</p>`;
+
+    return `
+    <div class="${cardClass}" id="poder-${m.id}" onclick="togglePoder(${m.id})">
+      <div class="poder-card-header">
+        <div class="poder-icon poder-icon-${col}"><i class="ti ${m.icono}" aria-hidden="true"></i></div>
+        <span class="poder-nombre">${m.nombre}</span>
+        <i class="ti ti-chevron-down poder-chevron" aria-hidden="true"></i>
+      </div>
+      <div class="poder-body">
+        <div class="poder-desc">${descHtml}</div>
+        ${pjsBlock}
+      </div>
+    </div>`;
+  }
+
+  const poderes = DATA.magia.filter(m => !m.esEnfermedad);
+  const enfermedades = DATA.magia.filter(m => m.esEnfermedad);
+
+  document.getElementById('magia-list').innerHTML = poderes.map(m => buildCard(m, false)).join('');
+
+  const enfEl = document.getElementById('magia-enfermedades');
+  const divEl = document.getElementById('magia-enf-divider');
+  if (enfEl) {
+    enfEl.innerHTML = enfermedades.map(m => buildCard(m, true)).join('');
+    if (divEl) divEl.style.display = enfermedades.length ? 'flex' : 'none';
+  }
+}
+
+function togglePoder(id) {
+  const card = document.getElementById('poder-' + id);
+  if (card) card.classList.toggle('open');
+}
+
+// Categoría principal de cada especie (para la barra de filtros)
+// Las categorías principales son: 'Portadores de magia', 'Híbridos', 'Sangre pura', 'Otras'
+// Dentro de Híbridos y Sangre pura hay sub-apartados internos
+const ESPECIE_CAT = {
+  1:  'Portadores de magia',
+  2:  'Híbridos',
+  4:  'Híbridos',
+  20: 'Híbridos',
+  21: 'Híbridos',
+  22: 'Híbridos',
+  23: 'Híbridos',
+  3:  'Sangre pura',
+  34: 'Sangre pura',
+  35: 'Sangre pura',
+  36: 'Sangre pura',
+  37: 'Sangre pura',
+  38: 'Sangre pura',
+  39: 'Sangre pura',
+  47: 'Sangre pura',
+  48: 'Sangre pura',
+  49: 'Sangre pura',
+  50: 'Sangre pura',
+  30: 'Sangre pura',
+  31: 'Sangre pura',
+  32: 'Sangre pura',
+  33: 'Sangre pura',
+};
+
+// Sub-apartado interno dentro de la categoría principal
+const ESPECIE_SUBAPARTADO = {
+  1:  'Naturaleza de los portadores',
+  2:  'Especies de híbridos',
+  4:  'Especies de híbridos',
+  20: 'Ciclo, frenesí, enlaces y vínculos',
+  21: 'Ciclo, frenesí, enlaces y vínculos',
+  22: 'Ciclo, frenesí, enlaces y vínculos',
+  23: 'Ciclo, frenesí, enlaces y vínculos',
+  3:  'Especies de sangre pura',
+  34: 'Especies de sangre pura',
+  35: 'Especies de sangre pura',
+  36: 'Especies de sangre pura',
+  37: 'Especies de sangre pura',
+  38: 'Especies de sangre pura',
+  39: 'Especies de sangre pura',
+  47: 'Especies de sangre pura',
+  48: 'Especies de sangre pura',
+  49: 'Especies de sangre pura',
+  50: 'Especies de sangre pura',
+  30: 'Ciclo, frenesí, enlaces y vínculos',
+  31: 'Ciclo, frenesí, enlaces y vínculos',
+  32: 'Ciclo, frenesí, enlaces y vínculos',
+  33: 'Ciclo, frenesí, enlaces y vínculos',
+};
+
+const CAT_ICONS = {
+  'Portadores de magia': 'ti-user-bolt',
+  'Híbridos':            'ti-dna',
+  'Sangre pura':         'ti-stars',
+  'Otras':               'ti-circle-dashed',
+};
+
+const SUBAPARTADO_ICONS = {
+  'Descripción general':               'ti-user-bolt',
+  'Categorías de poderes':             'ti-wand',
+  'Especies de híbridos':              'ti-dna',
+  'Ciclo, frenesí, enlaces y vínculos':'ti-heart-handshake',
+  'Especies de sangre pura':           'ti-stars',
+};
+
+const SUBAPARTADO_ORDER = ['Descripción general', 'Categorías de poderes', 'Especies de híbridos', 'Ciclo, frenesí, enlaces y vínculos', 'Especies de sangre pura'];
+
+let especieCatActiva = 'todas';
+
+function spIconHtml(s) {
+  const colors = {blue:'#0c1e38', purple:'#26215a', teal:'#0d2e26', pink:'#2a1020'};
+  const iconos  = {blue:'ti-user', purple:'ti-dna', teal:'ti-sparkles', pink:'ti-flower'};
+  const textCol = {blue:'#7ab8e8', purple:'#c4baf0', teal:'#7dd4bb', pink:'#e49ab8'};
+  return `<div class="sp-icon" style="background:${colors[s.color]||'#1a1830'}">
+    <i class="ti ${iconos[s.color]||'ti-circle'}" style="font-size:16px;color:${textCol[s.color]||'#8a80b8'}" aria-hidden="true"></i>
+  </div>`;
+}
+
+function spItemHtml(s) {
+  return `<div class="species-item">
+    ${spIconHtml(s)}
+    <div>
+      <div class="sp-name">${s.nombre}</div>
+      <div class="sp-desc">${s.descripcion}</div>
+      <div class="edit-del">
+        <button onclick="editItem('especie',${s.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+        <button onclick="deleteItem('especie',${s.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderEspecies() {
+  const c = document.getElementById('especies-list');
+
+  // Agrupar por categoría principal
+  const porCat = {};
+  DATA.especies.forEach(s => {
+    const cat = s.categoria || ESPECIE_CAT[s.id] || 'Otras';
+    if (!porCat[cat]) porCat[cat] = [];
+    porCat[cat].push(s);
+  });
+
+  const cats = ['Portadores de magia', 'Híbridos', 'Sangre pura'].filter(c => porCat[c] && porCat[c].length);
+
+  // Barra de filtros principal (solo categorías, no sub-apartados)
+  const navHtml = `<div class="subcat-nav">
+    <button class="subcat-btn ${especieCatActiva==='todas'?'active':''}" onclick="filtrarEspecies('todas')">
+      <i class="ti ti-layout-list" style="font-size:12px"></i> Todas
+    </button>
+    ${cats.map((cat, i) => `
+      <button class="subcat-btn ${especieCatActiva===cat?'active':''}" onclick="filtrarEspeciesCat(${i})">
+        <i class="ti ${CAT_ICONS[cat]||'ti-circle'}" style="font-size:12px"></i> ${cat}
+      </button>`).join('')}
+  </div>`;
+
+  const catsARenderizar = especieCatActiva === 'todas' ? cats : [especieCatActiva];
+
+  let sectionsHtml = '';
+  catsARenderizar.forEach(cat => {
+    const items = porCat[cat] || [];
+    if (!items.length) return;
+
+    // ¿Esta categoría tiene sub-apartados internos?
+    const tieneSubapartados = cat === 'Híbridos' || cat === 'Sangre pura';
+
+    if (!tieneSubapartados) {
+      // Portadores de magia u Otras: lista plana
+      sectionsHtml += `<div class="subcat-section">
+        <div class="subcat-title">
+          <i class="ti ${CAT_ICONS[cat]||'ti-circle'}" style="font-size:12px" aria-hidden="true"></i>${cat}
+        </div>
+        ${items.map(spItemHtml).join('')}
+      </div>`;
+    } else {
+      // Híbridos / Sangre pura: agrupar por sub-apartado interno
+      const porSub = {};
+      items.forEach(s => {
+        const sub = s.subapartado || ESPECIE_SUBAPARTADO[s.id] || 'General';
+        if (!porSub[sub]) porSub[sub] = [];
+        porSub[sub].push(s);
+      });
+      const subsEnOrden = SUBAPARTADO_ORDER.filter(s => porSub[s] && porSub[s].length);
+      if (porSub['General']) subsEnOrden.push('General');
+
+      // Encabezado de categoría
+      const descripcionGeneral = items.find(i => i.nombre === cat);
+
+      sectionsHtml += `<div class="subcat-section">
+        <div class="subcat-title" style="font-size:15px;color:#c4baf0;margin-bottom:14px;">
+          <i class="ti ${CAT_ICONS[cat]||'ti-circle'}" style="font-size:12px" aria-hidden="true"></i>${cat}
+        </div>
+
+        ${descripcionGeneral ? `
+          <div class="magic-desc" style="margin-bottom:18px;padding:12px;border:1px solid #2a2450;border-radius:10px;background:rgba(20,16,45,0.45);">
+            ${descripcionGeneral.descripcion}
+          </div>
+        ` : ''}
+
+        ${subsEnOrden.map(sub => `
+          <div style="margin-bottom:1.25rem;">
+            <div class="subcat-title" style="font-size:12px;color:#7f77dd;margin-bottom:8px;padding-left:8px;border-left:2px solid #3a3468;">
+              <i class="ti ${SUBAPARTADO_ICONS[sub]||'ti-circle'}" style="font-size:11px" aria-hidden="true"></i>${sub}
+            </div>
+            ${porSub[sub].filter(i => i.nombre !== cat).map(spItemHtml).join('')}
+          </div>`).join('')}
+      </div>`;
+    }
+  });
+
+  c.innerHTML = navHtml + sectionsHtml;
+}
+
+function filtrarEspecies(cat) {
+  especieCatActiva = cat;
+  renderEspecies();
+}
+
+function filtrarEspeciesCat(idx) {
+  const porCat = {};
+  DATA.especies.forEach(s => {
+    const cat = s.categoria || ESPECIE_CAT[s.id] || 'Otras';
+    if (!porCat[cat]) porCat[cat] = [];
+    porCat[cat].push(s);
+  });
+  const cats = ['Portadores de magia', 'Híbridos', 'Sangre pura'].filter(c => porCat[c] && porCat[c].length);
+  especieCatActiva = cats[idx] || 'todas';
+  renderEspecies();
+}
+
+let lugarFiltro = 'todos';
+
+function setLugarFiltro(f) {
+  lugarFiltro = f;
+  document.querySelectorAll('.lugar-tab').forEach(b => b.classList.toggle('active', b.dataset.f === f));
+  renderLugares();
+}
+
+function renderLugares() {
+  const c = document.getElementById('lugares-list');
+  const iconMap = {
+    humano: {icon:'ti-world', bg:'rgba(12,30,56,0.9)', accent:'#7ab8e8'},
+    velo:   {icon:'ti-sparkles', bg:'rgba(30,14,56,0.9)', accent:'#c4baf0'},
+  };
+  const fallback = {icon:'ti-map-pin', bg:'rgba(20,16,45,0.7)', accent:'#8a80b8'};
+
+  const filtrados = lugarFiltro === 'todos'
+    ? DATA.lugares
+    : DATA.lugares.filter(l => l.dimension === lugarFiltro);
+
+  if (!filtrados.length) {
+    c.innerHTML = '<div class="empty">No hay lugares en esta categoría.</div>';
+    return;
+  }
+
+  // Si mostramos todos, agrupa por dimensión
+  if (lugarFiltro === 'todos') {
+    const humanos = filtrados.filter(l => l.dimension === 'humano');
+    const velo    = filtrados.filter(l => l.dimension === 'velo');
+
+    const renderGrupo = (lista) => lista.map(l => renderLugarCard(l, iconMap, fallback)).join('');
+
+    c.innerHTML = `
+      <div class="subcat-section">
+        <div class="subcat-title" style="color:#7ab8e8"><i class="ti ti-world" style="font-size:11px"></i> Mundo humano</div>
+        ${renderGrupo(humanos)}
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-title" style="color:#c4baf0"><i class="ti ti-sparkles" style="font-size:11px"></i> El otro lado del velo</div>
+        ${renderGrupo(velo)}
+      </div>`;
+  } else {
+    c.innerHTML = filtrados.map(l => renderLugarCard(l, iconMap, fallback)).join('');
+  }
+}
+
+function renderLugarCard(l, iconMap, fallback) {
+  const dim = iconMap[l.dimension] || fallback;
+  return `
+    <div class="lugar-card">
+      <div class="lugar-header">
+        <div class="sp-icon" style="background:${dim.bg}">
+          <i class="ti ${dim.icon}" style="font-size:16px;color:${dim.accent}" aria-hidden="true"></i>
+        </div>
+        <div style="flex:1;padding-left:8px">
+          <div class="lugar-name">${l.nombre}</div>
+          <div style="font-size:12px;color:#9890c0">${l.tipo}</div>
+        </div>
+        <span class="badge ${l.dimension === 'humano' ? 'badge-blue' : 'badge-purple'}" style="font-size:10px;align-self:flex-start;margin-top:0">
+          ${l.dimension === 'humano' ? '🌍 Humano' : '✨ Velo'}
+        </span>
+      </div>
+      <div class="lugar-desc">${l.descripcion}</div>
+      <div class="edit-del">
+        <button onclick="editItem('lugar',${l.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+        <button onclick="deleteItem('lugar',${l.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+      </div>
+    </div>`;
+}
+
+function renderCronologia() {
+  const c = document.getElementById('cronologia-list');
+  const sorted = [...DATA.eventos].sort((a,b) => String(a.anio).localeCompare(String(b.anio)));
+  c.innerHTML = sorted.map((e,i) => `
+    <div class="timeline-item">
+      <div style="display:flex;flex-direction:column;align-items:center;width:10px">
+        <div class="tl-dot"></div>
+        ${i < sorted.length-1 ? '<div style="width:0.5px;background:var(--color-border-tertiary);flex:1;margin-top:4px"></div>' : ''}
+      </div>
+      <div style="flex:1;padding-bottom:${i < sorted.length-1 ? '1rem' : '0'}">
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <span class="tl-year">${e.anio}</span>
+          <span class="tl-event">${e.evento}</span>
+        </div>
+        <div class="tl-desc">${e.descripcion}</div>
+        <div class="edit-del">
+          <button onclick="editItem('evento',${e.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+          <button onclick="deleteItem('evento',${e.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function showDetail(type, id) {
+  const panelId = type + '-detail';
+  const panel = document.getElementById(panelId);
+  const data = type === 'personaje' ? DATA.personajes : DATA.facciones;
+  const item = data.find(x => x.id === id);
+  if (!item) return;
+  if (panel.dataset.open === String(id)) {
+    panel.classList.remove('open');
+    panel.dataset.open = '';
+    return;
+  }
+  panel.dataset.open = id;
+  if (type === 'personaje') {
+    panel.innerHTML = `
+      <div class="detail-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="avatar av-${item.color}">${item.avatar}</div>
+          <div><div style="font-size:16px;font-weight:500;color:#ede8ff">${item.nombre}</div><div style="font-size:13px;color:#a89ed8">${item.rol}</div></div>
+        </div>
+        <button class="close-btn" onclick="closeDetail('${panelId}')" aria-label="Cerrar detalle">×</button>
+      </div>
+      <div class="detail-row"><span class="detail-label">Facción</span><span class="detail-value">${item.faccion}</span></div>
+      <div class="detail-row"><span class="detail-label">Especie</span><span class="detail-value">${item.especie}</span></div>
+      <div class="detail-row"><span class="detail-label">Poderes</span><span class="detail-value">${item.poderes}</span></div>
+      ${item.tomo ? `<div class="detail-row"><span class="detail-label">Aparece en</span><span class="detail-value">${item.tomo}</span></div>` : ''}
+      <div class="detail-desc">${item.descripcion}</div>
+      <div class="edit-del" style="margin-top:12px">
+        <button onclick="editItem('personaje',${item.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+        <button onclick="deleteItem('personaje',${item.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+      </div>`;
+  } else {
+    panel.innerHTML = `
+      <div class="detail-header">
+        <div><div style="font-size:16px;font-weight:500;color:#ede8ff">${item.nombre}</div><div style="font-size:13px;color:#a89ed8">${item.tipo}</div></div>
+        <button class="close-btn" onclick="closeDetail('${panelId}')" aria-label="Cerrar detalle">×</button>
+      </div>
+      <div class="detail-desc">${item.descripcion}</div>
+      <div class="edit-del" style="margin-top:12px">
+        <button onclick="editItem('faccion',${item.id})"><i class="ti ti-edit" aria-hidden="true"></i> Editar</button>
+        <button onclick="deleteItem('faccion',${item.id})"><i class="ti ti-trash" aria-hidden="true"></i> Eliminar</button>
+      </div>`;
+  }
+  panel.classList.add('open');
+}
+
+function closeDetail(panelId) {
+  const p = document.getElementById(panelId);
+  p.classList.remove('open');
+  p.dataset.open = '';
+}
+
+function filterCards(gridId, query) {
+  document.querySelectorAll(`#${gridId} .card`).forEach(card => {
+    const name = card.dataset.name || '';
+    card.style.display = name.includes(query.toLowerCase()) ? '' : 'none';
+  });
+}
+
+
+const MODAL_FORMS = {
+  tomo: (item) => `
+    <div class="modal-title">${item ? 'Editar tomo' : 'Nuevo tomo'}</div>
+    <div class="form-row"><label class="form-label">Título</label><input id="f-titulo" value="${item ? item.titulo : ''}" /></div>
+    <div class="form-row"><label class="form-label">Número / tipo</label><input id="f-numero" value="${item ? item.numero : ''}" placeholder="Tomo 2, Spin-off..." /></div>
+    <div class="form-row"><label class="form-label">Estado</label><select id="f-estado"><option value="planeado" ${item&&item.estado==='planeado'?'selected':''}>Planeado</option><option value="en proceso" ${item&&item.estado==='en proceso'?'selected':''}>En proceso</option><option value="publicado" ${item&&item.estado==='publicado'?'selected':''}>Publicado</option></select></div>
+    <div class="form-row"><label class="form-label">Sinopsis</label><textarea id="f-sinopsis">${item ? item.sinopsis : ''}</textarea></div>`,
+  personaje: (item) => `
+    <div class="modal-title">${item ? 'Editar personaje' : 'Nuevo personaje'}</div>
+    <div class="form-row"><label class="form-label">Nombre</label><input id="f-nombre" value="${item ? item.nombre : ''}" /></div>
+    <div class="form-row"><label class="form-label">Rol</label><input id="f-rol" value="${item ? item.rol : ''}" placeholder="Protagonista, Antagonista..." /></div>
+    <div class="form-row"><label class="form-label">Aparece en (tomo)</label><input id="f-tomo" value="${item ? (item.tomo||'') : ''}" placeholder="Tomo 1, Tomo 2..." /></div>
+    <div class="form-row"><label class="form-label">Facción</label><input id="f-faccion" value="${item ? item.faccion : ''}" /></div>
+    <div class="form-row"><label class="form-label">Especie</label><input id="f-especie" value="${item ? item.especie : ''}" /></div>
+    <div class="form-row"><label class="form-label">Poderes</label><input id="f-poderes" value="${item ? item.poderes : ''}" /></div>
+    <div class="form-row"><label class="form-label">Color avatar</label><select id="f-color"><option value="purple" ${item&&item.color==='purple'?'selected':''}>Púrpura</option><option value="teal" ${item&&item.color==='teal'?'selected':''}>Teal</option><option value="coral" ${item&&item.color==='coral'?'selected':''}>Coral</option><option value="pink" ${item&&item.color==='pink'?'selected':''}>Rosa</option><option value="amber" ${item&&item.color==='amber'?'selected':''}>Ámbar</option><option value="blue" ${item&&item.color==='blue'?'selected':''}>Azul</option></select></div>
+    <div class="form-row"><label class="form-label">Iniciales avatar</label><input id="f-avatar" value="${item ? item.avatar : ''}" maxlength="2" /></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+  faccion: (item) => `
+    <div class="modal-title">${item ? 'Editar facción' : 'Nueva facción'}</div>
+    <div class="form-row"><label class="form-label">Nombre</label><input id="f-nombre" value="${item ? item.nombre : ''}" /></div>
+    <div class="form-row"><label class="form-label">Tipo</label><input id="f-tipo" value="${item ? item.tipo : ''}" placeholder="Ministerio, Gremio..." /></div>
+    <div class="form-row"><label class="form-label">Color</label><select id="f-color"><option value="purple" ${item&&item.color==='purple'?'selected':''}>Púrpura</option><option value="teal" ${item&&item.color==='teal'?'selected':''}>Teal</option><option value="coral" ${item&&item.color==='coral'?'selected':''}>Coral</option><option value="amber" ${item&&item.color==='amber'?'selected':''}>Ámbar</option></select></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+  magia: (item) => `
+    <div class="modal-title">${item ? 'Editar tipo de magia' : 'Nuevo tipo de magia'}</div>
+    <div class="form-row"><label class="form-label">Nombre</label><input id="f-nombre" value="${item ? item.nombre : ''}" /></div>
+    <div class="form-row"><label class="form-label">Icono Tabler (ej: ti-bolt)</label><input id="f-icono" value="${item ? item.icono : 'ti-sparkles'}" /></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+  especie: (item) => `
+    <div class="modal-title">${item ? 'Editar especie' : 'Nueva especie'}</div>
+    <div class="form-row"><label class="form-label">Nombre</label><input id="f-nombre" value="${item ? item.nombre : ''}" /></div>
+    <div class="form-row"><label class="form-label">Subcategoría</label><select id="f-subcategoria"><option value="Portadores de magia" ${item&&item.subcategoria==='Portadores de magia'?'selected':''}>Portadores de magia</option><option value="Híbridos" ${item&&item.subcategoria==='Híbridos'?'selected':''}>Híbridos</option><option value="Sangre pura" ${item&&item.subcategoria==='Sangre pura'?'selected':''}>Sangre pura</option><option value="Otras" ${item&&item.subcategoria==='Otras'?'selected':''}>Otras</option></select></div>
+    <div class="form-row"><label class="form-label">Color</label><select id="f-color"><option value="blue" ${item&&item.color==='blue'?'selected':''}>Azul</option><option value="purple" ${item&&item.color==='purple'?'selected':''}>Púrpura</option><option value="teal" ${item&&item.color==='teal'?'selected':''}>Teal</option><option value="pink" ${item&&item.color==='pink'?'selected':''}>Rosa</option></select></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+  lugar: (item) => `
+    <div class="modal-title">${item ? 'Editar lugar' : 'Nuevo lugar'}</div>
+    <div class="form-row"><label class="form-label">Nombre</label><input id="f-nombre" value="${item ? item.nombre : ''}" /></div>
+    <div class="form-row"><label class="form-label">Tipo</label><input id="f-tipo" value="${item ? item.tipo : ''}" placeholder="Dimensión, Ciudad..." /></div>
+    <div class="form-row"><label class="form-label">Color</label><select id="f-color"><option value="blue" ${item&&item.color==='blue'?'selected':''}>Azul</option><option value="purple" ${item&&item.color==='purple'?'selected':''}>Púrpura</option><option value="teal" ${item&&item.color==='teal'?'selected':''}>Teal</option></select></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+  evento: (item) => `
+    <div class="modal-title">${item ? 'Editar evento' : 'Nuevo evento'}</div>
+    <div class="form-row"><label class="form-label">Año / período</label><input id="f-anio" value="${item ? item.anio : ''}" placeholder="1919, 1920–1925..." /></div>
+    <div class="form-row"><label class="form-label">Evento</label><input id="f-evento" value="${item ? item.evento : ''}" /></div>
+    <div class="form-row"><label class="form-label">Descripción</label><textarea id="f-descripcion">${item ? item.descripcion : ''}</textarea></div>`,
+};
+
+function openModal(type, item) {
+  editingType = type;
+  editingId = item ? item.id : null;
+  const mc = document.getElementById('modal-content');
+  mc.innerHTML = MODAL_FORMS[type](item) + `
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-save" onclick="saveItem()">Guardar</button>
+    </div>`;
+  document.getElementById('modal-bg').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('open');
+  editingType = null; editingId = null;
+}
+
+function g(id) { const el = document.getElementById(id); return el ? el.value.trim() : ''; }
+
+function saveItem() {
+  const type = editingType;
+  const sets = {
+    tomo: () => ({titulo:g('f-titulo'), numero:g('f-numero'), estado:g('f-estado'), sinopsis:g('f-sinopsis')}),
+    personaje: () => ({nombre:g('f-nombre'), rol:g('f-rol'), tomo:g('f-tomo'), faccion:g('f-faccion'), especie:g('f-especie'), poderes:g('f-poderes'), color:g('f-color'), avatar:g('f-avatar'), descripcion:g('f-descripcion')}),
+    faccion: () => ({nombre:g('f-nombre'), tipo:g('f-tipo'), color:g('f-color'), descripcion:g('f-descripcion')}),
+    magia: () => ({nombre:g('f-nombre'), icono:g('f-icono'), descripcion:g('f-descripcion')}),
+    especie: () => ({nombre:g('f-nombre'), subcategoria:g('f-subcategoria'), color:g('f-color'), descripcion:g('f-descripcion')}),
+    lugar: () => ({nombre:g('f-nombre'), tipo:g('f-tipo'), color:g('f-color'), descripcion:g('f-descripcion')}),
+    evento: () => ({anio:g('f-anio'), evento:g('f-evento'), descripcion:g('f-descripcion')}),
+  };
+  const keyMap = {tomo:'tomos', personaje:'personajes', faccion:'facciones', magia:'magia', especie:'especies', lugar:'lugares', evento:'eventos'};
+  const arr = DATA[keyMap[type]];
+  const vals = sets[type]();
+  if (editingId) {
+    const idx = arr.findIndex(x => x.id === editingId);
+    if (idx >= 0) arr[idx] = {...arr[idx], ...vals};
+  } else {
+    const newId = arr.length ? Math.max(...arr.map(x => x.id)) + 1 : 1;
+    arr.push({id: newId, ...vals});
+  }
+  closeModal();
+  renderAll();
+}
+
+function editItem(type, id) {
+  const keyMap = {tomo:'tomos', personaje:'personajes', faccion:'facciones', magia:'magia', especie:'especies', lugar:'lugares', evento:'eventos'};
+  const item = DATA[keyMap[type]].find(x => x.id === id);
+  openModal(type, item);
+}
+
+function deleteItem(type, id) {
+  const keyMap = {tomo:'tomos', personaje:'personajes', faccion:'facciones', magia:'magia', especie:'especies', lugar:'lugares', evento:'eventos'};
+  DATA[keyMap[type]] = DATA[keyMap[type]].filter(x => x.id !== id);
+  renderAll();
+}
+
+document.getElementById('modal-bg').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ══════════════════════════════════════════════
+//  GITHUB SYNC
+// ══════════════════════════════════════════════
+const GH_OWNER = 'LadyMagic05';
+const GH_REPO  = 'R-beiller';
+const GH_FILE  = 'data.json';
+const GH_BRANCH = 'main';
+const GH_API   = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+
+function getToken() { return localStorage.getItem('gh_token'); }
+function setToken(t) { localStorage.setItem('gh_token', t); }
+
+let ghFileSha = null; // needed for updates
+
+function showSyncStatus(msg, type = 'info') {
+  const el = document.getElementById('sync-status');
+  if (!el) return;
+  const colors = { info: '#8a80b8', ok: '#7dd4bb', error: '#e8957a', saving: '#e0b87a' };
+  el.textContent = msg;
+  el.style.color = colors[type] || colors.info;
+}
+
+async function loadFromGitHub() {
+  const token = getToken();
+  if (!token) { renderAll(); return; }
+  showSyncStatus('⟳ Cargando datos…', 'info');
+  try {
+    const res = await fetch(GH_API + '?ref=' + GH_BRANCH, {
+      headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json' }
+    });
+    if (res.status === 404) {
+      // data.json doesn't exist yet — save current DATA to create it
+      await saveToGitHub('Crear data.json inicial');
+      showSyncStatus('✦ Wiki iniciada', 'ok');
+      renderAll();
+      return;
+    }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const json = await res.json();
+    ghFileSha = json.sha;
+    const decoded = JSON.parse(atob(json.content.replace(/
+/g, '')));
+    // Merge: keep code structure, replace data
+    Object.assign(DATA, decoded);
+    showSyncStatus('✦ Sincronizado con GitHub', 'ok');
+  } catch(e) {
+    showSyncStatus('✗ Error al cargar: ' + e.message, 'error');
+    console.error(e);
+  }
+  renderAll();
+}
+
+async function saveToGitHub(message = 'Actualizar wiki') {
+  const token = getToken();
+  if (!token) { showAuthPrompt(); return false; }
+  showSyncStatus('⟳ Guardando…', 'saving');
+  try {
+    const body = { message, content: btoa(unescape(encodeURIComponent(JSON.stringify(DATA, null, 2)))), branch: GH_BRANCH };
+    if (ghFileSha) body.sha = ghFileSha;
+    const res = await fetch(GH_API, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || 'HTTP ' + res.status);
+    }
+    const json = await res.json();
+    ghFileSha = json.content.sha;
+    showSyncStatus('✓ Guardado en GitHub', 'ok');
+    return true;
+  } catch(e) {
+    showSyncStatus('✗ Error al guardar: ' + e.message, 'error');
+    console.error(e);
+    return false;
+  }
+}
+
+function showAuthPrompt() {
+  const existing = getToken();
+  const token = prompt(
+    existing
+      ? 'Token de GitHub actual guardado. Introduce uno nuevo para reemplazarlo (o cancela para mantenerlo):'
+      : '🔑 Introduce tu token de GitHub (Personal Access Token con permiso "repo").
+
+Se guardará solo en tu navegador.',
+    ''
+  );
+  if (token && token.trim()) {
+    setToken(token.trim());
+    loadFromGitHub();
+  }
+}
+
+function clearToken() {
+  if (confirm('¿Eliminar el token guardado? Dejarás de poder guardar cambios hasta que introduzcas uno nuevo.')) {
+    localStorage.removeItem('gh_token');
+    showSyncStatus('Token eliminado', 'info');
+  }
+}
+
+// Patch saveItem to also push to GitHub
+const _originalSaveItem = saveItem;
+async function saveItem() {
+  _originalSaveItem();
+  await saveToGitHub('Editar wiki');
+}
+
+// Patch deleteItem to also push to GitHub
+const _originalDeleteItem = deleteItem;
+async function deleteItem(type, id) {
+  if (!confirm('¿Eliminar este elemento? Esta acción se guardará en GitHub.')) return;
+  _originalDeleteItem(type, id);
+  await saveToGitHub('Eliminar elemento de wiki');
+}
+
+// Init
+loadFromGitHub();
+</script>
+<script>
+(function(){
+  const canvas = document.getElementById('star-canvas');
+  if(!canvas) return;
+  function resize(){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    draw();
+  }
+  function rnd(min,max){return Math.random()*(max-min)+min;}
+  function draw(){
+    const W = canvas.width, H = canvas.height;
+    if(!W||!H) return;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,W,H);
+
+    // Stars
+    const count = Math.floor(W*H/1800);
+    for(let i=0;i<count;i++){
+      const x=rnd(0,W), y=rnd(0,H), r=rnd(0.3,1.4);
+      const alpha=rnd(0.2,0.9);
+      ctx.beginPath();
+      ctx.arc(x,y,r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(200,190,255,${alpha})`;
+      ctx.fill();
+    }
+
+    // 4-point sparkles
+    const sparkles = Math.floor(W*H/12000);
+    for(let i=0;i<sparkles;i++){
+      const x=rnd(0,W), y=rnd(0,H), s=rnd(3,7);
+      const alpha=rnd(0.25,0.6);
+      ctx.save();
+      ctx.translate(x,y);
+      ctx.fillStyle=`rgba(210,200,255,${alpha})`;
+      // 4-point star shape
+      ctx.beginPath();
+      ctx.moveTo(0,-s);ctx.lineTo(s*0.15,-s*0.15);
+      ctx.lineTo(s,0);ctx.lineTo(s*0.15,s*0.15);
+      ctx.lineTo(0,s);ctx.lineTo(-s*0.15,s*0.15);
+      ctx.lineTo(-s,0);ctx.lineTo(-s*0.15,-s*0.15);
+      ctx.closePath();ctx.fill();
+      ctx.restore();
+    }
+
+    // Crescent moons scattered
+    const moons = [
+      {x:W*0.88, y:H*0.07, r:18, alpha:0.12},
+      {x:W*0.06, y:H*0.82, r:12, alpha:0.09},
+      {x:W*0.94, y:H*0.55, r:9,  alpha:0.07},
+      {x:W*0.15, y:H*0.18, r:7,  alpha:0.08},
+    ];
+    moons.forEach(m=>{
+      if(m.x>W||m.y>H) return;
+      ctx.save();
+      ctx.translate(m.x, m.y);
+      ctx.fillStyle=`rgba(180,165,255,${m.alpha})`;
+      // Crescent: big circle minus offset circle
+      ctx.beginPath();
+      ctx.arc(0,0,m.r,0,Math.PI*2);
+      ctx.fill();
+      ctx.globalCompositeOperation='destination-out';
+      ctx.beginPath();
+      ctx.arc(m.r*0.45, -m.r*0.1, m.r*0.78, 0, Math.PI*2);
+      ctx.fill();
+      ctx.globalCompositeOperation='source-over';
+      ctx.restore();
+    });
+  }
+  window.addEventListener('resize', resize);
+  setTimeout(resize, 50);
+})();
+</script>
+
+<script>
+// Fondo de estrellas
+const canvas = document.getElementById('star-canvas');
+if(canvas){
+    const ctx = canvas.getContext('2d');
+
+    function resize(){
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+
+    const stars = Array.from({length:120}, ()=>({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*1.6,
+        a:Math.random()
+    }));
+
+    function draw(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        for(const s of stars){
+            ctx.beginPath();
+            ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+            ctx.fillStyle=`rgba(255,255,255,${s.a})`;
+            ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+}
+</script>
+
+</body>
+</html>
