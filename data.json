@@ -1,0 +1,1069 @@
+{
+  "tomos": [
+    {
+      "id": 1,
+      "titulo": "Tomo 1: Rébeiller Prólogue",
+      "numero": "Tomo 1",
+      "estado": "en proceso",
+      "sinopsis": "Elías y Elliot son dos jóvenes que viven en un mundo aparentemente igual al nuestro, con el pequeño detalle de que existen magos y seres capaces de usar magia que deben pasar desapercibidos entre humanos. Es 1919, la Primera Guerra Mundial acaba de terminar. El padre de Elías ha desaparecido y él debe encargarse de todos sus asuntos como la nueva cabeza de la familia. Elliot vive intentando hacer todo por complacer a su madre, incluso tratar de deshacerse de lo que ella llama una \"enfermedad\". Un encuentro en una biblioteca cambiará sus vidas para siempre."
+    },
+    {
+      "id": 2,
+      "titulo": "La cabeza de la familia",
+      "numero": "Spin-off",
+      "estado": "publicado",
+      "sinopsis": "Inglaterra, 1909. Kenji Nakamura tiene once o doce años y ya carga con más de lo que le corresponde. Tras la muerte de sus padres y el intento de linchamiento de su hermana menor Aoi —una portadora de magia a quien el pueblo llama bruja—, ambos acaban en las instalaciones de Clarté, donde Aoi es sometida a experimentos. Narrado como el diario de Kenji, el spin-off sigue a un niño que aprende a leer libros de medicina a escondidas, roba tiempo en la biblioteca para entender palabras que nadie le explica y reparte su escasa comida entre su hermana y Z-056: un niño con ojos violetas que lleva toda su vida encerrado entre esas paredes sin haber visto nunca el cielo. 'La cabeza de la familia' es una historia sobre lo que significa proteger a quienes amas cuando no tienes ningún poder real para hacerlo."
+    },
+    {
+      "id": 3,
+      "titulo": "Entre rosas y espinas: Un ángel",
+      "numero": "Spin-off",
+      "estado": "publicado",
+      "sinopsis": "Inglaterra, 1915. Allen D'Arnaud es un joven híbrido de belleza inquietante que, desde los dieciséis años, se prostituye en secreto para sostener a su madre y sus cinco hermanos menores mientras la Primera Guerra Mundial devora al continente. Cuando Aarick Ainsworth lo secuestra para usarlo como sujeto de experimentos en Clarté, Allen queda atrapado en una celda húmeda, sometido a pruebas que amenazan tanto su cuerpo como la vida que crece dentro de él. En medio del encierro aparece Jules Ainsworth, la hija mayor del hombre que lo tiene prisionero, que a escondidas le lleva comida, libros y, sin quererlo, esperanza. Lo que comienza como actos de compasión se convierte en algo más difícil de nombrar. Cuando la situación se vuelve crítica, Jules deberá enfrentarse a su propio padre para sacar a Allen de allí, y Allen descubrirá un poder que jamás imaginó tener."
+    },
+    {
+      "id": 4,
+      "titulo": "Tomo 2: Dark Rebéiller",
+      "numero": "Tomo 2",
+      "estado": "planeado",
+      "sinopsis": "Protagonizado por Auguste D'Arnaud-Ainsworth, segundo hijo de Jules y Allen, y hermano menor de Joseph. Los acontecimientos comienzan aproximadamente un año antes del estallido de la Segunda Guerra Mundial. Auguste conoce a una muchacha llamada Willow, quien parece ser una híbrida, pero cuya presencia le despierta recuerdos extraños: experiencias que siente haber vivido con ella, aunque sabe que eso es imposible porque nunca han coincidido antes."
+    },
+    {
+      "id": 5,
+      "titulo": "Tomo 3: Rebéiller — The Lake",
+      "numero": "Tomo 3",
+      "estado": "planeado",
+      "sinopsis": "Sucede inmediatamente después de los eventos de Dark Rebéiller. Sigue dos historias entrelazadas: la de Rémi, amigo de Auguste, y su historia de amor; y la del Rey Lyall, quien por ciertas circunstancias pierde el amor del Rey Deymus y debe comenzar de nuevo — terminando por enamorarse de Ryuji, un príncipe nereida rechazado de otro reino."
+    },
+    {
+      "id": 6,
+      "titulo": "Tomo 4: Avant Rebéiller",
+      "numero": "Tomo 4",
+      "estado": "planeado",
+      "sinopsis": "Ambientado en lo que para el mundo humano sería 1970. El protagonista es Maius, hijo del Rey Lyall y Ryuji. A pesar de ser amado por sus padres, es descartado como sucesor por su naturaleza considerada peligrosa —tachado de psicópata por la corte— y exiliado, mientras su hermana melliza Aira (Airi) es designada heredera. En el mundo humano, Maius conoce a Chiara, quien afirma ser la princesa heredera de un reino del otro lado del velo."
+    },
+    {
+      "id": 7,
+      "titulo": "Tomo 5: The Rebéiller",
+      "numero": "Tomo 5",
+      "estado": "planeado",
+      "sinopsis": "Los acontecimientos transcurren en la época actual. Dado el número de personajes involucrados, es probable que se divida en al menos tres tomos distintos."
+    },
+    {
+      "id": 8,
+      "titulo": "La magia más pura",
+      "numero": "Spin-off",
+      "estado": "planeado",
+      "sinopsis": ""
+    },
+    {
+      "id": 9,
+      "titulo": "Mentiras",
+      "numero": "Spin-off",
+      "estado": "planeado",
+      "sinopsis": ""
+    }
+  ],
+  "personajes": [
+    {
+      "id": 1,
+      "nombre": "Elías Ainsworth",
+      "rol": "Protagonista",
+      "faccion": "Clarté",
+      "especie": "Portador de magia",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "18 años (cumple 19 el 21 de septiembre de 1919). Líder temporal de Clarté. Estudia medicina en la Universitat de València. Ojos azul profundo, cabello negro. Criado bajo el régimen de Aarick; ha heredado el liderazgo que no pidió. Cuida de Camille con devoción absoluta: cuando ella cae inconsciente (agosto de 1919) apenas duerme, la visita a diario y busca desesperadamente una explicación en los libros. Descubre que Camille podría ser una híbrida de rosa, nacimiento que quizás fue planeado por su padre. Reconoció en sus propios pensamientos que ama a Elliot, aunque no se lo ha dicho. Le dio un beso en la frente a Elliot de forma impulsiva. Su hermana mayor Jules regresó de Francia con su esposo Allen y su bebé Joseph. Confía en el doctor Del Castillo para gestionar Farmacéuticas Ainsworth. Aún actúa como si su padre lo observara, incapaz de aceptar que ya no tiene que demostrarse nada.",
+      "poderes": "Manipulación de sombras (viaje entre sombras, masas oscuras); telequinesis (poco entrenada)",
+      "avatar": "EA",
+      "color": "purple"
+    },
+    {
+      "id": 2,
+      "nombre": "Elliot",
+      "rol": "Protagonista",
+      "faccion": "—",
+      "especie": "Híbrido (descendiente de nereidas)",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "18 años. Vive en el barrio costero con su madre Eleanor. Cabello rubio cenizo, ojos variables entre gris, azul y celeste. Vende pan y figuritas de madera talladas. Le gustan las novelas románticas aunque le da vergüenza admitirlo. Pasó tres días encerrado en el cobertizo de su casa durante su ciclo híbrido (agosto de 1919), luchando contra el calor y los pensamientos sobre Elías. Su madre lo presiona cada vez más para que formalice con Lydia y acepte que Miss Beatrice pague sus estudios para ser profesor. Elliot empezó a distanciarse de Elías para no depender de él, lo que provocó una discusión con llanto. Leyó sobre el concepto de Enlace en la biblioteca y lo relacionó instintivamente con Elías. Sabe que sus sentimientos son reales pero los siente condenados. Su padre fue un marinero que prometió volver del mar y nunca lo hizo. Sus poderes acuáticos son herencia directa de su madre Eleanor, descendiente de nereidas.",
+      "poderes": "Respirar bajo el agua; comunicación con seres marinos; anulación de magia ajena",
+      "avatar": "EL",
+      "color": "teal"
+    },
+    {
+      "id": 3,
+      "nombre": "Aarick Ainsworth",
+      "rol": "Antagonista / Padre de Elías",
+      "faccion": "Clarté",
+      "especie": "Portador de magia",
+      "tomo": "Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel",
+      "descripcion": "Padre de Elías y antiguo líder de Clarté, desaparecido en 1919. Obligó a Elías desde niño a estudiar bajo castigos severos. Trató a Camille como sujeto de experimentación. Hay indicios de que el nacimiento de Camille como híbrida de rosa no fue accidental, sino planeado por él. Sus experimentos más crueles se llevaban a cabo en el Departamento de Anatomía Comparada. En 1915 secuestró a Allen —entonces de dieciséis años— para experimentar con él por ser híbrido. Al descubrir que su esposa Alana era también híbrida, la encerró, la insultó con brutalidad y cometió algo que Jules describe como 'lo peor que puede hacerse a un ser humano'. Odia a los híbridos aunque los estudia; Julius lo describe como alguien que parece disfrutarlo. Usa su propia magia de sombras para destruir las de otros durante los enfrentamientos, causando dolor físico. Fue derrotado temporalmente por Allen con el poder 'Sanguis Innocentium'. Se desconoce su paradero actual.",
+      "poderes": "Magia de sombras poderosa (destrucción y dominación de sombras ajenas); investigación y explotación mágica",
+      "avatar": "AA",
+      "color": "coral"
+    },
+    {
+      "id": 4,
+      "nombre": "Dominico Riva",
+      "rol": "Líder de Mirage",
+      "faccion": "Mirage",
+      "especie": "Portador de magia",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Líder de Mirage en 1920. Organización dedicada a la fabricación de artefactos y armas para potenciar habilidades mágicas.",
+      "poderes": "Criogénesis",
+      "avatar": "DR",
+      "color": "amber"
+    },
+    {
+      "id": 5,
+      "nombre": "Camille Bigot",
+      "rol": "Hermana menor de Elías",
+      "faccion": "Clarté",
+      "especie": "Híbrida de rosa",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "14 años. Ojos grises, cabello rubio rizado. Media hermana de Elías por parte de madre. Cayó inconsciente en agosto de 1919 rodeada de pétalos de rosas blancas (símbolo de purificación entre los sangre pura). Su habitación olía a fiebre y flores. Elías descubrió en libros antiguos que los 'híbridos de rosa' son los más raros entre todos los sangre pura, y sospecha que su nacimiento fue planeado por Aarick. Lleva más de un mes sin despertar. Tiene sueños premonitorios. Tenía un gato llamado Botitas que maúlló para alertar a Elías. Conserva como recuerdo de su madre la canción Le Temps des Cerises.",
+      "poderes": "Sueños premonitorios; poderes de rosa sangre pura (en desarrollo, aún no controlados)",
+      "avatar": "CB",
+      "color": "pink"
+    },
+    {
+      "id": 6,
+      "nombre": "Jules Ainsworth",
+      "rol": "Hermana mayor de Elías",
+      "faccion": "—",
+      "especie": "Híbrida",
+      "tomo": "Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel",
+      "descripcion": "Hermana mayor de Elías. Cabello rojizo rizado, piel dorada, ojos azules del linaje Ainsworth. En 1915, mientras Aarick tenía a Allen prisionero en Clarté, Jules lo visitaba a escondidas haciéndose pasar por personal médico usando su poder de cambiaformas. Se enamoró de él y organizó su escape usando su magia de sombras. Durante el rescate enfrentó a su padre, cuyas sombras la lastimaron físicamente. Escaparon juntos saltando entre sombras hasta Inglaterra, donde entregó a Allen a su familia. Huyó hace dos años con Allen, un híbrido francés. Regresó a Valencia en agosto de 1919 con su esposo Allen y su hijo Joseph (aprox. 1 año, cabello castaño cenizo, ojos grises). Se instaló con ellos en la mansión Ainsworth mientras Camille sigue inconsciente. Prometió quedarse hasta que Camille mejore, aunque tendrá que volver a Francia. Elías la perdonó entre lágrimas pero sigue sintiéndose traicionado por el tiempo en que estuvo desaparecida. Quería estudiar literatura y ser escritora, pero su padre no se lo permitió.",
+      "poderes": "Cambiaformas (puede adoptar la apariencia de otras personas); magia de sombras limitada (viaje entre sombras a distancias cortas, con agotamiento físico severo)",
+      "avatar": "JU",
+      "color": "amber"
+    },
+    {
+      "id": 7,
+      "nombre": "Joan Ainsworth",
+      "rol": "Primo de Elías / Segundo al mando en Clarté",
+      "faccion": "Clarté",
+      "especie": "Portador de magia",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Primo de Elías, algunos años mayor. Ojos azul oscuro y cabello negro, rasgos propios del linaje Ainsworth. Habla frecuentemente en francés. Es más experimentado que Elías en la práctica, y gestiona gran parte de las tareas administrativas de Clarté para aliviarle la carga. Rechazó ser el líder para proteger a su familia. Está casado en secreto con Aida; tienen un hijo llamado Andrick al que no dio su apellido, deliberadamente. Apoya a Elías con discreción incluso cuando parece llevarle la contraria en las reuniones. Su magia: movimiento preciso entre sombras.",
+      "poderes": "Desplazamiento preciso entre sombras",
+      "avatar": "JA",
+      "color": "blue"
+    },
+    {
+      "id": 8,
+      "nombre": "Aida",
+      "rol": "Esposa secreta de Joan / Médica en Clarté",
+      "faccion": "Clarté",
+      "especie": "Sangre pura — demonio",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Esposa de Joan, aunque dentro de Clarté fingen no tener relación. Es vista como madre soltera y menospreciada por sus colegas. Cabello oscuro, voz sombría y ojos negros muy oscuros; su expresión suele carecer de 'humanidad', según Elías. Acaba de dar a luz a Andrick. Capacidad de percibir emociones y pensamientos superficiales de otros (sin manipularlos, de forma involuntaria). Sorprendió a Elías al detectar sus sentimientos por Elliot sin que él los mencionara.",
+      "poderes": "Percepción empática / lectura superficial de emociones y pensamientos",
+      "avatar": "AI",
+      "color": "teal"
+    },
+    {
+      "id": 9,
+      "nombre": "Lina",
+      "rol": "Personaje misterioso / Hermana adoptiva de Anna Sofía",
+      "faccion": "—",
+      "especie": "Híbrida (demonio de sangre; antepasado 'rosa roja')",
+      "tomo": "Tomo 1: Rébeiller Prólogue / La magia más pura",
+      "descripcion": "Mujer joven de identidad incierta; 'Lina' podría ser un apodo. Cabello largo y rizado con un tono rosado. Lleva siempre una joya con un rubí auténtico, lo que sugiere origen acomodado. En el spin-off La magia más pura se revela su vínculo con Anna Sofía Vitale: son una especie de hermanas adoptivas. Ha sido vista en aldeas de los alrededores de Valencia (Albuixech, Massamagrell) ayudando a personas sin acceso a médico. Se cree que tiene la facultad de sanar heridas. Algunos grupos conservadores la persiguen. En el Tomo 1, Elías la busca para incorporarla voluntariamente a los equipos de investigación de Clarté.",
+      "poderes": "Sanación (no confirmada)",
+      "avatar": "LI",
+      "color": "pink"
+    },
+    {
+      "id": 10,
+      "nombre": "Eleanor",
+      "rol": "Madre de Elliot",
+      "faccion": "—",
+      "especie": "Híbrida (descendiente de nereidas)",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Madre de Elliot. Cabello rubio en ondas suaves, ojos grises intensos como una tormenta. Aparenta ser hermana mayor de Elliot. Trabaja turnos nocturnos en un bar cerca de la costa. Le inculcó a Elliot que sus sentimientos hacia hombres son una enfermedad. Presiona cada vez más a su hijo para que formalice con Lydia y estudie para ser profesor, con el apoyo económico de Miss Beatrice. Conoce el ciclo híbrido de Elliot y lo encierra en el cobertizo durante esos días para protegerlo. Tiene miedo de que use sus poderes cerca del mar. Fue abandonada por el padre de Elliot, un marinero que prometió volver. Su frase: 'Tienes que ser mejor que yo'. Oculta activamente su naturaleza mágica; de ella hereda Elliot sus poderes acuáticos.",
+      "poderes": "Desconocidos (oculta su naturaleza mágica activamente); descendiente de nereidas",
+      "avatar": "EN",
+      "color": "amber"
+    },
+    {
+      "id": 11,
+      "nombre": "Alana Ruiz (Olivia)",
+      "rol": "Madre fallecida de Elías y Camille",
+      "faccion": "—",
+      "especie": "Híbrida",
+      "tomo": "Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel",
+      "descripcion": "Madre de Elías y Camille, fallecida en 1908. Cantante de cabaret en París bajo el nombre artístico 'Olivia', donde Aarick la conoció. Mezzosoprano de voz aterciopelada y grave. Su familia de origen consideraba que su voz 'no era digna de una señorita', pero fue esa voz la que le dio libertad y fama. Era híbrida; cuando Aarick lo descubrió, la insultó brutalmente, la llamó 'embustera' y 'criatura despreciable', la encerró y le hizo algo que Jules describe como 'lo peor que puede hacerse a un ser humano'. Aarick la obligó a abandonar su repertorio artístico y a cantar solo canciones 'respetables'. Vivió una vida infeliz en la mansión Ainsworth. Solo queda un disco suyo: Le Temps des Cerises, que Camille atesora.",
+      "poderes": "Desconocidos",
+      "avatar": "AR",
+      "color": "coral"
+    },
+    {
+      "id": 12,
+      "nombre": "Lydia",
+      "rol": "Vecina / Interés propuesto por las madres",
+      "faccion": "—",
+      "especie": "Humana",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Hija de Miss Beatrice y don Joaquim. Cabello castaño oscuro y ojos verdes. Le interesa la costura y quiere trabajar en el taller de su tía Amélie, aunque su madre solo se lo permitirá cuando esté casada. Admite con franqueza que a ella nunca le interesaron los chicos, y que valora a Elliot más como amigo que como pretendiente. Comprende sin decirlo que el matrimonio que sus madres planean es por conveniencia mutua. Le compró a Elliot una figurita de gato por una peseta, reconociendo el valor de su trabajo.",
+      "poderes": "Ninguno",
+      "avatar": "LY",
+      "color": "teal"
+    },
+    {
+      "id": 13,
+      "nombre": "Allen",
+      "rol": "Esposo de Jules",
+      "faccion": "—",
+      "especie": "Híbrido",
+      "tomo": "Tomo 1: Rébeiller Prólogue / Entre rosas y espinas: Un ángel",
+      "descripcion": "Esposo de Jules y cuñado de Elías. Francés. Híbrido. Piel pálida, cabello castaño revuelto, ojos grises, labios muy marcados; belleza que él mismo considera una condena. Soñaba con ser médico. Su familia perdió todo en Francia —posiblemente por ser descubiertos como híbridos— y emigró a Inglaterra en 1913. Siendo el mayor de seis hermanos (Thomas, Henry, Madelaine, Lucille y Élodie), con apenas dieciséis años comenzó a prostituirse discretamente para mantener a su madre y hermanos durante la Primera Guerra Mundial. En 1915 fue secuestrado por Aarick Ainsworth y encerrado en las instalaciones de Clarté, donde fue sometido a experimentos. Durante el encierro perdió un bebé a causa de las pruebas. Fue rescatado por Jules, con quien escapó usando magia de sombras. Su padre murió en la guerra mientras él estaba prisionero. Se casó con Jules y tiempo después nació Joseph. Se identifica como atraído tanto por hombres como por mujeres, algo que Jules conoce y acepta. Vive en Francia con Jules y Joseph. Llegó a la mansión Ainsworth con Jules para acompañarla mientras Camille está enferma. Tiene una serenidad y perspicacia que desarma a Elías.",
+      "poderes": "Control del dolor — percibe, amplifica y da forma física al dolor (tanto físico como emocional); su manifestación más poderosa es 'Sanguis Innocentium', un ángel que materializa todo el sufrimiento que la víctima ha causado a otros y se lo devuelve. Aarick confundió erróneamente su poder con magia de sombras. Ciclo híbrido cada tres meses",
+      "avatar": "AL",
+      "color": "blue"
+    },
+    {
+      "id": 14,
+      "nombre": "Rubí",
+      "rol": "Bruja de sangre / Colaboradora de Clarté",
+      "faccion": "Clarté",
+      "especie": "Portadora de magia",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Joven de piel oscura y cabello de un rojo encendido. Acepta colaborar con Clarté a cambio de atención médica para su hermano Hugo, un niño en etapas avanzadas de degeneración mágica. Antes vivían actuando en un circo ambulante: Rubí hacía figuras de fuego, Hugo fingía ser ilusionista. Los echaron cuando el niño se desplomó. Su poder principal es el fuego; el control de sangre (su habilidad como bruja de sangre) le cuesta más. Descubrió que puede sanar heridas propias usando ese control. Se lastimó el pulgar a propósito para demostrárselo a Elías, lo que lo incomodó. Le recuerda a Camille.",
+      "poderes": "Control del fuego; control y conservación de sangre; sanación de heridas propias (recién descubierta)",
+      "avatar": "RU",
+      "color": "coral"
+    },
+    {
+      "id": 15,
+      "nombre": "Doctor Del Castillo",
+      "rol": "Director de Farmacéuticas Ainsworth",
+      "faccion": "—",
+      "especie": "Humano (sin magia)",
+      "tomo": "Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Hombre de confianza que gestiona Farmacéuticas Ainsworth en nombre de Elías. Fue amigo personal de Alana Ruiz, la madre de Elías. Discreto y leal, se mantiene completamente ajeno a los propósitos de Clarté. Elías delega en él la operación de la farmacéutica, aunque esa dependencia le genera cierta incomodidad.",
+      "poderes": "Ninguno conocido",
+      "avatar": "DC",
+      "color": "blue"
+    },
+    {
+      "id": 16,
+      "nombre": "Kenji Nakamura",
+      "rol": "Narrador / Hermano mayor de Aoi",
+      "faccion": "—",
+      "especie": "Portador de magia",
+      "tomo": "La cabeza de la familia",
+      "descripcion": "Niño japonés de aproximadamente once o doce años en 1909. Alto para su edad. Tras la muerte de sus padres —posiblemente víctimas de xenofobia en el pueblo— y el intento de linchamiento de su hermana Aoi, ambos acaban en las instalaciones de Clarté. Es el narrador del spin-off a través de entradas de diario. Inteligente y autodidacta: se escapa a la biblioteca para estudiar libros de medicina en inglés y espía conversaciones de los médicos para aprender vocabulario que luego busca en los libros. Su sueño es ser médico, aunque sabe que los médicos de Clarté no son un modelo a seguir. Comparte su escasa ración de comida con Z, el niño más olvidado del lugar. Su madre cocinaba udon con tempura y cantaba mientras cocinaba; esos recuerdos lo sostienen. Lleva consigo el peso de ser 'la cabeza de la familia' desde que era demasiado pequeño para serlo.",
+      "poderes": "Reparación de objetos rotos (considerado 'inútil' por Clarté)",
+      "avatar": "KN",
+      "color": "amber"
+    },
+    {
+      "id": 17,
+      "nombre": "Aoi Nakamura",
+      "rol": "Hermana menor de Kenji",
+      "faccion": "—",
+      "especie": "Portadora de magia (poder de creación y destrucción)",
+      "tomo": "La cabeza de la familia",
+      "descripcion": "Hermana menor de Kenji, de unos ocho o nueve años en 1909. En su pueblo la llamaban bruja y el intento de quemarla viva fue lo que precipitó la huida de ambos hermanos. En Clarté es sometida a experimentos con regularidad; come mejor que Kenji porque sus poderes resultan más interesantes para los investigadores. A pesar del encierro conserva momentos de alegría, como cuando describe con orgullo la comida que recibió. Se enferma con frecuencia, posiblemente por efecto de los experimentos. En una ocasión guardó comida de su ración para dársela a Kenji y a Z cuando ambos estaban enfermos.",
+      "poderes": "Ralentización del entorno: puede reducir drásticamente la velocidad de todo cuanto la rodea, creando la ilusión de que ella misma posee supervelocidad. Poder que se ramifica de la Creación y Destrucción",
+      "avatar": "AO",
+      "color": "pink"
+    },
+    {
+      "id": 18,
+      "nombre": "Z-056 (Zahir)",
+      "rol": "Niño prisionero de Clarté",
+      "faccion": "—",
+      "especie": "Sangre pura (desconoce su propio origen)",
+      "tomo": "La cabeza de la familia / Tomo 1: Rébeiller Prólogue",
+      "descripcion": "Niño con ojos de color violeta intenso, como amatistas. Los médicos de Clarté lo identifican únicamente como Z-056; no tiene nombre propio hasta que Kenji le pone 'Zahir' en los eventos de Rébeiller Prólogue. Nació dentro de las instalaciones y nunca ha visto el cielo, los árboles ni ha corrido por un camino. Es el más ignorado del lugar: siempre último en la fila de comida, a menudo sin que le quede nada. Físicamente frágil —Kenji lo describe como 'una ramita que podría romperse con un viento fuerte'— y sometido a experimentos más severos que los otros niños. A pesar de esto, Kenji lo percibe como un niño dulce. Se duerme escuchando las canciones que Kenji recuerda de su madre. Desconoce completamente su propio origen como sangre pura.",
+      "poderes": "Poderes mentales: telequinesis y lectura de emociones",
+      "avatar": "Z0",
+      "color": "purple"
+    },
+    {
+      "id": 19,
+      "nombre": "Auguste D'Arnaud-Ainsworth",
+      "rol": "Protagonista",
+      "faccion": "Independiente",
+      "especie": "Híbrido (hijo de Jules Ainsworth y Allen D'Arnaud)",
+      "tomo": "Tomo 2: Dark Rebéiller",
+      "descripcion": "Segundo hijo de Jules Ainsworth y Allen D'Arnaud. Hermano menor de Joseph. Los eventos de su historia comienzan aproximadamente un año antes del estallido de la Segunda Guerra Mundial. Al conocer a Willow experimenta una sensación profundamente perturbadora: recuerdos de experiencias vividas junto a ella que sabe que son imposibles, porque nunca han coincidido antes. Hereda la manipulación de sombras del linaje Ainsworth.",
+      "poderes": "Manipulación de sombras (herencia del linaje Ainsworth)",
+      "avatar": "AG",
+      "color": "blue"
+    },
+    {
+      "id": 20,
+      "nombre": "Willow",
+      "rol": "Interés romántico de Auguste",
+      "faccion": "Independiente",
+      "especie": "Híbrida (madre sangre pura)",
+      "tomo": "Tomo 2: Dark Rebéiller",
+      "descripcion": "Joven que Auguste conoce cerca del inicio de la Segunda Guerra Mundial. Su presencia despierta en Auguste recuerdos inexplicables de experiencias compartidas que objetivamente no ocurrieron. Por herencia de su madre sangre pura, puede con esfuerzo cambiar a forma masculina: fluye en su género de forma literal.",
+      "poderes": "Creación de portales (poder de Creación y Destrucción: liga un punto del espacio con otro durante un instante); cambio de forma de género (herencia sangre pura de su madre)",
+      "avatar": "WL",
+      "color": "pink"
+    },
+    {
+      "id": 21,
+      "nombre": "Rémi",
+      "rol": "Amigo de Auguste / Protagonista secundario",
+      "faccion": "Independiente",
+      "especie": "Híbrido (descendiente de nereidas)",
+      "tomo": "Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller",
+      "descripcion": "Amigo cercano de Auguste. Protagoniza su propia historia de amor en The Lake, desarrollada en paralelo a la del Rey Lyall. Descendiente de nereidas.",
+      "poderes": "Control del agua (herencia de su linaje nereida)",
+      "avatar": "RM",
+      "color": "teal"
+    },
+    {
+      "id": 22,
+      "nombre": "Rey Lyall",
+      "rol": "Protagonista / Monarca de Arcadia",
+      "faccion": "Por definir",
+      "especie": "Demonio (linaje de lobo negro, casi extinto)",
+      "tomo": "Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller",
+      "descripcion": "Rey de Arcadia. Desciende de un linaje de demonios con bestialidad de lobo negro, una estirpe prácticamente extinta. En The Lake sufre la pérdida del amor del Rey Deymus y debe comenzar de nuevo. Su camino lo lleva a enamorarse de Ryuji, un príncipe nereida rechazado por su propio reino.",
+      "poderes": "Control del fuego; poderes parciales de Creación y Destrucción",
+      "avatar": "RL",
+      "color": "purple"
+    },
+    {
+      "id": 23,
+      "nombre": "Rey Deymus",
+      "rol": "Monarca de Ardalan / Interés romántico pasado del Rey Lyall",
+      "faccion": "Por definir",
+      "especie": "Sangre pura (descendiente de nereidas y demonios marinos)",
+      "tomo": "Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller",
+      "descripcion": "Rey de Ardalan, cuyo reino está habitado en gran parte por nereidas. Su relación con el Rey Lyall se rompe, desencadenando los eventos centrales de The Lake.",
+      "poderes": "Manipulación del agua y las mareas",
+      "avatar": "DM",
+      "color": "coral"
+    },
+    {
+      "id": 24,
+      "nombre": "Ryuji",
+      "rol": "Príncipe nereida / Interés romántico del Rey Lyall",
+      "faccion": "Por definir",
+      "especie": "Nereida (sangre pura)",
+      "tomo": "Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller",
+      "descripcion": "Príncipe nereida de Haroumi, rechazado por su propio reino desde el nacimiento por nacer extremadamente débil. Padece una enfermedad que fragiliza su cuerpo de forma permanente: se lastima con facilidad, casi como un niño de cristal, lo que lo hizo considerado indigno de su linaje imperial a ojos de la corte. A pesar de ello — o quizás a causa de ello — desarrolló los poderes de sanación más poderosos jamás documentados, superando con creces a cualquier otro portador de magia curativa conocido.\n\nSe enamora del Rey Lyall tras la pérdida de Deymus. Juntos tienen dos hijos mellizos: Maius y Aira (también llamada Airi de cariño), futuros protagonistas de Avant Rebéiller.",
+      "poderes": "Sanación (el más poderoso documentado); manipulación del agua",
+      "avatar": "RJ",
+      "color": "teal"
+    },
+    {
+      "id": 25,
+      "nombre": "Maius",
+      "rol": "Protagonista / Príncipe exiliado",
+      "faccion": "Por definir",
+      "especie": "Mezcla de los linajes de Lyall (demonio lobo negro) y Ryuji (nereida)",
+      "tomo": "Tomo 4: Avant Rebéiller",
+      "descripcion": "Hijo del Rey Lyall y Ryuji. Mellizo; su hermana Aira (Airi de cariño) es designada sucesora mientras él es exiliado por ser considerado un psicópata por la corte. En el mundo humano —1970— conoce a Chiara. Su naturaleza combina ambos linajes aunque se inclina más hacia el lado nereida.",
+      "poderes": "Combinación de los linajes de ambos padres, predominantemente nereida (por definir en detalle)",
+      "avatar": "MA",
+      "color": "purple"
+    },
+    {
+      "id": 26,
+      "nombre": "Chiara",
+      "rol": "Interés romántico de Maius / Princesa heredera",
+      "faccion": "Por definir",
+      "especie": "Híbrida casi sangre pura (mínima sangre humana)",
+      "tomo": "Tomo 4: Avant Rebéiller",
+      "descripcion": "Hija de Anna Sofía Vitale. Joven que Maius encuentra en el mundo humano. Afirma ser la princesa heredera de un reino del otro lado del velo. Tiene tan poca sangre humana que funciona en muchos aspectos como un sangre pura.",
+      "poderes": "Creación y Destrucción (parcial, herencia de Anna Sofía); criogénesis débil; magia de los sueños",
+      "avatar": "CH",
+      "color": "pink"
+    },
+    {
+      "id": 27,
+      "nombre": "Nazly Ainsworth",
+      "rol": "Protagonista",
+      "faccion": "Valhalla",
+      "especie": "Híbrida (bisnieta de Elías; mezcla de linajes)",
+      "tomo": "Tomo 5: The Rebéiller",
+      "descripcion": "Bisnieta de Elías Ainsworth. Protagonista de The Rebéiller, ambientado en la época actual. Su segundo nombre es Alana — coincidencia no planeada, aunque resuena de forma significativa con el nombre de la madre de Elías, Alana Ruiz. Hereda el poder de Creación y Destrucción por línea materna: su madre es Elaine Laurent, portadora de un linaje primigenio. Hermana de Louis Ainsworth.",
+      "poderes": "Manipulación leve de la realidad (poder de Creación y Destrucción, herencia materna — Elaine Laurent)",
+      "avatar": "NZ",
+      "color": "purple"
+    },
+    {
+      "id": 28,
+      "nombre": "Louis Ainsworth",
+      "rol": "Hermano de Nazly / Personaje del Tomo 5",
+      "faccion": "Valhalla",
+      "especie": "Híbrido (bisnieto de Elías; mezcla de linajes)",
+      "tomo": "Tomo 5: The Rebéiller",
+      "descripcion": "Hermano de Nazly Ainsworth. Bisnieto de Elías Ainsworth. Comparte con su hermana el poder de Creación y Destrucción, heredado por línea materna de Elaine Laurent. Es la pareja de Carlo de Simone, bailarín de ballet. Cuando Carlo desarrolla la enfermedad del Corazón Congelado tras una ruptura entre ambos, Louis logra reconciliarse con él y detener su progresión — aunque no puede revertir las secuelas permanentes que Carlo arrastra.",
+      "poderes": "Manifestaciones del poder de Creación y Destrucción (por definir); herencia materna — Elaine Laurent",
+      "avatar": "LO",
+      "color": "blue"
+    },
+    {
+      "id": 29,
+      "nombre": "Elaine Laurent",
+      "rol": "Madre de Nazly y Louis / Portadora del linaje primigenio",
+      "faccion": "Mirage (antiguamente)",
+      "especie": "Híbrida",
+      "tomo": "Tomo 5: The Rebéiller",
+      "descripcion": "Madre de Nazly y Louis Ainsworth. Portadora de un linaje primigenio que transmite a sus hijos el poder de Creación y Destrucción — el poder más antiguo y escaso del universo de Rebéiller, heredado de especies anteriores a las actuales. Sus propias manifestaciones de esta habilidad y su historia personal están por definir.",
+      "poderes": "Por definir (portadora del linaje primigenio de Creación y Destrucción)",
+      "avatar": "EL",
+      "color": "amber"
+    },
+    {
+      "id": 30,
+      "nombre": "Anna Sofía Vitale",
+      "rol": "Protagonista del spin-off / Madre de Chiara",
+      "faccion": "Eidrya (co-fundadora)",
+      "especie": "Sangre pura (mezcla de hadas y demonios con bestialidad de lobo blanco)",
+      "tomo": "Tomo 1: Rébeiller Prólogue / La magia más pura / Tomo 2: Dark Rebéiller / Tomo 3: Rebéiller — The Lake / Tomo 4: Avant Rebéiller / Tomo 5: The Rebéiller",
+      "descripcion": "Nombre completo: Anna Sofía Vitale. Su padre la llama cariñosamente 'Annie'. Madre de Chiara. Protagonista del spin-off La magia más pura y figura presente a lo largo de la saga: aparece en Dark Rebéiller, The Lake y Avant Rebéiller, y es mencionada en el último tomo. Tiene una hermana adoptiva llamada Lina, cuyo vínculo con ella se desarrolla en La magia más pura. Es la portadora más poderosa documentada del poder de Creación y Destrucción — un linaje de las especies primigenias. Su presencia y habilidades son tan inusuales que algunos seres del otro lado del velo casi la consideran una diosa. En The Rebéiller, su existencia se convierte en un misterio activo: se pone en duda si Anna Sofía sigue con vida o ha muerto, sin que ninguna respuesta sea definitiva.",
+      "poderes": "Creación y Destrucción (manipulación del tiempo y la realidad); la portadora más poderosa documentada de este linaje primigenio",
+      "avatar": "AS",
+      "color": "pink"
+    }
+  ],
+  "facciones": [
+    {
+      "id": 1,
+      "nombre": "Clarté",
+      "tipo": "Organización de investigación",
+      "descripcion": "Dedicada a la investigación de la magia: enfermedades de portadores, diferencias entre híbridos y humanos, aprovechamiento de la magia. Tiene enfoque médico pero bajo Aarick sus departamentos realizaron experimentos inhumanos, especialmente el Departamento de Anatomía Comparada. Elías está intentando limpiar la organización, despidiendo jefes corruptos y reemplazándolos con investigadores más jóvenes. Cuenta con un nuevo Departamento de Investigación en Campo fundado por Elías. Opera bajo las normas de Blackwood. Busca actualmente a una bruja de sangre independiente para sus investigaciones genéticas.",
+      "color": "purple"
+    },
+    {
+      "id": 2,
+      "nombre": "Mirage",
+      "tipo": "Fabricación de artefactos",
+      "descripcion": "Organización dedicada a la fabricación de artefactos y armas para potenciar habilidades mágicas. Líder en 1920: Dominico Riva.",
+      "color": "amber"
+    },
+    {
+      "id": 3,
+      "nombre": "Blackwood",
+      "tipo": "Ministerio oculto",
+      "descripcion": "Gobierno secreto que regula a los individuos con habilidades mágicas en el mundo. Quien se registra obtiene protección, acceso a recursos y reconocimiento. A cambio debe seguir sus leyes internas. La discreción es su primera norma: jamás revelar su existencia a los humanos comunes. Si se comete un delito usando magia, es Blackwood —no los estados— quien dicta sentencia. No abarca a todos: muchos nacidos en la pobreza nunca oyeron hablar de ellos; otros lo rechazan por desconfianza. Clarté opera bajo sus directrices.",
+      "color": "teal"
+    },
+    {
+      "id": 4,
+      "nombre": "Valhalla",
+      "tipo": "Organización en el mundo humano",
+      "descripcion": "Facción operativa en el mundo humano a la que pertenecen Nazly y Louis Ainsworth en los eventos de The Rebéiller. Su estructura, objetivos y liderazgo están por definir.",
+      "color": "purple"
+    },
+    {
+      "id": 5,
+      "nombre": "Eidrya",
+      "tipo": "Facción / Organización",
+      "descripcion": "Facción fundada por Anna Sofía Vitale junto a Adrián Moreau. Anna Sofía es co-fundadora y figura central durante el primer tomo de su presencia en la saga. Su ideología, alcance y composición están por definir.",
+      "color": "pink"
+    }
+  ],
+  "magia": [
+    {
+      "id": 1,
+      "categoria": "elementales",
+      "nombre": "Poderes elementales",
+      "icono": "ti-flame",
+      "color": "coral",
+      "descripcion": "Control sobre los elementos naturales: fuego, agua, tierra, aire, hielo, electricidad, criogénesis y sus variantes. Son de los poderes más comunes entre los portadores de magia, aunque su intensidad varía enormemente. Algunos solo pueden manipular su elemento en pequeñas cantidades; otros lo generan desde cero sin necesidad de una fuente cercana.",
+      "personajes": [
+        {
+          "nombre": "Rubí",
+          "detalle": "Control del fuego sin precisar llama preexistente; además controla y conserva sangre, y recientemente ha descubierto una forma rudimentaria de sanación propia."
+        },
+        {
+          "nombre": "Elliot",
+          "detalle": "Respirar bajo el agua y comunicación con seres marinos, herencia de su linaje nereida."
+        },
+        {
+          "nombre": "Eleanor",
+          "detalle": "Descendiente de nereidas, aunque oculta activamente su naturaleza mágica."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoria": "ilusiones",
+      "nombre": "Ilusiones",
+      "icono": "ti-eye",
+      "color": "pink",
+      "descripcion": "Habilidades para distorsionar la percepción y la realidad aparente. Abarcan desde espejismos complejos y alteración de sonidos hasta modificar cómo otros perciben el entorno. También incluyen el cambio de apariencia física. Son poderes especialmente asociados a los linajes feéricos, aunque pueden manifestarse en portadores humanos.",
+      "personajes": [
+        {
+          "nombre": "Jules Ainsworth",
+          "detalle": "Cambiaformas: puede adoptar la apariencia de otras personas con gran precisión."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoria": "mentales",
+      "nombre": "Poderes mentales",
+      "icono": "ti-brain",
+      "color": "purple",
+      "descripcion": "Habilidades que actúan sobre la mente de otros: lectura de pensamientos superficiales, telequinesis avanzada, desplazamiento de objetos a distancia, proyección de imágenes, confusión o alteración de la percepción. También incluyen la manipulación de recuerdos —modificarlos, borrarlos o implantarlos— y el control mental directo sobre la voluntad de otra persona. Su uso sin consentimiento está considerado una de las infracciones más graves bajo las normas de Blackwood. Algunos portadores los desarrollan de forma involuntaria e incapaz de desactivarse.",
+      "personajes": [
+        {
+          "nombre": "Aida",
+          "detalle": "Percepción empática involuntaria: lee emociones y pensamientos superficiales sin poder desactivarlo."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "categoria": "emocionales",
+      "nombre": "Poderes emocionales",
+      "icono": "ti-heart",
+      "color": "pink",
+      "descripcion": "Capacidad de percibir, amplificar, atenuar o proyectar emociones en otros. Difieren de los mentales en que no acceden a pensamientos concretos, sino al estado afectivo. La frontera entre ambas categorías no siempre está clara y los investigadores de Clarté los estudian como categorías separadas.",
+      "personajes": [
+        {
+          "nombre": "Allen D'Arnaud",
+          "detalle": "Control del dolor: percibe, amplifica y da forma física al dolor físico y emocional. Su manifestación más extrema es 'Sanguis Innocentium', un ángel que devuelve a la víctima todo el sufrimiento que ha causado a otros."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "categoria": "sombras",
+      "nombre": "Magia de sombras",
+      "icono": "ti-moon",
+      "color": "blue",
+      "descripcion": "Capacidad de manipular, habitar y desplazarse a través de las sombras. Es uno de los poderes más versátiles documentados: permite viajar entre sombras a distancias variables, proyectar masas oscuras con fuerza física y, en sus formas más avanzadas, destruir o dominar las sombras de otro portador causando dolor real. Es el poder hereditario del linaje Ainsworth.",
+      "personajes": [
+        {
+          "nombre": "Elías Ainsworth",
+          "detalle": "Especialista en desplazamiento entre sombras; además posee telequinesis poco entrenada como poder secundario."
+        },
+        {
+          "nombre": "Aarick Ainsworth",
+          "detalle": "Dominó la magia de sombras en su forma más destructiva: destrucción y dominación de sombras ajenas."
+        },
+        {
+          "nombre": "Jules Ainsworth",
+          "detalle": "Versión limitada: viaje entre sombras a distancias cortas, con agotamiento físico severo."
+        },
+        {
+          "nombre": "Joan Ainsworth",
+          "detalle": "Desplazamiento preciso entre sombras, característica del linaje."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "categoria": "luz",
+      "nombre": "Magia de luz",
+      "icono": "ti-sun",
+      "color": "amber",
+      "descripcion": "Control sobre la luz: desde destellos cegadores y proyecciones lumínicas hasta ilusiones ópticas y manipulación de la visibilidad. Es el polo opuesto de la magia de sombras y, aunque ambas pueden coexistir en teoría, se desconoce un portador que domine las dos con igual destreza. Asociada frecuentemente a los linajes de hadas ninfas.\n\nLa magia de luz también atribuye a sus portadores dotes sanadoras y purificadoras, comparables en naturaleza al efecto de las rosas blancas en el lenguaje de las flores: tiene la capacidad de limpiar heridas, neutralizar venenos mágicos y, en sus formas más avanzadas, purgar influencias externas sobre la mente o el cuerpo de otro ser.",
+      "personajes": []
+    },
+    {
+      "id": 7,
+      "categoria": "flores",
+      "nombre": "Lenguaje de las flores",
+      "icono": "ti-flower",
+      "color": "pink",
+      "descripcion": "Entre los sangre pura de ciertos linajes existe un sistema de magia canalizado a través de las flores, especialmente las rosas. No es un poder decorativo: las flores actúan como vehículo para emociones, promesas y lazos de una profundidad que otros tipos de magia no pueden alcanzar. Cada variedad y color tiene un significado preciso dentro de este lenguaje antiguo:\n• Rosas blancas — purificación.\n• Rosas rojas — lazo entre almas.\n• Rosas negras — muerte, o el precio de lo prohibido.\nLos portadores de este linaje son considerados antiguos y orgullosos, y rara vez cruzan el velo al mundo humano. Su esencia no se mezcla con facilidad con la carne humana; cuando lo hace, nacen los híbridos de rosa, los más escasos de todos los híbridos. En los linajes del lenguaje de las flores, el momento del Enlace suele acompañarse de una rosa roja entregada como símbolo del reconocimiento mutuo, aunque el mecanismo del Enlace en sí es el mismo que para cualquier otro ser mágico.",
+      "personajes": [
+        {
+          "nombre": "Camille Bigot",
+          "detalle": "Híbrida de rosa cuyo nacimiento fue posiblemente planeado. Su primera manifestación mágica ocurrió con pétalos de rosas blancas (purificación), desencadenando un colapso energético que la dejó inconsciente durante más de un mes."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "categoria": "enfermedad",
+      "nombre": "Degeneración mágica",
+      "icono": "ti-alert-triangle",
+      "color": "coral",
+      "descripcion": "Fenómeno en que el cuerpo de un portador de magia o híbrido no puede sostener la energía que maneja. Afecta exclusivamente a quienes poseen sangre humana en su linaje: los sangre pura, al no tener mezcla humana, no son susceptibles. La magia comienza a consumirlos desde adentro: el cuerpo se transforma, se corrompe, hasta volverse irreconocible. Sin tratamiento, puede llevar a la muerte.\n\nCaso documentado: una mujer cuya magia era crear figuras de hielo terminó con el lado derecho del rostro permanentemente cubierto de escarcha. Clarté investiga una posible cura, financiada por un inversor cuya hija se encuentra en las primeras etapas de la enfermedad.",
+      "personajes": [
+        {
+          "nombre": "Hugo",
+          "detalle": "Hermano menor de Rubí. Se encuentra en etapas avanzadas de degeneración mágica. Rubí aceptó colaborar con Clarté a cambio de atención médica para él; ambos habían vivido en un circo ambulante hasta que los echaron."
+        }
+      ],
+      "esEnfermedad": true
+    },
+    {
+      "id": 9,
+      "categoria": "enfermedad",
+      "nombre": "Corazón Congelado",
+      "icono": "ti-snowflake",
+      "color": "blue",
+      "descripcion": "Una de las posibles consecuencias de un enlace roto — ya sea por infidelidad o por rechazo de la pareja de vida. Es especialmente común en quienes poseen el poder de la criogénesis, aunque en seres emocionalmente sensibles puede desencadenarse incluso por un rechazo sin que haya existido enlace formal previo.\n\nEl proceso es físico: en el interior del corazón comienzan a formarse esquirlas de hielo que interfieren progresivamente con su funcionamiento. Si el ser no logra establecer un enlace nuevo a tiempo, las consecuencias pueden ser irreversibles. Siempre deja secuelas — en los casos más graves, el daño es permanente y limita las capacidades del afectado de por vida.",
+      "personajes": [
+        {
+          "nombre": "Carlo de Simone",
+          "detalle": "Tomo 5 — The Rébeiller. Bailarín profesional de los más talentosos de su generación. Desarrolla la enfermedad tras una ruptura con Louis Ainsworth. Louis logra reconciliarse con él y consigue que sane parcialmente, pero Carlo arrastra secuelas permanentes: sus habilidades en el ballet quedan limitadas para siempre."
+        },
+        {
+          "nombre": "Louis Ainsworth",
+          "detalle": "Pareja de Carlo. Su reconciliación con él es lo que detiene la progresión de la enfermedad, aunque no puede revertir el daño ya causado."
+        }
+      ],
+      "esEnfermedad": true
+    },
+    {
+      "id": 10,
+      "categoria": "primigenios",
+      "nombre": "Creación y Destrucción",
+      "icono": "ti-infinity",
+      "color": "purple",
+      "descripcion": "El poder más antiguo y escaso documentado en el universo de Rebéiller. No es una habilidad heredada de los linajes mágicos ordinarios, sino un don proveniente de las especies primigenias — seres de una era tan anterior que apenas quedan registros de su existencia.\n\nA diferencia de lo que su rareza podría sugerir, sí puede controlarse de forma activa. Sin embargo, su coste es proporcional a la magnitud del cambio: intervenciones menores suponen un esfuerzo tolerable, pero alterar algo de gran escala —retroceder mucho tiempo, pausar la realidad de forma prolongada o reescribir un evento significativo— puede dejar al portador al límite de sus fuerzas físicas y mentales, o incluso incapacitado durante un periodo.\n\nSus manifestaciones conocidas incluyen:\n• Manipulación del tiempo: retrocederlo, acelerarlo, pausarlo o ralentizarlo.\n• Manipulación de la realidad: alterar eventos o circunstancias, con un coste mayor cuanto más profundo sea el cambio.\n\nQuienes lo poseen aprenden a medir hasta dónde pueden llegar sin romperse en el intento.",
+      "personajes": [
+        {
+          "nombre": "Anna Sofía Vitale",
+          "detalle": "La magia más pura / Dark Rebéiller / The Lake / Avant Rebéiller / menciones en The Rebéiller. Madre de Chiara; su padre la llama 'Annie'. Hermana adoptiva de Lina. Es la portadora más poderosa documentada de este linaje primigenio. Algunos seres del velo casi la consideran una diosa. En el Tomo 5 su existencia misma se convierte en un misterio: se pone en duda si sigue viva o ha muerto."
+        },
+        {
+          "nombre": "Nazly Ainsworth",
+          "detalle": "Tomo 5 — The Rébeiller. Bisnieta de Elías Ainsworth. Hereda esta habilidad por línea materna (Elaine Laurent). Manifiesta la capacidad de manipular la realidad. Su segundo nombre es Alana — coincidencia no buscada que resuena con el nombre de la madre de Elías."
+        },
+        {
+          "nombre": "Louis Ainsworth",
+          "detalle": "Tomo 5 — The Rébeiller. Hermano de Nazly. También hereda el poder de Creación y Destrucción por la misma línea materna: Elaine Laurent. Sus manifestaciones específicas están por definir."
+        },
+        {
+          "nombre": "Elaine Laurent",
+          "detalle": "Madre de Nazly y Louis. Portadora del linaje primigenio que transmite este poder a sus hijos. Más detalles por definir."
+        }
+      ]
+    }
+  ],
+  "especies": [
+    {
+      "id": 1,
+      "nombre": "Humanos portadores de magia",
+      "descripcion": "Son humanos con la capacidad de usar poderes. Algunos se autodenominan magos, brujas, hechiceros, entre otros; estas son autodenominaciones culturales, no categorías distintas. Sus poderes se heredan y a veces saltan generaciones, pero mientras más se mezcle su sangre con sangre humana, más débiles se vuelven los poderes.",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "nombre": "Híbridos",
+      "descripcion": "Descendientes de humanos y seres mágicos de sangre pura. Combinan características de ambas naturalezas. A diferencia de los sangre pura, no pueden cambiar de forma, pero conservan una versatilidad única: tanto varones como mujeres pueden concebir. El ciclo híbrido ocurre cada tres meses y provoca ardor interno y necesidad de compañía.",
+      "color": "purple"
+    },
+    {
+      "id": 4,
+      "nombre": "Híbridos de rosa",
+      "descripcion": "Los más raros de todos los híbridos. Descienden de los sangre pura que dominan el lenguaje secreto de las flores. Camille Bigot es un ejemplo: su nacimiento fue posiblemente planeado. Su manifestación mágica se produjo con pétalos de rosas blancas (purificación), lo que detonó un colapso energético que la dejó inconsciente durante más de un mes.",
+      "color": "pink"
+    },
+    {
+      "id": 20,
+      "nombre": "Ciclo híbrido",
+      "descripcion": "Ocurre cada tres meses en todos los híbridos. Provoca un ardor interno intenso y una necesidad irrefrenable de compañía física. Durante el ciclo el híbrido es vulnerable: sus poderes se desestabilizan y el cuerpo consume más energía de lo habitual. Algunos lo viven en aislamiento voluntario para no depender de nadie. Elliot pasó tres días encerrado en el cobertizo de su casa durante uno de sus ciclos.",
+      "color": "purple"
+    },
+    {
+      "id": 21,
+      "nombre": "Frenesí híbrido",
+      "descripcion": "Ciclo especial que ocurre dos veces al año. A diferencia del ciclo habitual, el frenesí representa el pico máximo de fertilidad del híbrido. Su intensidad es considerablemente mayor: el ardor interno es más difícil de ignorar y la necesidad de compañía más apremiante. No es un estado de pérdida de control, sino un ciclo biológico diferenciado que el cuerpo reconoce como distinto.",
+      "color": "purple"
+    },
+    {
+      "id": 22,
+      "nombre": "El Enlace",
+      "descripcion": "Conexión que une a un ser mágico con su pareja de vida, común tanto a híbridos como a sangre pura. Se establece en un momento íntimo cuando existe atracción recíproca genuina entre ambas partes; muchos sangre pura eligen activamente enlazarse en la noche de bodas. Su manifestación física es una marca en el hombro derecho, cuya forma, tamaño y color varían según la pareja. Los enlazados comparten una conexión emocional profunda capaz de transmitir pensamientos o sensaciones cuando una emoción es muy intensa. Elliot leyó sobre este concepto en la Biblioteca Escarlata y lo asoció instintivamente a Elías.",
+      "color": "purple"
+    },
+    {
+      "id": 23,
+      "nombre": "Vínculo híbrido",
+      "descripcion": "Lazo más débil y anterior al Enlace. Puede formarse por convivencia prolongada, dependencia emocional intensa o por haber compartido un ciclo. No deja marca física visible, pero genera una sensación de atracción o inquietud ante la ausencia de la otra persona. Algunos investigadores lo consideran un precursor del Enlace; otros lo tratan como un fenómeno independiente.",
+      "color": "purple"
+    },
+    {
+      "id": 3,
+      "nombre": "Sangre pura",
+      "descripcion": "Categoría que agrupa a los seres mágicos originarios de una dimensión paralela. A veces cruzan al mundo humano. Se dividen en tres grandes categorías: Ninfas, Demonios y Hadas. Cada una posee múltiples subespecies y linajes.",
+      "color": "teal"
+    },
+    {
+      "id": 34,
+      "nombre": "Ninfas — Nereidas",
+      "descripcion": "Espíritus acuáticos inspirados en las nereidas de la mitología griega. Habitan mares y costas profundas del otro lado del velo. Poseen afinidad con las mareas, el canto y la manipulación del agua salada. Suelen ser asociadas con belleza sobrenatural y una naturaleza emocional intensa. Muchos híbridos descendientes de nereidas desarrollan habilidades relacionadas con el océano y la comunicación marina.\n\nSon una de las especies más longevas del mundo mágico: pueden llegar a vivir hasta 200 años.",
+      "color": "teal"
+    },
+    {
+      "id": 35,
+      "nombre": "Ninfas — Náyades",
+      "descripcion": "Ninfas vinculadas a ríos, lagos y fuentes de agua dulce. En el folclore griego eran guardianas de manantiales y corrientes sagradas. Dentro de Rébeiller son consideradas criaturas delicadas pero temperamentales, capaces de influir sobre emociones mediante el sonido del agua. Sus dominios suelen estar protegidos por magia ilusoria.",
+      "color": "teal"
+    },
+    {
+      "id": 36,
+      "nombre": "Ninfas — Dríades",
+      "descripcion": "Espíritus ligados a árboles y bosques antiguos. Inspiradas en las dríades de la mitología griega, su vida está conectada a la naturaleza que protegen. Son reservadas y difíciles de encontrar. Algunas poseen control parcial sobre raíces, flores y crecimiento vegetal. Se dice que los bosques donde viven reaccionan emocionalmente a su estado de ánimo.",
+      "color": "teal"
+    },
+    {
+      "id": 37,
+      "nombre": "Demonios — Bestialidades",
+      "descripcion": "La mayoría de demonios poseen una bestialidad asociada: lobos, felinos, osos, zorros, aves o incluso conejos. Cada linaje hereda rasgos físicos, instintos y habilidades particulares relacionados con su bestia. Los demonios conejo son conocidos por ser los más fértiles entre los sangre pura. Los demonios felinos destacan por agilidad y percepción; los lobos por vínculos grupales y ferocidad.",
+      "color": "teal"
+    },
+    {
+      "id": 38,
+      "nombre": "Demonios — Linajes sin bestialidad",
+      "descripcion": "Existen demonios que no están ligados a ninguna criatura animal. Entre ellos se encuentran los demonios de sombras, de sangre y los pertenecientes al reino del lenguaje de las flores. Los demonios de sombras manipulan oscuridad y desplazamiento; los de sangre poseen afinidad con la vitalidad y los vínculos biológicos; mientras que los del lenguaje de las flores canalizan emociones, promesas y lazos mediante rosas y simbolismos florales antiguos.",
+      "color": "teal"
+    },
+    {
+      "id": 39,
+      "nombre": "Demonios — Habilidades mentales",
+      "descripcion": "Algunos demonios desarrollan capacidades relacionadas con la mente y las emociones: percepción emocional, sugestión, lectura superficial de pensamientos o manipulación sensorial. Estas habilidades son consideradas peligrosas por Blackwood debido a su potencial para alterar la voluntad ajena.",
+      "color": "teal"
+    },
+    {
+      "id": 47,
+      "nombre": "Hadas — Luz",
+      "descripcion": "Hadas asociadas a la luz y la energía luminosa. Poseen afinidad con destellos, brillo sobrenatural y manipulación de visibilidad. Sus ciudades del otro lado del velo suelen describirse como espacios eternamente iluminados.",
+      "color": "teal"
+    },
+    {
+      "id": 48,
+      "nombre": "Hadas — Sueños",
+      "descripcion": "Linajes feéricos relacionados con los sueños y el subconsciente. Pueden influir en el descanso, los recuerdos oníricos y las visiones. Algunas culturas del velo creen que ciertos sueños proféticos provienen directamente de ellas.",
+      "color": "teal"
+    },
+    {
+      "id": 49,
+      "nombre": "Hadas — Ilusiones",
+      "descripcion": "Especialistas en distorsionar percepción y realidad aparente. Son capaces de crear espejismos complejos, alterar sonidos o modificar cómo otros perciben el entorno. Sus habilidades son usadas tanto para defensa como para entretenimiento dentro del velo.",
+      "color": "teal"
+    },
+    {
+      "id": 50,
+      "nombre": "Hadas — Emociones",
+      "descripcion": "Hadas capaces de percibir y alterar emociones ajenas. Algunas inspiran calma y bienestar; otras potencian miedo, deseo o melancolía. Su influencia suele ser sutil y difícil de detectar incluso para otros seres mágicos.",
+      "color": "teal"
+    },
+    {
+      "id": 30,
+      "nombre": "Ciclo de los sangre pura",
+      "descripcion": "A diferencia del ciclo híbrido, el de los sangre pura no sigue una cadencia mensual fija. Se desencadena por factores estacionales, lunares o emocionales según el linaje. En los demonios suele estar ligado a su bestialidad; en las nereidas, a las mareas o la proximidad al agua. Durante el ciclo sus poderes alcanzan el pico máximo, pero también son más difíciles de controlar.",
+      "color": "teal"
+    },
+    {
+      "id": 31,
+      "nombre": "Frenesí de los sangre pura",
+      "descripcion": "Ciclo especial que ocurre dos veces al año, equivalente al frenesí híbrido. Representa el pico máximo de fertilidad de los sangre pura y se distingue claramente del ciclo ordinario por su intensidad. Dado que sus poderes no están limitados por la sangre humana, la carga física y energética de este ciclo es mayor que la de cualquier híbrido.",
+      "color": "teal"
+    },
+    {
+      "id": 32,
+      "nombre": "El Enlace (sangre pura)",
+      "descripcion": "El Enlace funciona de la misma manera para los sangre pura que para los híbridos: se establece en un momento íntimo con atracción recíproca genuina, y deja una marca en el hombro derecho. La diferencia está en la cultura, no en el mecanismo — y cada reino o linaje tiene sus propios rituales para enmarcar ese momento.\n\nEn los linajes del lenguaje de las flores, el instante del Enlace suele acompañarse de una rosa roja entregada como símbolo del reconocimiento mutuo. En Teney-Kaia, el ritual es distinto: la pareja comparte una granada en la ceremonia de boda y la come frente a todos los invitados. Este acto va más allá del Enlace en sí — en Teney-Kaia forma parte de un pacto de vida: los años de vida restantes de ambos individuos se suman y se dividen a la mitad, de modo que la pareja pueda envejecer al mismo ritmo aunque una especie sea naturalmente más longeva que la otra.",
+      "color": "teal"
+    },
+    {
+      "id": 33,
+      "nombre": "Vínculo de los sangre pura",
+      "descripcion": "Los sangre pura pueden formar vínculos menores con humanos, portadores de magia o híbridos sin que estos lo sepan. Surge de la proximidad reiterada y de la atención sostenida. No es recíproco por naturaleza: el sangre pura siente el tirón; la otra parte puede no notarlo nunca, o notarlo como una atracción inexplicable. Algunos linajes lo usan de forma deliberada.",
+      "color": "teal"
+    }
+  ],
+  "lugares": [
+    {
+      "id": 1,
+      "nombre": "Mundo humano",
+      "tipo": "Dimensión",
+      "dimension": "humano",
+      "descripcion": "Muy similar al mundo real. Ambientado históricamente a partir de 1919. Los seres mágicos deben pasar desapercibidos aquí.",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "nombre": "El otro lado del velo",
+      "tipo": "Dimensión",
+      "dimension": "velo",
+      "descripcion": "Espacio mágico que se dobla y desdobla. La distancia y el tiempo son variables: avanzar 5 metros en el velo puede equivaler a aparecer 10 metros más lejos en el mundo humano, o al revés, dependiendo de la región. El tiempo también varía: pasar 2 días en el velo puede equivaler a 4 días en el mundo humano.",
+      "color": "purple"
+    },
+    {
+      "id": 3,
+      "nombre": "La Biblioteca Escarlata",
+      "tipo": "Edificio · Valencia",
+      "dimension": "humano",
+      "descripcion": "Biblioteca privada ubicada en Valencia, propiedad de Clarté y, por extensión, de la familia Ainsworth. De apariencia elegante y exclusiva, es confundida por el público general con una tienda de libros de lujo o sala de lectura para ricachones. Sus zonas más apartadas son acceso casi exclusivo de Elías para sus estudios. Alberga una sección visible sobre híbridos y una sección secreta oculta tras una estantería, con volúmenes antiguos sobre magia, alquimia y linajes, muchos obtenidos por Clarté de aquelarres. Los empleados no son humanos.",
+      "color": "teal"
+    },
+    {
+      "id": 4,
+      "nombre": "Mansión Ainsworth",
+      "tipo": "Residencia · El Ensanche, Valencia",
+      "dimension": "humano",
+      "descripcion": "Residencia de la familia Ainsworth, ubicada en el Ensanche, cerca de la Gran Vía Marqués del Turia, en un entorno de palacetes burgueses con fachadas modernistas y balcones de hierro forjado. Elías vive aquí con Camille y los sirvientes sombra. Cuenta con una sala de estar con gramófono, sala de estudios para Camille y el despacho privado de Elías. Elías suele volver a ella viajando entre sombras desde la biblioteca o Clarté.",
+      "color": "purple"
+    },
+    {
+      "id": 5,
+      "nombre": "Universitat de València / La Nau",
+      "tipo": "Institución educativa · Valencia",
+      "dimension": "humano",
+      "descripcion": "Sede histórica de la universidad donde Elías estudia medicina. Los pasillos huelen a cal, tinta y desinfectante. Ingresó antes de la edad habitual gracias a las conexiones de su padre; sus compañeros lo llaman 'el riquillo' o 'el niño' y lo miran con desdén. Elías destaca por encima de todos ellos aunque mantiene distancia.",
+      "color": "blue"
+    },
+    {
+      "id": 6,
+      "nombre": "Barrio costero de Elliot",
+      "tipo": "Barrio · Valencia",
+      "dimension": "humano",
+      "descripcion": "Zona modesta de Valencia cercana al mar donde viven Elliot y Eleanor. Las casas son construcciones humildes de tapia y maderas, con tejados de teja vieja y puertas de tablas. El aire huele a sal, leña húmeda y pescado. La mayoría de los vecinos son forasteros llegados por la actividad comercial de la costa. Junto a la casa de Elliot hay un naranjo torcido que Eleanor cuida con esmero.",
+      "color": "teal"
+    },
+    {
+      "id": 7,
+      "nombre": "Casa de Miss Beatrice",
+      "tipo": "Residencia · Barrio acomodado, Valencia",
+      "dimension": "humano",
+      "descripcion": "Casa en una esquina bien cuidada de un barrio más adinerado que el de Elliot. Tiene ventanas altas con postigos pintados, cortinas de encaje blanco, macetas de geranios en flor y un llamador de bronce. Aquí viven Miss Beatrice, su esposo don Joaquim (médico local) y su hija Lydia. Eleanor manda a Elliot con regalos frecuentes como pretexto para acercarlo a Lydia.",
+      "color": "blue"
+    },
+    {
+      "id": 8,
+      "nombre": "Sede de Clarté — Valencia",
+      "tipo": "Organización · Valencia",
+      "dimension": "humano",
+      "descripcion": "Sede principal de Clarté en España y epicentro de las operaciones de Aarick Ainsworth durante años. De cara al exterior funciona como una institución médica discreta; en su interior alberga laboratorios, celdas de contención y el temido Departamento de Anatomía Comparada, donde se realizaron los experimentos más inhumanos. Sus paredes son altas, los pasillos fríos y la luz escasa. Aquí fueron encerrados y sometidos a experimentos Allen D'Arnaud (1915–1916), Kenji y Aoi Nakamura (1909), y Z-056, entre otros sujetos cuyo paradero se desconoce. Camille Ainsworth fue trasladada aquí tras caer inconsciente en agosto de 1919. Elías acude regularmente desde la mansión viajando entre sombras y está intentando desmantelar las prácticas heredadas de su padre, despidiendo jefes corruptos y reorientando la investigación. El personal no es en su totalidad humano.",
+      "color": "coral"
+    },
+    {
+      "id": 9,
+      "nombre": "Teney-Kaia",
+      "tipo": "Reino",
+      "dimension": "velo",
+      "descripcion": "Uno de los reinos más influyentes de su región al otro lado del velo. Su población predominante son los demonios de sombra, y su cultura y política irradian peso sobre los territorios vecinos. Guarda numerosas similitudes con la Rusia del mundo humano: una extensión vasta, una arquitectura imponente, tradiciones arraigadas y un carácter que combina grandeza y severidad. Sus inviernos son extremadamente crudos, con fríos que pocos forasteros soportan sin preparación. La oscuridad forma parte de su identidad, pero no como hermetismo sino como rasgo propio de un pueblo que lleva siglos habitándola y convirtiéndola en poder.",
+      "color": "purple"
+    },
+    {
+      "id": 11,
+      "nombre": "Sede Central de Clarté — Londres",
+      "tipo": "Organización · Londres, Inglaterra",
+      "dimension": "humano",
+      "descripcion": "Sede matriz de Clarté, ubicada en Londres. Es considerablemente más grande que la delegación de Valencia, tanto en superficie como en infraestructura. Cuenta con extensas instalaciones subterráneas que, a diferencia de lo que podría suponerse, están destinadas al alojamiento del personal: dormitorios, comedores, zonas de descanso y espacios comunes para los trabajadores que residen en el edificio. Esta sede nunca fue tan permeada por la ideología de Aarick Ainsworth; su cultura interna es más neutral y menos marcada por los abusos que caracterizaron la delegación española bajo su mandato.",
+      "color": "blue"
+    },
+    {
+      "id": 12,
+      "nombre": "Velmora",
+      "tipo": "Reino",
+      "dimension": "velo",
+      "descripcion": "Reino hermético al otro lado del velo, habitado por una raza que se considera descendiente de seres tan poderosos que eran tenidos por dioses. Su cultura está profundamente influenciada por la mitología griega: los nombres de sus habitantes —como Pasitea, abuela de Chiara, o Talia, su tía abuela— reflejan ese legado. La magia fluye con abundancia por todo el reino. Su población convive con los demonios de bestialidad del lobo blanco, un linaje casi extinto al igual que el de los lobos negros. Velmora es un reino de carácter marcadamente aislacionista: no suele involucrarse en conflictos regionales, no envía representantes a las decisiones que afectan a los reinos vecinos y evita activamente las alianzas externas. Su fortaleza reside precisamente en ese hermetismo: Velmora se ocupa de los suyos y espera que el resto del mundo haga lo mismo.",
+      "color": "purple"
+    },
+    {
+      "id": 10,
+      "nombre": "Ardalan de Arcadia",
+      "tipo": "Reino unificado",
+      "dimension": "velo",
+      "descripcion": "Reino unificado a raíz del matrimonio del rey Lyall de Arcadia y el rey Deymus de Ardalan. Arcadia es un reino de fuego: su geografía, su magia y su cultura giran en torno a ese elemento, y sus habitantes son en su mayoría portadores de poderes ígneos o demonios asociados al fuego. Ardalan, en cambio, es un reino cuya población está compuesta en gran parte por nereidas y seres afines al agua. La unión de ambas coronas —fuego y agua— generó un reino de equilibrios delicados, donde las diferencias entre pueblos conviven bajo una misma bandera. La alianza se selló a través del vínculo entre sus dos reyes. El rey Lyall carga además con un linaje que va más allá del fuego: desciende de demonios con bestialidad de lobo negro, una estirpe prácticamente extinta en toda la región. Lo que eso implica para su magia, su ciclo y su carácter es algo que pocos en la corte comprenden del todo.",
+      "color": "teal"
+    },
+    {
+      "id": 13,
+      "nombre": "Haroumi",
+      "tipo": "Imperio",
+      "dimension": "velo",
+      "descripcion": "Imperio nereida al otro lado del velo, de extensión vasta y cultura profundamente elaborada. Su inspiración principal bebe de varias tradiciones orientales del mundo humano — especialmente Japón, China y Corea —, aunque Haroumi es una entidad propia que no replica ninguna de ellas de forma exacta.\n\nHaroumi colonizó durante siglos numerosos reinos aledaños, y su influencia política, lingüística y cultural todavía se percibe en esos territorios incluso donde el dominio directo del imperio ya no existe. Su historia imperial es larga y no exenta de violencia: la expansión de Haroumi dejó marcas profundas en el mapa del velo.\n\nA pesar de su carácter imperial, Haroumi es también reconocido como cuna de algunos de los sanadores más poderosos que han existido. El más notable es Ryuji, príncipe nereida de este reino, considerado el sanador más poderoso documentado — cuyas habilidades superan con creces lo que cualquier otro portador de magia curativa haya logrado.",
+      "color": "teal"
+    }
+  ],
+  "eventos": [
+    {
+      "id": 24,
+      "anio": "Antes de 1909",
+      "evento": "Muerte de los padres de Kenji y Aoi",
+      "descripcion": "[La cabeza de la familia] Los padres de Kenji y Aoi mueren en circunstancias confusas: oficialmente un accidente con una carreta, aunque Kenji sospecha que pudo ser intencionado. La familia era japonesa y extranjera en el pueblo; el padre advertía que algunos vecinos no confiaban en ellos. Kenji cree que quizás su madre también era sospechosa de tener poderes."
+    },
+    {
+      "id": 25,
+      "anio": "1909 (marzo)",
+      "evento": "Intento de linchamiento de Aoi — huida y llegada a Clarté",
+      "descripcion": "[La cabeza de la familia] El pueblo intenta quemar viva a Aoi, acusándola de bruja. Aoi usa sus poderes para escapar. Los hermanos huyen y se pierden hasta que un joven de ojos amables los encuentra y los lleva a las instalaciones de Clarté, prometiéndoles que allí nadie quema a nadie por ser diferente. Kenji desconfía pero no tienen alternativa."
+    },
+    {
+      "id": 26,
+      "anio": "1909 (marzo–dic.)",
+      "evento": "Kenji cuida a Aoi y a Z dentro de Clarté",
+      "descripcion": "[La cabeza de la familia] Kenji, considerado 'inútil' por su magia de reparación, recibe raciones mínimas de comida. Aoi es tratada mejor por ser más interesante para los experimentos. Kenji descubre a Z-056, un niño con ojos violetas nacido en Clarté que nunca ha visto el exterior. Le cede parte de su comida, lo cuida durante las enfermedades y le canta canciones de su madre para ayudarlo a dormir. Estudia medicina a escondidas en la biblioteca. Planea escapar."
+    },
+    {
+      "id": 17,
+      "anio": "1913",
+      "evento": "La familia D'Arnaud emigra a Inglaterra",
+      "descripcion": "[Spin-off: Entre rosas y espinas] La familia de Allen huye de Francia —posiblemente por ser descubiertos como híbridos— y se instala en una casa pequeña de un pariente lejano fallecido. El padre comienza a trabajar en cualquier oficio disponible; la madre lava ropa ajena para sobrevivir."
+    },
+    {
+      "id": 1,
+      "anio": "1914–1918",
+      "evento": "Primera Guerra Mundial",
+      "descripcion": "[Contexto histórico] Ocurre en el mundo humano. Los portadores de magia participan de forma encubierta. Elliot pierde en la guerra al único chico que le había gustado."
+    },
+    {
+      "id": 18,
+      "anio": "1914 (28 julio)",
+      "evento": "El padre de Allen es llamado al frente",
+      "descripcion": "[Spin-off: Entre rosas y espinas] El padre de Allen parte a la guerra. Las cartas llegan cada vez con menos frecuencia. Allen, mayor de seis hermanos, siente que debe actuar."
+    },
+    {
+      "id": 19,
+      "anio": "1914–1915 aprox.",
+      "evento": "Allen comienza a prostituirse para sostener a su familia",
+      "descripcion": "[Spin-off: Entre rosas y espinas] Con apenas dieciséis años y ante la miseria del hogar, Allen usa su belleza como recurso. Se convierte en un amante discreto de personas adineradas —hombres y mujeres— a cambio de dinero y favores. Siempre guarda alguna prueba comprometedora como protección. Su madre lo intuye pero teme confrontarlo."
+    },
+    {
+      "id": 20,
+      "anio": "1915 aprox.",
+      "evento": "Allen es secuestrado por Aarick y encerrado en Clarté",
+      "descripcion": "[Spin-off: Entre rosas y espinas] Aarick captura a Allen para experimentar con él por su condición de híbrido. Allen es sometido a inyecciones, extracción de sangre y pruebas que dañan su salud. Durante el encierro descubre que está embarazado. Una prueba fallida provoca la pérdida del bebé."
+    },
+    {
+      "id": 21,
+      "anio": "1915–1916 aprox.",
+      "evento": "Jules y Allen se conocen en el cautiverio",
+      "descripcion": "[Spin-off: Entre rosas y espinas] Jules visita a Allen en secreto haciéndose pasar por personal médico. Le lleva comida y libros. Ambos se abren emocionalmente: Jules le confiesa lo que Aarick hizo a su madre Alana; Allen le revela su embarazo. Jules declara sus sentimientos y Allen, en un momento de vulnerabilidad, la besa."
+    },
+    {
+      "id": 22,
+      "anio": "1916 aprox.",
+      "evento": "Jules rescata a Allen — confrontación con Aarick",
+      "descripcion": "[Spin-off: Entre rosas y espinas] Jules irrumpe en el quirófano y enfrenta a los médicos. Aarick aparece y la ataca con su magia de sombras. Allen, en un acto de furia protectora, invoca 'Sanguis Innocentium': un ángel que inflige a Aarick todo el daño emocional que ha causado. Aarick cae destrozado internamente. Jules y Allen escapan saltando entre sombras."
+    },
+    {
+      "id": 23,
+      "anio": "1916–1917 aprox.",
+      "evento": "Boda de Jules y Allen — nacimiento de Joseph",
+      "descripcion": "[Spin-off: Entre rosas y espinas] Jules lleva a Allen de regreso a Inglaterra. Allen se entera de que su padre murió en la guerra. Meses después, Jules y Allen se casan en una ceremonia íntima. Nace su hijo Joseph."
+    },
+    {
+      "id": 2,
+      "anio": "1908",
+      "evento": "Muerte de Alana Ruiz (Olivia)",
+      "descripcion": "[Tomo 1 — antecedente] Muere la madre de Elías y Camille. Elías tenía entonces unos seis años y Camille dos. Solo queda un disco suyo: Le Temps des Cerises, que Aarick le impuso cantar como símbolo de sumisión."
+    },
+    {
+      "id": 3,
+      "anio": "1919 (10 enero)",
+      "evento": "Reunión de Clarté — Propuesta de Elías sobre brujas de sangre",
+      "descripcion": "[Tomo 1] En una reunión directiva, Elías propone buscar una bruja de sangre independiente para las investigaciones genéticas de Clarté. Uno de los hombres de Aarick insinúa secuestrar a alguien no registrado en Blackwood; Elías lo rechaza con firmeza."
+    },
+    {
+      "id": 4,
+      "anio": "1919 (5 marzo)",
+      "evento": "Elliot descubre la naturaleza híbrida de su reproducción",
+      "descripcion": "[Tomo 1] En La Biblioteca Escarlata, Elliot lee que los híbridos pueden concebir independientemente del género, lo que contradice el argumento más repetido contra los hombres que aman a hombres. Ese mismo día, Elías lo lleva por primera vez a su habitación viajando entre sombras y le revela el poder de anulación de Elliot."
+    },
+    {
+      "id": 5,
+      "anio": "1919 (16 junio)",
+      "evento": "El paseo por Valencia — Elliot confiesa 'me gustas'",
+      "descripcion": "[Tomo 1] Tras un momento de tensión casi romántica en la biblioteca, salen a caminar por el Ensanche. Elliot confiesa sin querer 'me gustas'. Elías empieza a reconocer sus sentimientos. Le habla de los híbridos en la antigua Grecia y los mitos como prueba de existencia real."
+    },
+    {
+      "id": 6,
+      "anio": "1919 (1 julio)",
+      "evento": "Elías lidera su primer equipo de campo",
+      "descripcion": "[Tomo 1] Elías dirige con éxito a un equipo de investigadores jóvenes para localizar a una mujer conocida como 'Lina', posible bruja de sangre con cabello rosa y facultad de sanación. Primera vez que se siente obedecido sin la sombra de su padre."
+    },
+    {
+      "id": 9,
+      "anio": "1919 (5 agosto)",
+      "evento": "Rubí se une a Clarté",
+      "descripcion": "[Tomo 1] Rubí, bruja de sangre con poder de fuego, acepta colaborar con Clarté a cambio de atención médica para su hermano Hugo, en etapas avanzadas de degeneración mágica. Había vivido con él en un circo ambulante hasta que los echaron."
+    },
+    {
+      "id": 10,
+      "anio": "1919 (5 agosto)",
+      "evento": "Camille cae inconsciente — pétalos de rosa blanca",
+      "descripcion": "[Tomo 1] Elías llega a la mansión y encuentra a Camille desmayada, con fiebre extrema y convulsiones. El suelo de su habitación está cubierto de pétalos de rosas blancas. Elías logra llevarla a Clarté en el último momento. Pasa las siguientes semanas sin dormir buscando una explicación."
+    },
+    {
+      "id": 11,
+      "anio": "1919 (agosto)",
+      "evento": "Elías descubre el concepto de 'híbridos de rosa'",
+      "descripcion": "[Tomo 1] En un tomo antiguo de La Biblioteca Escarlata, Elías lee sobre el lenguaje secreto de las rosas entre los sangre pura y sobre los híbridos de rosa, los más raros. Sospecha que el nacimiento de Camille fue planeado por Aarick."
+    },
+    {
+      "id": 12,
+      "anio": "1919 (agosto)",
+      "evento": "Elliot lee sobre el Enlace",
+      "descripcion": "[Tomo 1] Mientras espera a Elías en La Biblioteca Escarlata, Elliot lee sobre el Enlace: la conexión de por vida entre dos personas, que se manifiesta con una marca en el hombro derecho. Lo asocia instintivamente con Elías, lo que le provoca confusión y miedo."
+    },
+    {
+      "id": 13,
+      "anio": "1919 (agosto)",
+      "evento": "Primer beso — Elías a Elliot, en la frente",
+      "descripcion": "[Tomo 1] Tras encontrarse en la biblioteca después de una noche de angustia por Camille, Elías acepta el consuelo de Elliot. Al marcharse, de forma impulsiva, le da un beso rápido en la frente y desaparece entre las sombras. Ambos no duermen pensando en ello."
+    },
+    {
+      "id": 14,
+      "anio": "1919 (agosto)",
+      "evento": "Jules regresa con Allen y Joseph",
+      "descripcion": "[Tomo 1] Jules vuelve a Valencia tras dos años de ausencia con su esposo Allen y su hijo Joseph (aprox. 1 año). Elías la confronta entre lágrimas por haberlo dejado solo. Se reconcilian y Jules promete quedarse hasta que Camille mejore."
+    },
+    {
+      "id": 15,
+      "anio": "1919 (agosto–sept.)",
+      "evento": "Ciclo híbrido de Elliot — presión de Eleanor hacia Lydia",
+      "descripcion": "[Tomo 1] Elliot pasa tres días encerrado en el cobertizo durante su ciclo. Su madre intensifica la presión para que formalice con Lydia, cuya familia ofrece pagar sus estudios para ser profesor. Elliot, resignado, decide llevarle pastel de naranja como señal de acercamiento."
+    },
+    {
+      "id": 16,
+      "anio": "1919 (20 sept.)",
+      "evento": "Discusión y reconciliación entre Elías y Elliot",
+      "descripcion": "[Tomo 1] Tras semanas de distancia, Elías estalla en reproches. Elliot llora. Ambos terminan abrazados, incapaces de admitir lo que sienten. Elías le confiesa que al día siguiente es su cumpleaños y le pide que lo pase con él. Elliot promete ir."
+    },
+    {
+      "id": 7,
+      "anio": "1920",
+      "evento": "Dominico Riva lidera Mirage",
+      "descripcion": "[Tomo 1 — contexto] Inicio del período documentado del liderazgo de Mirage."
+    },
+    {
+      "id": 8,
+      "anio": "1920–1925",
+      "evento": "La guerra oculta",
+      "descripcion": "[Contexto] Desaparición masiva de portadores de magia. Una guerra encubierta ocurre invisible a los ojos humanos."
+    },
+    {
+      "id": 27,
+      "anio": "~1938",
+      "evento": "Auguste conoce a Willow — inicio de Dark Rebéiller",
+      "descripcion": "[Tomo 2: Dark Rebéiller] Aproximadamente un año antes del inicio de la Segunda Guerra Mundial, Auguste D'Arnaud-Ainsworth conoce a Willow. Su presencia despierta en él recuerdos imposibles de experiencias que siente haber compartido con ella, aunque sabe que nunca han coincidido."
+    },
+    {
+      "id": 28,
+      "anio": "1939–1945",
+      "evento": "Segunda Guerra Mundial",
+      "descripcion": "[Contexto histórico — Tomo 2] Ocurre en el mundo humano durante los eventos de Dark Rebéiller."
+    },
+    {
+      "id": 29,
+      "anio": "Post-WWII aprox.",
+      "evento": "Eventos de Rebéiller: The Lake",
+      "descripcion": "[Tomo 3: Rebéiller — The Lake] Inmediatamente después de Dark Rebéiller. El Rey Lyall pierde el amor del Rey Deymus y conoce a Ryuji, príncipe nereida rechazado por su reino. En paralelo, Rémi, amigo de Auguste, vive su propia historia de amor."
+    },
+    {
+      "id": 30,
+      "anio": "~1970",
+      "evento": "Exilio de Maius — encuentro con Chiara",
+      "descripcion": "[Tomo 4: Avant Rebéiller] Maius, hijo de Lyall y Ryuji, es descartado como sucesor y exiliado al mundo humano. Su hermana melliza Aira (Airi) es designada heredera. En el exilio conoce a Chiara, quien afirma ser la princesa heredera de un reino del otro lado del velo."
+    },
+    {
+      "id": 31,
+      "anio": "Época actual",
+      "evento": "Eventos de The Rebéiller",
+      "descripcion": "[Tomo 5: The Rebéiller] Los acontecimientos del tomo final transcurren en el presente. Dada la cantidad de personajes involucrados, probablemente se divida en al menos tres tomos distintos."
+    }
+  ]
+}
